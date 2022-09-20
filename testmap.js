@@ -130,7 +130,7 @@ async function main() {
                 delete vehicleMarkers[key];
             }
         }
-        await delay(6000);
+        await delay(15000);
     }
 }
 
