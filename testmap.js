@@ -46,7 +46,7 @@ async function main() {
     vehicleLayer.addTo(map);
     while (true) {
         // fetch localhost:4242/trips/active
-        let vehicles = await fetch('http://localhost:4242/trips/active').then(res => res.json()).then(res => res.data);
+        let vehicles = await fetch('https://api.hzpp.prometko.si/trips/active').then(res => res.json()).then(res => res.data);
         let tempIds = [];
         for (let vehicle of vehicles) {
             let composition = "";
