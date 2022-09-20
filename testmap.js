@@ -1,6 +1,12 @@
 var map = L.map('mapid', { zoomControl: false }).setView([44.4110628,16.5184112], 8);
 let vehicleMarkers = {};
-let vehicleLayer = L.markerClusterGroup({
+var vehicleLayer = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    removeOutsideVisibleBounds: true,
+    maxClusterRadius: 20,
+    spiderfyDistanceMultiplier: 3
+});
+var szLayer = L.markerClusterGroup({
     showCoverageOnHover: true,
     removeOutsideVisibleBounds: true,
     maxClusterRadius: 20,
@@ -17,6 +23,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var LAYER_CONTROL = L.control.layers().addTo(map);
 
+LAYER_CONTROL.addOverlay(vehicleLayer, "HŽPP");
+LAYER_CONTROL.addOverlay(szLayer, "SŽ");
+
 L.control.zoom({
     position: 'topright'
 }).addTo(map);
@@ -26,6 +35,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 let stops = [];
 
 async function main() {
+    mainSz();
     let data = await fetch('./data.json').then(res => res.json());
     stops = await fetch('./stops.json').then(res => res.json());
     for (let h of data) {
@@ -44,6 +54,7 @@ async function main() {
         L.marker([stop.stop_lat, stop.stop_lon]).bindTooltip(`${stop.stop_name}`).addTo(map);
     }*/
     vehicleLayer.addTo(map);
+    szLayer.addTo(map);
     while (true) {
         // fetch localhost:4242/trips/active
         let vehicles = await fetch('https://api.hzpp.prometko.si/trips/active').then(res => res.json()).then(res => res.data);
@@ -133,6 +144,57 @@ async function main() {
         await delay(15000);
     }
 }
+
+const PROXY_URL = "https://cors.proxy.prometko.si/";
+
+let szMarkers = {}
+
+async function mainSz() {
+    let grouped = await fetch(`./szdata.json`).then(r => r.json());
+    for (let g in grouped) {
+        // make a polyline for each group
+        await L.polyline(grouped[g], {color: '#005B7D'}).addTo(map);
+    }
+    // check if szLayer is visible
+    if (map.hasLayer(szLayer)) {
+        console.log("SŽ layer is visible");
+    } else {
+        console.log("SŽ layer is not visible");
+        szLayer.addTo(map);
+    }
+    while (true) {
+        try {
+            // fetch https://mestnipromet.cyou/api/v1/resources/sz/locations with proxy
+            let vehicles = await fetch(`${PROXY_URL}https://mestnipromet.cyou/api/v1/resources/sz/locations`).then(res => res.json());
+            for (let vehicle of vehicles.data) {
+                if (!szMarkers[vehicle.train_no]) {
+                    szMarkers[vehicle.train_no] = await L.marker([vehicle.latitude, vehicle.latitude]);
+                    szMarkers[vehicle.train_no].addTo(szLayer);
+                } else {
+                    await szMarkers[vehicle.train_no].setLatLng([vehicle.latitude, vehicle.longitude]);
+                }
+                szMarkers[vehicle.train_no].setIcon(L.divIcon({
+                    iconSize: [80, 20],
+                    iconAnchor: [40, 10],
+                    popupAnchor: [0, 0],
+                    className: "icon",
+                    html: `<div class="szIcon"><b>${vehicle.train_no}</b></div>${vehicle.delay > 0 ? `<b class="delay">+${vehicle.delay}min</b>` : ""}`
+                }));
+                szMarkers[vehicle.train_no].bindPopup(`<b>${vehicle.train_type} ${vehicle.train_no}</b><br>
+                ${vehicle.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.delay}min</b>` : ""}<hr class="no-padding no-margin">
+                <b>Train unit:</b> ${vehicle.train_model.length > 0 ? vehicle.train_model : "Unknown"}<br>`);
+            }
+            // if layer_control doesnt have szLayer, add it
+            await delay(10000);
+        } catch (e) {
+            console.log(e);
+            await delay(5000);
+        }
+    }
+}
+
+
+mainSz();
 
 
 main();
