@@ -30,9 +30,17 @@ var zsLayer = L.markerClusterGroup({
     spiderfyDistanceMultiplier: 3
 }).addTo(map);
 
+var zcgLayer = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    removeOutsideVisibleBounds: true,
+    maxClusterRadius: 20,
+    spiderfyDistanceMultiplier: 3
+}).addTo(map);
+
 LAYER_CONTROL.addOverlay(vehicleLayer, "HŽPP");
 LAYER_CONTROL.addOverlay(szLayer, "SŽ");
 LAYER_CONTROL.addOverlay(zsLayer, "ZŠ");
+LAYER_CONTROL.addOverlay(zcgLayer, "ZCG");
 
 L.control.zoom({
     position: 'topright'
@@ -156,6 +164,7 @@ const PROXY_URL = "https://cors.proxy.prometko.si/";
 
 let szMarkers = {}
 let zsMarkers = {}
+let zcgMarkers = {};
 
 async function mainSz() {
     let grouped = await fetch(`./szdata.json`).then(r => r.json());
@@ -237,8 +246,8 @@ async function mainZs() {
                     html: `<div class="zsIcon"><b>${vehicle.train_data.train_number}</b></div>${vehicle.train_cache.delay > 0 ? `<b class="delay">+${vehicle.train_cache.delay}min</b>` : ""}`
                 }))
                 .bindPopup(`<b>${vehicle.train_data.train_number}</b> ${vehicle.train_data.train_name}<br>
-                <b>Current stop:</b> ${current_stop.stop_name} (${current_stop.departure_time} ${vehicle.train_cache.delay > 0 ? `<b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
-                <b>Next stop:</b> ${next_stop.stop_name} (${next_stop.arrival_time} ${vehicle.train_cache.delay > 0 ? `<b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
+                <b>Current stop:</b> ${current_stop.stop_name} (${current_stop.departure_time}${vehicle.train_cache.delay > 0 ? ` <b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
+                <b>Next stop:</b> ${next_stop.stop_name} (${next_stop.arrival_time}${vehicle.train_cache.delay > 0 ? ` <b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
                 ${vehicle.train_cache && vehicle.train_cache.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.train_cache.delay}min</b>` : ""}
                 <hr class="no-padding no-margin">
                 <b>Vehicle composition:</b><br>${vehicle.train_cache ? vehicle.train_cache.composition : "Unknown"}<br>`);
@@ -255,8 +264,63 @@ async function mainZs() {
     }
 }
 
+async function mainZcg() {
+    // fetch https://api.hzpp.prometko.si/RS/zs/geometry/list
+    let grouped = await fetch(`https://api.hzpp.prometko.si/ME/zcg/geometry/list`).then(r => r.json()).then(r => r.data);
+    let passed = [];
+    for (let g in grouped) {
+        // if we already have this combo of from and to, skip it
+        if (passed.includes(`${grouped[g].from}-${grouped[g].to}`) || passed.includes(`${grouped[g].to}-${grouped[g].from}`)) continue;
+        // make a polyline for each group
+        let poly = await L.polyline(grouped[g].geometry, {color: '#DA1F32'}).addTo(map);
+        // push poly to top of map
+        poly.bringToFront();
+        passed.push(`${grouped[g].from}-${grouped[g].to}`);
+    }
+    while (true) {
+        try {
+            let vehicles = await fetch(`https://api.hzpp.prometko.si/ME/zcg/trips/active`).then(res => res.json()).then(res => res.data);
+            for (let vehicle of vehicles) {
+                try {
+                console.log(vehicle.train_data.train_id);
+                if (!zcgLayer[vehicle.train_data.train_id]) {
+                    zcgLayer[vehicle.train_data.train_id] = await L.marker([vehicle.coordinates.lat, vehicle.coordinates.lng]);
+                    zcgLayer[vehicle.train_data.train_id].addTo(zcgLayer);
+                } else {
+                    await zcgLayer[vehicle.train_data.train_id].setLatLng([vehicle.coordinates.lat, vehicle.coordinates.lng]);
+                }
+                let current_stop = await vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.current_stop_sequence);
+                let next_stop = await vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.next_stop_sequence);
+
+                zcgLayer[vehicle.train_data.train_id].setIcon(L.divIcon({
+                    iconSize: [80, 20],
+                    iconAnchor: [40, 10],
+                    popupAnchor: [0, 0],
+                    className: "icon",
+                    html: `<div class="zcgIcon"><b>${vehicle.train_data.train_number}</b></div>`
+                }))
+                .bindPopup(`<b>${vehicle.train_data.train_number}</b> ${vehicle.train_data.train_name}<br>
+                <b>Current stop:</b> ${current_stop.stop_name} (${current_stop.departure_time})<br>
+                <b>Next stop:</b> ${next_stop.stop_name} (${next_stop.arrival_time})
+                <hr class="no-padding no-margin">
+                This is static data, with no delay information.`);
+                } catch (e) {
+                    console.log(vehicle)
+                    console.log(e);
+                }
+            }
+            await delay(10000);
+        } catch (e) {
+            console.log(e);
+            await delay(5000);
+        }
+    }
+}
+
 main();
 
 mainSz();
+
+mainZcg();
 
 mainZs();
