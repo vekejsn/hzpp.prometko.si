@@ -1,23 +1,5 @@
 var map = L.map('mapid', { zoomControl: false }).setView([44.4110628,16.5184112], 8);
 let vehicleMarkers = {};
-var vehicleLayer = L.markerClusterGroup({
-    showCoverageOnHover: true,
-    removeOutsideVisibleBounds: true,
-    maxClusterRadius: 20,
-    spiderfyDistanceMultiplier: 3
-});
-var szLayer = L.markerClusterGroup({
-    showCoverageOnHover: true,
-    removeOutsideVisibleBounds: true,
-    maxClusterRadius: 20,
-    spiderfyDistanceMultiplier: 3
-});
-var zsLayer = L.markerClusterGroup({
-    showCoverageOnHover: true,
-    removeOutsideVisibleBounds: true,
-    maxClusterRadius: 20,
-    spiderfyDistanceMultiplier: 3
-});
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 19,
@@ -28,6 +10,25 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 var LAYER_CONTROL = L.control.layers().addTo(map);
+
+var vehicleLayer = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    removeOutsideVisibleBounds: true,
+    maxClusterRadius: 20,
+    spiderfyDistanceMultiplier: 3
+}).addTo(map);
+var szLayer = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    removeOutsideVisibleBounds: true,
+    maxClusterRadius: 20,
+    spiderfyDistanceMultiplier: 3
+}).addTo(map);
+var zsLayer = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    removeOutsideVisibleBounds: true,
+    maxClusterRadius: 20,
+    spiderfyDistanceMultiplier: 3
+}).addTo(map);
 
 LAYER_CONTROL.addOverlay(vehicleLayer, "HŽPP");
 LAYER_CONTROL.addOverlay(szLayer, "SŽ");
@@ -42,8 +43,6 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 let stops = [];
 
 async function main() {
-    mainSz();
-    mainZs();
     let data = await fetch('./data.json').then(res => res.json());
     stops = await fetch('./stops.json').then(res => res.json());
     for (let h of data) {
@@ -227,6 +226,9 @@ async function mainZs() {
                 } else {
                     await zsMarkers[vehicle.train_data.train_id].setLatLng([vehicle.coordinates.lat, vehicle.coordinates.lng]);
                 }
+                let current_stop = await vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.current_stop_sequence);
+                let next_stop = await vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.next_stop_sequence);
+
                 zsMarkers[vehicle.train_data.train_id].setIcon(L.divIcon({
                     iconSize: [80, 20],
                     iconAnchor: [40, 10],
@@ -235,8 +237,8 @@ async function mainZs() {
                     html: `<div class="zsIcon"><b>${vehicle.train_data.train_number}</b></div>${vehicle.train_cache.delay > 0 ? `<b class="delay">+${vehicle.train_cache.delay}min</b>` : ""}`
                 }))
                 .bindPopup(`<b>${vehicle.train_data.train_number}</b> ${vehicle.train_data.train_name}<br>
-                <b>Current stop:</b> ${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.current_stop_sequence).stop_name} (${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.current_stop_sequence).departure_time})<br>
-                <b>Next stop:</b> ${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.next_stop_sequence).stop_name} (${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.next_stop_sequence).arrival_time})<br>
+                <b>Current stop:</b> ${current_stop.stop_name} (${current_stop.departure_time} ${vehicle.train_cache.delay > 0 ? `<b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
+                <b>Next stop:</b> ${next_stop.stop_name} (${next_stop.arrival_time} ${vehicle.train_cache.delay > 0 ? `<b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
                 ${vehicle.train_cache && vehicle.train_cache.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.train_cache.delay}min</b>` : ""}
                 <hr class="no-padding no-margin">
                 <b>Vehicle composition:</b><br>${vehicle.train_cache ? vehicle.train_cache.composition : "Unknown"}<br>`);
