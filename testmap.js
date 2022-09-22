@@ -12,6 +12,12 @@ var szLayer = L.markerClusterGroup({
     maxClusterRadius: 20,
     spiderfyDistanceMultiplier: 3
 });
+var zsLayer = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    removeOutsideVisibleBounds: true,
+    maxClusterRadius: 20,
+    spiderfyDistanceMultiplier: 3
+});
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 19,
@@ -25,6 +31,7 @@ var LAYER_CONTROL = L.control.layers().addTo(map);
 
 LAYER_CONTROL.addOverlay(vehicleLayer, "HŽPP");
 LAYER_CONTROL.addOverlay(szLayer, "SŽ");
+LAYER_CONTROL.addOverlay(zsLayer, "ZŠ");
 
 L.control.zoom({
     position: 'topright'
@@ -36,6 +43,7 @@ let stops = [];
 
 async function main() {
     mainSz();
+    mainZs();
     let data = await fetch('./data.json').then(res => res.json());
     stops = await fetch('./stops.json').then(res => res.json());
     for (let h of data) {
@@ -57,7 +65,7 @@ async function main() {
     szLayer.addTo(map);
     while (true) {
         // fetch localhost:4242/trips/active
-        let vehicles = await fetch('https://api.hzpp.prometko.si/trips/active').then(res => res.json()).then(res => res.data);
+        let vehicles = await fetch('https://api.hzpp.prometko.si/HR/hz/trips/active').then(res => res.json()).then(res => res.data);
         let tempIds = [];
         for (let vehicle of vehicles) {
             let composition = "";
@@ -148,6 +156,7 @@ async function main() {
 const PROXY_URL = "https://cors.proxy.prometko.si/";
 
 let szMarkers = {}
+let zsMarkers = {}
 
 async function mainSz() {
     let grouped = await fetch(`./szdata.json`).then(r => r.json());
@@ -193,9 +202,59 @@ async function mainSz() {
     }
 }
 
+async function mainZs() {
+    // fetch https://api.hzpp.prometko.si/RS/zs/geometry/list
+    let grouped = await fetch(`https://api.hzpp.prometko.si/RS/zs/geometry/list`).then(r => r.json()).then(r => r.data);
+    let passed = [];
+    for (let g in grouped) {
+        // if we already have this combo of from and to, skip it
+        if (passed.includes(`${grouped[g].from}-${grouped[g].to}`) || passed.includes(`${grouped[g].to}-${grouped[g].from}`)) continue;
+        // make a polyline for each group
+        await L.polyline(grouped[g].geometry, {color: '#006DDD'}).addTo(map);
+        passed.push(`${grouped[g].from}-${grouped[g].to}`);
+    }
 
-mainSz();
-
+    zsLayer.addTo(map);
+    while (true) {
+        try {
+            let vehicles = await fetch(`https://api.hzpp.prometko.si/RS/zs/trips/active`).then(res => res.json()).then(res => res.data);
+            for (let vehicle of vehicles) {
+                try {
+                                    //console.log(vehicle);
+                if (!zsMarkers[vehicle.train_data.train_id]) {
+                    zsMarkers[vehicle.train_data.train_id] = await L.marker([vehicle.coordinates.lat, vehicle.coordinates.lng]);
+                    zsMarkers[vehicle.train_data.train_id].addTo(zsLayer);
+                } else {
+                    await zsMarkers[vehicle.train_data.train_id].setLatLng([vehicle.coordinates.lat, vehicle.coordinates.lng]);
+                }
+                zsMarkers[vehicle.train_data.train_id].setIcon(L.divIcon({
+                    iconSize: [80, 20],
+                    iconAnchor: [40, 10],
+                    popupAnchor: [0, 0],
+                    className: "icon",
+                    html: `<div class="zsIcon"><b>${vehicle.train_data.train_number}</b></div>${vehicle.train_cache.delay > 0 ? `<b class="delay">+${vehicle.train_cache.delay}min</b>` : ""}`
+                }))
+                .bindPopup(`<b>${vehicle.train_data.train_number}</b> ${vehicle.train_data.train_name}<br>
+                <b>Current stop:</b> ${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.current_stop_sequence).stop_name} (${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.current_stop_sequence).departure_time})<br>
+                <b>Next stop:</b> ${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.next_stop_sequence).stop_name} (${vehicle.train_data.train_times.find(t => t.stop_sequence == vehicle.train_data.next_stop_sequence).arrival_time})<br>
+                ${vehicle.train_cache && vehicle.train_cache.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.train_cache.delay}min</b>` : ""}
+                <hr class="no-padding no-margin">
+                <b>Vehicle composition:</b><br>${vehicle.train_cache ? vehicle.train_cache.composition : "Unknown"}<br>`);
+                } catch (e) {
+                    console.log(vehicle)
+                    console.log(e);
+                }
+            }
+            await delay(10000);
+        } catch (e) {
+            console.log(e);
+            await delay(5000);
+        }
+    }
+}
 
 main();
 
+mainSz();
+
+mainZs();
