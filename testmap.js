@@ -185,7 +185,7 @@ async function mainSz() {
             let vehicles = await fetch(`${PROXY_URL}https://mestnipromet.cyou/api/v1/resources/sz/locations`).then(res => res.json());
             for (let vehicle of vehicles.data) {
                 if (!szMarkers[vehicle.train_no]) {
-                    szMarkers[vehicle.train_no] = await L.marker([vehicle.latitude, vehicle.latitude]);
+                    szMarkers[vehicle.train_no] = await L.marker([vehicle.latitude, vehicle.longitude]);
                     szMarkers[vehicle.train_no].addTo(szLayer);
                 } else {
                     await szMarkers[vehicle.train_no].setLatLng([vehicle.latitude, vehicle.longitude]);
