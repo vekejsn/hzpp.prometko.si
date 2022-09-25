@@ -197,7 +197,7 @@ async function mainSz() {
                     className: "icon",
                     html: `<div class="szIcon"><b>${vehicle.train_no}</b></div>${vehicle.delay > 0 ? `<b class="delay">+${vehicle.delay}min</b>` : ""}`
                 }));
-                szMarkers[vehicle.train_no].bindPopup(`<b>${vehicle.train_type} ${vehicle.train_no}</b><br>
+                szMarkers[vehicle.train_no].bindPopup(`<b>${vehicle.train_type} ${vehicle.train_no}</b> ${vehicle.route}<br>
                 ${vehicle.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.delay}min</b>` : ""}<hr class="no-padding no-margin">
                 <b>Train unit:</b> ${vehicle.train_model.length > 0 ? vehicle.train_model : "Unknown"}<br>`);
             }
