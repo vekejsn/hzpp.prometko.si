@@ -1,13 +1,19 @@
 var map = L.map('mapid', { zoomControl: false }).setView([44.4110628,16.5184112], 8);
 let vehicleMarkers = {};
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    maxZoom: 19,
-    attribution: ``,
-    id: 'mapbox/light-v9',
-    tileSize: 512, detectRetina: true,
-    zoomOffset: -1
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+map.addControl(L.languageSelector({
+    languages: new Array(
+      L.langObject('en', 'English', 'https://flagcdn.com/16x12/gb.png'),
+      L.langObject('hr', 'Hrvatski', 'https://flagcdn.com/16x12/hr.png'),
+      L.langObject('sl', 'Slovenski', 'https://flagcdn.com/16x12/si.png'),
+    ),
+    callback: changeLanguage,
+    position: 'topleft',
+  }));
 
 var LAYER_CONTROL = L.control.layers().addTo(map);
 
@@ -37,6 +43,8 @@ var zcgLayer = L.markerClusterGroup({
     spiderfyDistanceMultiplier: 3
 }).addTo(map);
 
+var railwayLayer = L.layerGroup().addTo(map);
+
 LAYER_CONTROL.addOverlay(vehicleLayer, "HŽPP");
 LAYER_CONTROL.addOverlay(szLayer, "SŽ");
 LAYER_CONTROL.addOverlay(zsLayer, "ZŠ");
@@ -46,11 +54,45 @@ L.control.zoom({
     position: 'topright'
 }).addTo(map);
 
+L.control.locate({ position: `bottomright` }).addTo(map);
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 let stops = [];
+let vocabulary = {};
+let active_lang = {};
+
+function changeLanguage(selectedLanguage) {
+        active_lang = vocabulary[selectedLanguage];
+        console.log(active_lang);
+        document.cookie = `mapper_lang=${selectedLanguage}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+        // reload the page
+        location.reload();
+}
+
+async function getCookie(name) {
+    let value = "; " + document.cookie;
+    let parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
 
 async function main() {
+    vocabulary = await fetch('./vocabulary.json').then(res => res.json());
+    // read cookie for selected language
+    let lang = await getCookie("mapper_lang");
+    if (lang) {
+        active_lang = vocabulary[lang];
+    } else {
+        active_lang = vocabulary["hr"];
+        // write this cookie
+        document.cookie = `mapper_lang=hr; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+    }
+    mainSz();
+
+    mainZcg();
+
+    mainZs();
+
     let data = await fetch('./data.json').then(res => res.json());
     stops = await fetch('./stops.json').then(res => res.json());
     for (let h of data) {
@@ -63,7 +105,7 @@ async function main() {
                 };
             }
         }).bindTooltip(`${h.properties.name} - ${h.id}`)
-        .addTo(map);
+        .addTo(railwayLayer);
     }
     /*for (let stop of stops) {
         L.marker([stop.stop_lat, stop.stop_lon]).bindTooltip(`${stop.stop_name}`).addTo(map);
@@ -89,13 +131,12 @@ async function main() {
             if (vehicleMarkers[vehicle.trip_id]) {
                 vehicleMarkers[vehicle.trip_id].setLatLng([vehicle.train_lat, vehicle.train_lon]);
                 vehicleMarkers[vehicle.trip_id].setPopupContent(`<b>${vehicle.trip_short_name}</b> - ${vehicle.route.route_long_name}<br>
-                <b>Current stop:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.current_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.current_stop_index].departure_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})<br>
-                <b>Next stop:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.next_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.next_stop_index].arrival_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})
-                ${vehicle.delay ? `<br><b>Delay:</b> ${vehicle.delay ? `<b style="color:red">${vehicle.delay}min</b>` :""}` : ""}
+                <b>${active_lang.current_stop}:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.current_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.current_stop_index].departure_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})<br>
+                <b>${active_lang.next_stop}:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.next_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.next_stop_index].arrival_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})
+                ${vehicle.delay ? `<br><b>${active_lang.delay}:</b> ${vehicle.delay ? `<b style="color:red">${vehicle.delay}min</b>` :""}` : ""}
                 <hr class="no-padding no-margin">
-                <b>Vehicle composition:</b><br>
-                ${composition.length > 0 ? composition : "No composition data available."}<br>
-                `);
+                <b>${active_lang.composition}:</b><br>
+                ${composition.length > 0 ? composition : `${active_lang.no_composition}`}`, {className: "labelstyle"});
                 vehicleMarkers[vehicle.trip_id].setIcon(L.divIcon({
                     iconSize: [80, 20],
                     iconAnchor: [40, 10],
@@ -106,12 +147,12 @@ async function main() {
             } else {
             vehicleMarkers[vehicle.trip_id] = L.marker([vehicle.train_lat, vehicle.train_lon])
             .bindPopup(`<b>${vehicle.trip_short_name}</b> - ${vehicle.route.route_long_name}<br>
-            <b>Current stop:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.current_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.current_stop_index].departure_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})<br>
-            <b>Next stop:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.next_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.next_stop_index].arrival_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})
-            ${vehicle.delay ? `<br><b>Delay:</b> ${vehicle.delay ? `<b style="color:red">${vehicle.delay}min</b>` :""}` : ""}
+            <b>${active_lang.current_stop}:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.current_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.current_stop_index].departure_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})<br>
+            <b>${active_lang.next_stop}:</b> ${await stops.find(s => s.stop_id == vehicle.stop_times[vehicle.next_stop_index].stop_id).stop_name} (${vehicle.stop_times[vehicle.next_stop_index].arrival_time}${vehicle.delay ? ` <b>+${vehicle.delay}min</b>` : ``})
+            ${vehicle.delay ? `<br><b>${active_lang.delay}:</b> ${vehicle.delay ? `<b style="color:red">${vehicle.delay}min</b>` :""}` : ""}
             <hr class="no-padding no-margin">
-            <b>Vehicle composition:</b><br>
-            ${composition.length > 0 ? composition : "No composition data available."}<br>`).addTo(vehicleLayer);
+            <b>${active_lang.composition}:</b><br>
+            ${composition.length > 0 ? composition : `${active_lang.no_composition}`}`, {className: "labelstyle"}).addTo(vehicleLayer);
             vehicleMarkers[vehicle.trip_id].setIcon(L.divIcon({
                 iconSize: [80, 20],
                 iconAnchor: [40, 10],
@@ -170,7 +211,7 @@ async function mainSz() {
     let grouped = await fetch(`./szdata.json`).then(r => r.json());
     for (let g in grouped) {
         // make a polyline for each group
-        await L.polyline(grouped[g], {color: '#005B7D'}).addTo(map);
+        await L.polyline(grouped[g], {color: '#005B7D'}).addTo(railwayLayer);
     }
     // check if szLayer is visible
     if (map.hasLayer(szLayer)) {
@@ -195,11 +236,11 @@ async function mainSz() {
                     iconAnchor: [40, 10],
                     popupAnchor: [0, 0],
                     className: "icon",
-                    html: `<div class="szIcon"><b>${vehicle.train_no}</b></div>${vehicle.delay > 0 ? `<b class="delay">+${vehicle.delay}min</b>` : ""}`
+                    html: `<div class="szIcon"><b>${vehicle.train_type}${vehicle.train_no}</b></div>${vehicle.delay > 0 ? `<b class="delay">+${vehicle.delay}min</b>` : ""}`
                 }));
                 szMarkers[vehicle.train_no].bindPopup(`<b>${vehicle.train_type} ${vehicle.train_no}</b> ${vehicle.route}<br>
-                ${vehicle.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.delay}min</b>` : ""}<hr class="no-padding no-margin">
-                <b>Train unit:</b> ${vehicle.train_model.length > 0 ? vehicle.train_model : "Unknown"}<br>`);
+                ${vehicle.delay > 0 ? `<b>${active_lang.delay}: </b><b style="color:red">+${vehicle.delay}min</b>` : ""}<hr class="no-padding no-margin">
+                <b>${active_lang.unit}</b> ${vehicle.train_model.length > 0 ? vehicle.train_model : `${active_lang.unknown}`}`, {className: "labelstyle"});
             }
             // if layer_control doesnt have szLayer, add it
             await delay(10000);
@@ -218,7 +259,7 @@ async function mainZs() {
         // if we already have this combo of from and to, skip it
         if (passed.includes(`${grouped[g].from}-${grouped[g].to}`) || passed.includes(`${grouped[g].to}-${grouped[g].from}`)) continue;
         // make a polyline for each group
-        await L.polyline(grouped[g].geometry, {color: '#006DDD'}).addTo(map);
+        await L.polyline(grouped[g].geometry, {color: '#006DDD'}).addTo(railwayLayer);
         passed.push(`${grouped[g].from}-${grouped[g].to}`);
     }
 
@@ -246,11 +287,11 @@ async function mainZs() {
                     html: `<div class="zsIcon"><b>${vehicle.train_data.train_number}</b></div>${vehicle.train_cache.delay > 0 ? `<b class="delay">+${vehicle.train_cache.delay}min</b>` : ""}`
                 }))
                 .bindPopup(`<b>${vehicle.train_data.train_number}</b> ${vehicle.train_data.train_name}<br>
-                <b>Current stop:</b> ${current_stop.stop_name} (${current_stop.departure_time}${vehicle.train_cache.delay > 0 ? ` <b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
-                <b>Next stop:</b> ${next_stop.stop_name} (${next_stop.arrival_time}${vehicle.train_cache.delay > 0 ? ` <b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
-                ${vehicle.train_cache && vehicle.train_cache.delay > 0 ? `<b>Delay: </b><b style="color:red">+${vehicle.train_cache.delay}min</b>` : ""}
+                <b>${active_lang.current_stop}:</b> ${current_stop.stop_name} (${current_stop.departure_time}${vehicle.train_cache.delay > 0 ? ` <b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
+                <b>${active_lang.next_stop}:</b> ${next_stop.stop_name} (${next_stop.arrival_time}${vehicle.train_cache.delay > 0 ? ` <b>+${vehicle.train_cache.delay}min</b>` : ""})<br>
+                ${vehicle.train_cache && vehicle.train_cache.delay > 0 ? `<b>${active_lang.delay}: </b><b style="color:red">+${vehicle.train_cache.delay}min</b>` : ""}
                 <hr class="no-padding no-margin">
-                <b>Vehicle composition:</b><br>${vehicle.train_cache ? vehicle.train_cache.composition : "Unknown"}<br>`);
+                <b>${active_lang.composition}:</b><br>${vehicle.train_cache ? vehicle.train_cache.composition : `${active_lang.unknown}`}`, {className: "labelstyle"});
                 } catch (e) {
                     console.log(vehicle)
                     console.log(e);
@@ -272,8 +313,8 @@ async function mainZcg() {
         // if we already have this combo of from and to, skip it
         if (passed.includes(`${grouped[g].from}-${grouped[g].to}`) || passed.includes(`${grouped[g].to}-${grouped[g].from}`)) continue;
         // make a polyline for each group
-        let poly = await L.polyline(grouped[g].geometry, {color: '#DA1F32'}).addTo(map);
-        // push poly to top of map
+        let poly = await L.polyline(grouped[g].geometry, {color: '#DA1F32'}).addTo(railwayLayer);
+        // push poly to top of layer
         poly.bringToFront();
         passed.push(`${grouped[g].from}-${grouped[g].to}`);
     }
@@ -300,10 +341,10 @@ async function mainZcg() {
                     html: `<div class="zcgIcon"><b>${vehicle.train_data.train_number}</b></div>`
                 }))
                 .bindPopup(`<b>${vehicle.train_data.train_number}</b> ${vehicle.train_data.train_name}<br>
-                <b>Current stop:</b> ${current_stop.stop_name} (${current_stop.departure_time})<br>
-                <b>Next stop:</b> ${next_stop.stop_name} (${next_stop.arrival_time})
+                <b>${active_lang.current_stop}:</b> ${current_stop.stop_name} (${current_stop.departure_time})<br>
+                <b>${active_lang.next_stop}:</b> ${next_stop.stop_name} (${next_stop.arrival_time})
                 <hr class="no-padding no-margin">
-                This is static data, with no delay information.`);
+                ${active_lang.static_data}`, {className: "labelstyle"});
                 } catch (e) {
                     console.log(vehicle)
                     console.log(e);
@@ -318,9 +359,3 @@ async function mainZcg() {
 }
 
 main();
-
-mainSz();
-
-mainZcg();
-
-mainZs();

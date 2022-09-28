@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Promet.ba</title>
+    <title>Mapper</title>
     <meta name="description" content="">
     <meta name="author" content="TrackerkoProject">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <!--Internal stylesheets-->
     <!--External stylesheets    -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -38,84 +39,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <script type="text/javascript" src="MovingMarker.js"></script>
-    <style>
-        .icon {
-            display:flex;
-            flex-direction: row;
-            vertical-align: center;
-            align-items: center;
-            justify-content: center;
-
-        }
-        .zsIcon {
-            font-family: 'Raleway', sans-serif;
-            color: white !important;
-            border-radius: 6px;
-            background-color: #173963;
-            padding: .1rem;
-            margin: .1rem;
-            vertical-align: center;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            transition-duration: 2000ms;
-        }
-        .szIcon {
-            font-family: 'Raleway', sans-serif;
-            color: white !important;
-            border-radius: 6px;
-            background-color: #00AEEF;
-            padding: .1rem;
-            margin: .1rem;
-            vertical-align: center;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            transition-duration: 2000ms;
-        }
-        .szIcon-test {
-            font-family: 'Raleway', sans-serif;
-            color: white !important;
-            border-radius: 6px;
-            background-color: #2C549A;
-            padding: .1rem;
-            margin: .1rem;
-            vertical-align: center;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            transition-duration: 2000ms;
-        }
-        .zcgIcon {
-            font-family: 'Raleway', sans-serif;
-            color: white !important;
-            border-radius: 6px;
-            background-color: #CC991A;
-            padding: .1rem;
-            margin: .1rem;
-            vertical-align: center;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            transition-duration: 2000ms;
-        }
-        .delay {
-            font-family: 'Raleway', sans-serif;
-            background-color: #C31F2A !important;
-            color: white;
-            font-size: 0.6rem;
-            /* move the delay 15px to the left and add 15px to the right*/
-            padding: 0 5px 0 15px;
-            margin: 0 0 0 -15px;
-            border-radius: 0 6px 6px 0;
-            text-align: right;
-            z-index: 0;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
-        }
-        .no-padding {
-            padding: 0 !important;
-        }
-        .no-margin {
-            margin: 0 !important;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8">
+    </script>
+    <link rel="stylesheet" type="text/css" href="leaflet-languageselector.css" />
+    <script src="leaflet-languageselector.js"></script>
 </head>
 
 <body style="padding:0; margin:0">

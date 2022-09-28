@@ -1,0 +1,97 @@
+.icon {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.zsIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #173963;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.szIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #00AEEF;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.szIcon-test {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #2C549A;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.zcgIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #CC991A;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 3px grey;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.delay {
+    font-family: 'Raleway', sans-serif;
+    background-color: #C31F2A !important;
+    color: white;
+    font-size: 0.6rem;
+    padding: 0 5px 0 15px;
+    margin: 0 0 0 -15px;
+    border-radius: 0 6px 6px 0;
+    text-align: right;
+    z-index: 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+}
+
+.leaflet-control-layers-toggle {
+    font-family: 'Raleway', sans-serif;
+    transition-duration: 200ms;
+}
+
+.leaflet-control-layers {
+    font-family: 'Raleway', sans-serif;
+    transition-duration: 200ms;
+}
+
+.labelstyle {
+    font-family: 'Roboto Condensed', sans-serif;
+    transition-duration: 200ms;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
