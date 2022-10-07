@@ -80,7 +80,16 @@
     window.onload = async () => {
         let data = await fetch('https://api.hzpp.prometko.si/HR/hz/units/info').then(res => res.json()).then(res => res
             .data);
-        await data.sort((a, b) => a.uicNumber - b.uicNumber);
+        await data.sort((a, b) => {
+            // regex both into numbers, and check then
+            try {
+                let aNum = parseInt(a.kind.match(/\d+/g).join(''));
+                let bNum = parseInt(b.kind.match(/\d+/g).join(''));
+                return aNum - bNum;
+            } catch (e) {
+                return a.uicNumber - b.uicNumber;
+            }
+        });
         let info = document.getElementById('info');
         data.forEach((unit) => {
             let type = types.find(type => unit.kind.includes(type.type));
