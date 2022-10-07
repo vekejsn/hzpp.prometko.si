@@ -10,6 +10,7 @@ map.addControl(L.languageSelector({
       L.langObject('en', 'English', 'https://flagcdn.com/16x12/gb.png'),
       L.langObject('hr', 'Hrvatski', 'https://flagcdn.com/16x12/hr.png'),
       L.langObject('sl', 'Slovenski', 'https://flagcdn.com/16x12/si.png'),
+      L.langObject('hrArchive', 'Arhiv', '')
     ),
     callback: changeLanguage,
     position: 'topleft',
@@ -35,7 +36,6 @@ var zsLayer = L.markerClusterGroup({
     maxClusterRadius: 20,
     spiderfyDistanceMultiplier: 3
 }).addTo(map);
-
 var zcgLayer = L.markerClusterGroup({
     showCoverageOnHover: true,
     removeOutsideVisibleBounds: true,
@@ -62,7 +62,52 @@ let stops = [];
 let vocabulary = {};
 let active_lang = {};
 
+let types = [
+    {
+        type: "4111",
+        img: "4111-a"
+    },
+    {
+        type: "4121",
+        img: "4121-1-b-a"  
+    }, {
+       type: "5111",
+        img: "5111-a"  
+    }, {
+        type: "6111",
+        img: "6111-a"
+    }, {
+        type: "7121-0",
+        img: "7121-1-a-a"  
+    }, {
+        type: "7121-1",
+        img: "7121-1-a-a"  
+    }, {
+        type: "7122",
+        img: "7122-m-a"
+    }, {
+        type: "7123",
+        img: "7123"
+    }, {
+        type: "6112-1",
+        img: "6112-1-a"
+    }, {
+        type: "6112-0",
+        img: "6112-0-a"
+    }, {
+        type: "7023",
+        img: "7023-b"
+    }, {
+        type: "AUTOBUS",
+        img: "autobus"
+    }
+]
+
 function changeLanguage(selectedLanguage) {
+        if (selectedLanguage == 'hrArchive') {
+            location.href = "hzArchive.html";
+            return;
+        }
         active_lang = vocabulary[selectedLanguage];
         console.log(active_lang);
         document.cookie = `mapper_lang=${selectedLanguage}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
@@ -123,11 +168,35 @@ async function main() {
                     composition += `${c.kind} <small>(${c.uicNumber})</small><br>`;
                 }
             }
-            // make a stop list
-            let stops_str = "";
-            /*for (let st of vehicle.stop_times) {
-                stops_str += `${await stops.find(s => s.stop_id == st.stop_id).stop_name}<br>`;
-            }*/
+            let composition_img = "";
+            if (composition.length > 0) {
+                let unitCounter = {};
+                // if the composition includes classes 4111 and 5111, replace their positions, if 5111 is before 4111
+                if (vehicle.composition[0].kind.includes("5111") && vehicle.composition[2].kind.includes("4111")) {
+                    let temp = vehicle.composition[0];
+                    vehicle.composition[0] = vehicle.composition[2];
+                    vehicle.composition[2] = temp;
+                }
+
+                for (let component of vehicle.composition) {
+                    let type = types.find(t => component.kind.includes(t.type));
+                    if (type) {
+                        // if it's the 2nd in a row of the classes 7121-1 or 7123, flip the image to the other side
+                        // console.log('uc',vehicle.trip_short_name, unitCounter[type.type])
+                        if (unitCounter[type.type] && (unitCounter[type.type] + 1) % 2 == 0 && (type.type == "7121-1" || type.type == "7121-0" || type.type == "7123")) {
+                            // console.log('went in')
+                            composition_img += `<img src="./img/${type.img}.gif" style="height: 30px; transform: scaleX(-1);">`;
+                        } else if (false) {
+
+                        } else {
+                            composition_img += `<img src="./img/${type.img}.gif" style="height: 30px;">`;
+                        }
+                        unitCounter[type.type] = unitCounter[type.type] ? unitCounter[type.type] + 1 : 1;
+                    } else {
+                        composition_img += `<img src="./img/generic.gif" style="height: 30px;">`;
+                    }
+                }
+            }
             if (vehicleMarkers[vehicle.trip_id]) {
                 vehicleMarkers[vehicle.trip_id].setLatLng([vehicle.train_lat, vehicle.train_lon]);
                 vehicleMarkers[vehicle.trip_id].setPopupContent(`<b>${vehicle.trip_short_name}</b> - ${vehicle.route.route_long_name}<br>
@@ -136,7 +205,8 @@ async function main() {
                 ${vehicle.delay ? `<br><b>${active_lang.delay}:</b> ${vehicle.delay ? `<b style="color:red">${vehicle.delay}min</b>` :""}` : ""}
                 <hr class="no-padding no-margin">
                 <b>${active_lang.composition}:</b><br>
-                ${composition.length > 0 ? composition : `${active_lang.no_composition}`}`, {className: "labelstyle"});
+                ${composition.length > 0 ? composition : `${active_lang.no_composition}`}
+                ${composition_img.length > 0 ? `<div class="popup-train-img">${composition_img}</div>` : ""}`, {className: "labelstyle"});
                 vehicleMarkers[vehicle.trip_id].setIcon(L.divIcon({
                     iconSize: [80, 20],
                     iconAnchor: [40, 10],
@@ -152,7 +222,8 @@ async function main() {
             ${vehicle.delay ? `<br><b>${active_lang.delay}:</b> ${vehicle.delay ? `<b style="color:red">${vehicle.delay}min</b>` :""}` : ""}
             <hr class="no-padding no-margin">
             <b>${active_lang.composition}:</b><br>
-            ${composition.length > 0 ? composition : `${active_lang.no_composition}`}`, {className: "labelstyle"}).addTo(vehicleLayer);
+            ${composition.length > 0 ? composition : `${active_lang.no_composition}`}
+            ${composition_img.length > 0 ? `<div class="popup-train-img">${composition_img}</div>` : ""}`, {className: "labelstyle"}).addTo(vehicleLayer);
             vehicleMarkers[vehicle.trip_id].setIcon(L.divIcon({
                 iconSize: [80, 20],
                 iconAnchor: [40, 10],

@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mapper | HR Arhiv</title>
+    <meta name="description" content="">
+    <meta name="author" content="TrackerkoProject">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body style="padding:0; margin:0">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0093D0;">
+        <div class="container-fluid">
+            <button class="btn btn-info" onclick="location.href='index.html'" style="color:white"><i
+                    class="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
+            <a class="navbar-brand" href="index.html"><i class="bi bi-map-fill"></i> Mapper | <b>HŽ arhiv</b></a>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <div id="info">
+            <!--div class="vehicle">
+                <img src="./img/6112-1-a.gif" alt="6112-1-a" class="vehicle-img">
+                <div class="vehicle-data">
+                    <text><b>UIC</b> <span class="info-span">957870230027</span> <b>Tip</b> <span class="info-span">7023-002</span><br>
+                    <b>Vlak</b> <span class="info-span">783 Split - Osijek</span> ⟷ <b>Otpremni kolodvor</b> <span class="info-span">ZAGREB GLAVNI KOLOD</span> - <b>Uputni kolodvor</b> <span class="info-span">OSIJEK</span><br>
+                    <b>Zabilježen</b> <span class="info-span">10:53:33, 28.9.2022.</span>
+                    </text>
+                </div>
+            </div-->
+        </div>
+    </div>
+</body>
+<script>
+    let types = [{
+            type: "4111",
+            img: "4111-a"
+        }, {
+            type: "4121",
+            img: "4121-1-b-a"
+        }, {
+            type: "5111",
+            img: "5111-a"
+        }, {
+            type: "6111",
+            img: "6111-a"
+        }, {
+            type: "7121",
+            img: "7121-1-a-a"
+        }, {
+            type: "7122",
+            img: "7122-m-a"
+        }, {
+            type: "7123",
+            img: "7123"
+        }, {
+            type: "6112-1",
+            img: "6112-1-a"
+        }, {
+            type: "6112-0",
+            img: "6112-0-a"
+        }, {
+            type: "7023",
+            img: "7023-b"
+        }
+    ]
+    window.onload = async () => {
+        let data = await fetch('https://api.hzpp.prometko.si/HR/hz/units/info').then(res => res.json()).then(res => res
+            .data);
+        await data.sort((a, b) => a.uicNumber - b.uicNumber);
+        let info = document.getElementById('info');
+        data.forEach((unit) => {
+            let type = types.find(type => unit.kind.includes(type.type));
+            console.log(type)
+            let vehicle = document.createElement('div');
+            vehicle.classList.add('vehicle');
+            let img = document.createElement('img');
+            img.src = `./img/${type != null ? type.img : "generic"}.gif`;
+            img.alt = unit.uic;
+            img.classList.add('vehicle-img');
+            let vehicleData = document.createElement('div');
+            vehicleData.classList.add('vehicle-data');
+            let text = document.createElement('text');
+            text.innerHTML =
+                `<b>UIC</b> <span class="info-span">${unit.uicNumber}</span> <b>Tip</b> <span class="info-span">${unit.kind}</span><br>
+            <b>Vlak</b> <span class="info-span">${unit.trainNumber} ${unit.trainRoute}</span> ⟷ <b>Otpremni kolodvor</b> <span class="info-span">${unit.origin}</span> - <b>Uputni kolodvor</b> <span class="info-span">${unit.destination}</span><br>
+            <b>Zabilježen</b> <span class="info-span">${new Date(unit.timestamp * 1000).toLocaleString('hr-HR')}</span>`;
+            vehicleData.appendChild(text);
+            vehicle.appendChild(img);
+            vehicle.appendChild(vehicleData);
+            info.appendChild(vehicle);
+        });
+    }
+</script>
+
+</html>

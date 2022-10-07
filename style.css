@@ -95,3 +95,40 @@
 .no-margin {
     margin: 0 !important;
 }
+
+.vehicle-img {
+    padding-left:.5rem;
+    max-width: 80vw;
+    max-height:2.5rem;
+    width: auto;
+}
+
+.vehicle-data {
+    border: 1px solid #4CABCE;
+    background-color: #9CC0CE;
+    color: white;
+    border-radius: 6px;
+    padding: .5rem;
+    box-shadow: inset 0 0 2px darkgrey;
+}
+
+.info-span {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 0 5px;
+    border-radius: 6px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.popup-train-img {
+    display:flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .vehicle-data {
+        font-size: 0.8rem;
+    }
+}
