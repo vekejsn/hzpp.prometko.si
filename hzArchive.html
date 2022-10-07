@@ -45,41 +45,10 @@
     </div>
 </body>
 <script>
-    let types = [{
-            type: "4111",
-            img: "4111-a"
-        }, {
-            type: "4121",
-            img: "4121-1-b-a"
-        }, {
-            type: "5111",
-            img: "5111-a"
-        }, {
-            type: "6111",
-            img: "6111-a"
-        }, {
-            type: "7121",
-            img: "7121-1-a-a"
-        }, {
-            type: "7122",
-            img: "7122-m-a"
-        }, {
-            type: "7123",
-            img: "7123"
-        }, {
-            type: "6112-1",
-            img: "6112-1-a"
-        }, {
-            type: "6112-0",
-            img: "6112-0-a"
-        }, {
-            type: "7023",
-            img: "7023-b"
-        }
-    ]
     window.onload = async () => {
         let data = await fetch('https://api.hzpp.prometko.si/HR/hz/units/info').then(res => res.json()).then(res => res
             .data);
+        let types = await fetch('types.json').then(res => res.json());
         await data.sort((a, b) => {
             // regex both into numbers, and check then
             try {

@@ -62,47 +62,6 @@ let stops = [];
 let vocabulary = {};
 let active_lang = {};
 
-let types = [
-    {
-        type: "4111",
-        img: "4111-a"
-    },
-    {
-        type: "4121",
-        img: "4121-1-b-a"  
-    }, {
-       type: "5111",
-        img: "5111-a"  
-    }, {
-        type: "6111",
-        img: "6111-a"
-    }, {
-        type: "7121-0",
-        img: "7121-1-a-a"  
-    }, {
-        type: "7121-1",
-        img: "7121-1-a-a"  
-    }, {
-        type: "7122",
-        img: "7122-m-a"
-    }, {
-        type: "7123",
-        img: "7123"
-    }, {
-        type: "6112-1",
-        img: "6112-1-a"
-    }, {
-        type: "6112-0",
-        img: "6112-0-a"
-    }, {
-        type: "7023",
-        img: "7023-b"
-    }, {
-        type: "AUTOBUS",
-        img: "autobus"
-    }
-]
-
 function changeLanguage(selectedLanguage) {
         if (selectedLanguage == 'hrArchive') {
             location.href = "hzArchive.html";
@@ -123,6 +82,7 @@ async function getCookie(name) {
 
 async function main() {
     vocabulary = await fetch('./vocabulary.json').then(res => res.json());
+    let types = await fetch('types.json').then(res => res.json());
     // read cookie for selected language
     let lang = await getCookie("mapper_lang");
     if (lang) {
@@ -183,7 +143,7 @@ async function main() {
                     if (type) {
                         // if it's the 2nd in a row of the classes 7121-1 or 7123, flip the image to the other side
                         // console.log('uc',vehicle.trip_short_name, unitCounter[type.type])
-                        if (unitCounter[type.type] && (unitCounter[type.type] + 1) % 2 == 0 && (type.type == "7121-1" || type.type == "7121-0" || type.type == "7123")) {
+                        if (unitCounter[type.type] && (unitCounter[type.type] + 1) % 2 == 0 && (type.type == "7121" || type.type == "7123")) {
                             // console.log('went in')
                             composition_img += `<img src="./img/${type.img}.gif" style="height: 30px; transform: scaleX(-1);">`;
                         } else if (false) {
