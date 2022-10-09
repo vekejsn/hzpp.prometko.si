@@ -132,13 +132,14 @@ async function main() {
             if (composition.length > 0) {
                 let unitCounter = {};
                 // if the composition includes classes 4111 and 5111, replace their positions, if 5111 is before 4111
-                if (vehicle.composition[0].kind.includes("5111") && vehicle.composition[2].kind.includes("4111")) {
-                    let temp = vehicle.composition[0];
-                    vehicle.composition[0] = vehicle.composition[2];
-                    vehicle.composition[2] = temp;
-                }
 
-                for (let component of vehicle.composition) {
+                for (let i = 0; i < vehicle.composition.length; i++) {
+                    if (vehicle.composition[i+2] != null && (vehicle.composition[i].kind.includes("5111") && vehicle.composition[i+2].kind.includes("4111"))) {
+                        let temp = vehicle.composition[i];
+                        vehicle.composition[i] = vehicle.composition[i+2];
+                        vehicle.composition[i+2] = temp;
+                    }
+                    let component = vehicle.composition[i];
                     let type = types.find(t => component.kind.includes(t.type));
                     if (type) {
                         // if it's the 2nd in a row of the classes 7121-1 or 7123, flip the image to the other side
