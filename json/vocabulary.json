@@ -7,7 +7,10 @@
         "unit": "Train unit",
         "no_composition": "No composition data available.",
         "static_data": "This is static data, with no delay information.",
-        "unknown": "Unknown"
+        "unknown": "Unknown",
+        "schedule": "Schedule",
+        "operator": "Operator",
+        "in_stop": "in stop"
     },
     "sl": {
         "current_stop": "Trenutna postaja",
@@ -17,7 +20,10 @@
         "unit": "Vlak",
         "no_composition": "Ni podatkov o sestavi vlaka.",
         "static_data": "To so statični podatki, brez podatkov o zamujanju.",
-        "unknown": "Neznano"
+        "unknown": "Neznano",
+        "schedule": "Vozni red",
+        "operator": "Operater",
+        "in_stop": "na postaji"
     },
     "hr": {
         "current_stop": "Trenutna stanica",
@@ -27,7 +33,10 @@
         "unit": "Vlak",
         "no_composition": "Nema podataka o sastavu vlaka.",
         "static_data": "Ovo su statični podaci, bez podataka o kašnjenju.",
-        "unknown": "Nepoznato"
+        "unknown": "Nepoznato",
+        "schedule": "Vozni red",
+        "operator": "Operater",
+        "in_stop": "na postaji"
     },
     "bs": {
         "current_stop": "Trenutna stanica",
@@ -37,6 +46,9 @@
         "unit": "Voz",
         "no_composition": "Nema podataka o sastavu voza.",
         "static_data": "Ovo su statični podaci, bez podataka o kašnjenju.",
-        "unknown": "Nepoznato"
+        "unknown": "Nepoznato",
+        "schedule": "Red vožnje",
+        "operator": "Operater",
+        "in_stop": "na stanici"
     }
 }

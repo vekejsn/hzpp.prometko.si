@@ -127,6 +127,47 @@
     overflow-y: auto;
 }
 
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+span.delayText {
+    font-weight: bold;
+    color: red;
+}
+
+.sidebar {
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+.composition {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-bottom: 1px solid grey;
+    justify-content: left;
+    align-items: center;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    padding-top:0px;
+    border-top: 1px solid lightgrey;
+}
+
+.composition::-webkit-scrollbar {
+    display: none;
+  }
+
 @media screen and (max-width: 600px) {
     .vehicle-data {
         font-size: 0.8rem;

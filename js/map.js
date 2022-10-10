@@ -1,9 +1,11 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 var map = {};
+var VOCABULARY = {};
+var SIDEBAR = {};
+var ACTIVE_VOCABULARY = {};
 
 window.onload = async () => {
-    await delay(1000);
     let height = await $(document).height();
     await $('#map').height(height);
 
@@ -89,10 +91,28 @@ window.onload = async () => {
         );
 
     }); // end: load
+    // get vocabulary
+    VOCABULARY = await fetch('json/vocabulary.json').then(response => response.json());
+    ACTIVE_VOCABULARY = VOCABULARY.hr;
 
+    SIDEBAR = new SidebarJS.SidebarElement({
+        position: 'left',
+        open: true,
+        backdropOpacity: 0,
+        maxWidth: 400,
+        backdrop: false,
+        nativeSwipe: false,
+        scrollable: true,
+        onClose: () => {
+            document.querySelector('[sidebarjs-container]').innerHTML = '';
+        }
+    });
 
-    fetchLppMarkers();
+    hz();
+    zs();
 }
+
+
 
 // when window changes size
 $(window).resize(function () {
