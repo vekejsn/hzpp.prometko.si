@@ -134,10 +134,16 @@ async function main() {
                 // if the composition includes classes 4111 and 5111, replace their positions, if 5111 is before 4111
 
                 for (let i = 0; i < vehicle.composition.length; i++) {
-                    if (vehicle.composition[i+2] != null && (vehicle.composition[i].kind.includes("5111") && vehicle.composition[i+2].kind.includes("4111"))) {
+                    if (vehicle.composition[i+2] != null    && (vehicle.composition[i].kind.includes("5111") && vehicle.composition[i+2].kind.includes("4111"))) {
                         let temp = vehicle.composition[i];
                         vehicle.composition[i] = vehicle.composition[i+2];
                         vehicle.composition[i+2] = temp;
+                    }
+                    // if 4121 is ahead of 7121, replace their positions
+                    if (vehicle.composition[i+1] != null    && (vehicle.composition[i].kind.includes("4121") && vehicle.composition[i+1].kind.includes("7121"))) {
+                        let temp = vehicle.composition[i];
+                        vehicle.composition[i] = vehicle.composition[i+1];
+                        vehicle.composition[i+1] = temp;
                     }
                     let component = vehicle.composition[i];
                     let type = types.find(t => component.kind.includes(t.type));
