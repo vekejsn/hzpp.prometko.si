@@ -54,11 +54,11 @@ async function hz() {
                             let row = document.createElement('tr');
                             let td1 = document.createElement('td');
                             let td2 = document.createElement('td');
-                            let arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
+                            let arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'h:mm:ss').setZone('Europe/Ljubljana');
                             if (marker.data.delay > 0 && i > marker.data.current_stop_index) {
                                 arrival_time = arrival_time.plus({ minutes: marker.data.delay });
                             }
-                            let departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
+                            let departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'h:mm:ss').setZone('Europe/Ljubljana');
                             if (marker.data.delay > 0 && i > marker.data.current_stop_index) {
                                 departure_time = departure_time.plus({ minutes: marker.data.delay });
                             }
@@ -72,7 +72,7 @@ async function hz() {
                                 row.style.color = '#aaaaaa';
                             }
                             row.style.fontSize = 'smaller';
-                            // convert to HH:mm format both arrival and departure time
+                            // convert to h:mm format both arrival and departure time
                             arrival_time = arrival_time.toFormat('HH:mm');
                             departure_time = departure_time.toFormat('HH:mm');
                             td1.innerHTML = `${i != 0 ? `<i class="bi bi-box-arrow-in-right"></i> ${marker.data.delay > 0 && i > marker.data.current_stop_index ? `<span class="delayText">${arrival_time}</span>` : arrival_time}<br>` : ''}
