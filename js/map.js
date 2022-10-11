@@ -110,6 +110,7 @@ window.onload = async () => {
 
     hz();
     zs();
+    zcg();
 }
 
 
