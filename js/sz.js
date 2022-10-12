@@ -100,6 +100,7 @@ async function sz() {
                         for (let info of marker.data.train_cache.composition) {
                             compositionText += `${ACTIVE_VOCABULARY.source}: <img src="img/logos/${sourceLogos[info.source]}" style="height:1rem"/></span> <small>(${new Date(info.timestamp).toLocaleString('hr-HR')})</small><hr class="no-padding no-margin">`;
                             let imgs = "";
+                            if (info.source == 'HŽPP') info.composition = info.composition.reverse();
                             for (let composition of info.composition) {
                                 compositionText += `${composition.kind} ${composition.uicNumber ? `<small>(${composition.uicNumber})</small>`: ""}<br>`;
                                 if (info.source == 'SŽ') {
