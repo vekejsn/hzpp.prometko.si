@@ -62,7 +62,7 @@ async function sz() {
                             if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
                                 arrival_time = arrival_time.plus({ minutes: marker.data.train_cache.delay });
                             }
-                            arrival_time_copy.plus({ minutes: marker.data.train_cache.delay });
+                            arrival_time_copy = arrival_time_copy.plus({ minutes: marker.data.train_cache.delay });
                             let departure_time = 0;
                             if (stopTime.departure_time) {
                                 departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
@@ -73,22 +73,25 @@ async function sz() {
                             if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
                                 departure_time = departure_time.plus({ minutes: marker.data.train_cache.delay });
                             }
-                            departure_time_copy.plus({ minutes: marker.data.train_cache.delay });
+                            departure_time_copy = departure_time_copy.plus({ minutes: marker.data.train_cache.delay });
                             let is_in_stop = false;
                             if (new Date() >= arrival_time_copy.toJSDate() && new Date() <= departure_time_copy.toJSDate()) {
                                 row.style.backgroundColor = '#0B3968';
                                 row.style.color = '#fff';
                                 is_in_stop = true;
+                                arrival_time = arrival_time_copy;
+                                departure_time = departure_time_copy;
                             }
-                            if (new Date() > departure_time.toJSDate()) {
+                            console.log(stopTime.stop_sequence, marker.data.train_data.current_stop_sequence, stopTime.stop_name);
+                            if (new Date() > departure_time_copy.toJSDate()) {
                                 row.style.color = '#aaaaaa';
                             }
                             row.style.fontSize = 'smaller';
                             // convert to HH:mm format both arrival and departure time
                             arrival_time = arrival_time.toFormat('HH:mm');
                             departure_time = departure_time.toFormat('HH:mm');
-                            td1.innerHTML = `${i != 0 ? `<i class="bi bi-box-arrow-in-right"></i> ${marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence ? `<span class="delayText">${arrival_time}</span>` : arrival_time}<br>` : ''}
-                                         ${i != marker.data.train_data.train_times.length - 1 ? `<i class="bi bi-box-arrow-left"></i> ${marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence ? `<span class="delayText">${departure_time}</span>` : departure_time}` : ''}`
+                            td1.innerHTML = `${i != 0 ? `<i class="bi bi-box-arrow-in-right"></i> ${marker.data.train_cache.delay > 0 && (stopTime.stop_sequence > marker.data.train_data.current_stop_sequence || (is_in_stop && stopTime.stop_sequence >= marker.data.train_data.current_stop_sequence)) ? `<span class="delayText">${arrival_time}</span>` : arrival_time}<br>` : ''}
+                                         ${i != marker.data.train_data.train_times.length - 1 ? `<i class="bi bi-box-arrow-left"></i> ${marker.data.train_cache.delay > 0 && (stopTime.stop_sequence > marker.data.train_data.current_stop_sequence || (is_in_stop && stopTime.stop_sequence >= marker.data.train_data.current_stop_sequence)) ? `<span class="delayText">${departure_time}</span>` : departure_time}` : ''}`
                             td2.innerHTML = `${stopTime.stop_name} ${is_in_stop ? `<br><small>(${ACTIVE_VOCABULARY.in_stop})</small>` : ""}`;
                             row.appendChild(td1);
                             row.appendChild(td2);

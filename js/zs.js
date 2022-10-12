@@ -69,6 +69,8 @@ async function zs() {
                                 row.style.backgroundColor = '#0B3968';
                                 row.style.color = '#fff';
                                 is_in_stop = true;
+                                arrival_time = arrival_time_copy;
+                                departure_time = departure_time_copy;
                             }
                             if (new Date() > departure_time.toJSDate()) {
                                 row.style.color = '#aaaaaa';

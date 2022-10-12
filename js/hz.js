@@ -59,18 +59,20 @@ async function hz() {
                             if (marker.data.delay > 0 && i > marker.data.current_stop_index) {
                                 arrival_time = arrival_time.plus({ minutes: marker.data.delay });
                             }
-                            arrival_time_copy.plus({ minutes: marker.data.delay });
+                            arrival_time_copy = arrival_time_copy.plus({ minutes: marker.data.delay });
                             let departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'h:mm:ss').setZone('Europe/Ljubljana');
                             let departure_time_copy = departure_time;
                             if (marker.data.delay > 0 && i > marker.data.current_stop_index) {
                                 departure_time = departure_time.plus({ minutes: marker.data.delay });
                             }
-                            departure_time_copy.plus({ minutes: marker.data.delay });
+                            departure_time_copy = departure_time_copy.plus({ minutes: marker.data.delay });
                             let is_in_stop = false;
                             if (new Date() > arrival_time_copy.toJSDate() && new Date() < departure_time_copy.toJSDate()) {
                                 row.style.backgroundColor = '#0B3968';
                                 row.style.color = '#fff';
                                 is_in_stop = true;
+                                arrival_time = arrival_time_copy;
+                                departure_time = departure_time_copy;
                             }
                             if (new Date() > departure_time.toJSDate()) {
                                 row.style.color = '#aaaaaa';
