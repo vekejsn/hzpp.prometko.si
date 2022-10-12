@@ -30,11 +30,11 @@ async function sz() {
                 if (!marker) {
                     marker = new maplibregl.Marker({
                         color: '#ff0000',
-                        element: await returnszMarker(vehicle.train_data.train_number, vehicle.train_cache.delay)
+                        element: await returnszMarker(vehicle.train_data.train_type + vehicle.train_data.train_number, vehicle.train_cache.delay)
                     });
                     szMarkers.push(marker);
                 } else {
-                    let k = await returnszMarker(vehicle.train_data.train_number, vehicle.train_cache.delay);
+                    let k = await returnszMarker(vehicle.train_data.train_type + vehicle.train_data.train_number, vehicle.train_cache.delay);
                     marker.getElement().innerHTML = k.innerHTML;
                 }
                 marker.id = vehicle.train_data.train_id;
@@ -58,21 +58,24 @@ async function sz() {
                             } else {
                                 arrival_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
                             }
+                            let arrival_time_copy = arrival_time;
                             if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
                                 arrival_time = arrival_time.plus({ minutes: marker.data.train_cache.delay });
                             }
+                            arrival_time_copy.plus({ minutes: marker.data.train_cache.delay });
                             let departure_time = 0;
                             if (stopTime.departure_time) {
                                 departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
                             } else {
                                 departure_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
                             }
-                             
+                            let departure_time_copy = departure_time;
                             if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
                                 departure_time = departure_time.plus({ minutes: marker.data.train_cache.delay });
                             }
+                            departure_time_copy.plus({ minutes: marker.data.train_cache.delay });
                             let is_in_stop = false;
-                            if (new Date() > arrival_time.toJSDate() && new Date() < departure_time.toJSDate()) {
+                            if (new Date() >= arrival_time_copy.toJSDate() && new Date() <= departure_time_copy.toJSDate()) {
                                 row.style.backgroundColor = '#0B3968';
                                 row.style.color = '#fff';
                                 is_in_stop = true;
@@ -114,7 +117,7 @@ async function sz() {
                         let sidebar = document.querySelector('[sidebarjs-container]');
                         sidebar.innerHTML = `<div class="card" style="border-radius:0; border: 0px solid white;" id="sidebar-sz-${marker.data.train_data.train_number}">
                         <div class="card-header bg-warning" style="display:flex; flex-direction:column; border-radius:0; border: 0px solid white; background-color:#004B87 !important; color:white;">
-                            <h5 class="card-title">${marker.data.train_data.train_number}</h5>
+                            <h5 class="card-title">${marker.data.train_data.train_type} ${marker.data.train_data.train_number}</h5>
                             <span>${marker.data.train_data.train_name}</span>
                             </div>
                             <div class="card-body">
