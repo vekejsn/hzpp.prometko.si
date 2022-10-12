@@ -107,10 +107,31 @@ window.onload = async () => {
             document.querySelector('[sidebarjs-container]').innerHTML = '';
         }
     });
-
+    // check if we have a cookie called 'new_mapper_language_preference'
+    let cookie = document.cookie.split(';').find(row => row.trim().startsWith('new_mapper_language_preference='));
+    if (cookie) {
+        let language = cookie.split('=')[1];
+        if (language in VOCABULARY) {
+            ACTIVE_VOCABULARY = VOCABULARY[language];
+        }
+    } else {
+        // prompt user to choose language
+        let languages = Object.keys(VOCABULARY);
+        let language = prompt(`Please choose your language: ${languages.join(', ')}`);
+        while (true) {
+            if (language in VOCABULARY) {
+                ACTIVE_VOCABULARY = VOCABULARY[language];
+                document.cookie = `new_mapper_language_preference=${language}`;
+                break;
+            } else {
+                language = prompt(`Please choose your language: ${languages.join(', ')}`);
+            }
+        }
+    }
     hz();
     zs();
     zcg();
+    sz();
 }
 
 

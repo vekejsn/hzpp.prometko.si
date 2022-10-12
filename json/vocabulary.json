@@ -10,7 +10,8 @@
         "unknown": "Unknown",
         "schedule": "Schedule",
         "operator": "Operator",
-        "in_stop": "in stop"
+        "in_stop": "in stop",
+        "source": "Source"
     },
     "sl": {
         "current_stop": "Trenutna postaja",
@@ -23,7 +24,8 @@
         "unknown": "Neznano",
         "schedule": "Vozni red",
         "operator": "Operater",
-        "in_stop": "na postaji"
+        "in_stop": "na postaji",
+        "source": "Vir"
     },
     "hr": {
         "current_stop": "Trenutna stanica",
@@ -36,7 +38,8 @@
         "unknown": "Nepoznato",
         "schedule": "Vozni red",
         "operator": "Operater",
-        "in_stop": "na postaji"
+        "in_stop": "na postaji",
+        "source": "Izvor"
     },
     "bs": {
         "current_stop": "Trenutna stanica",
@@ -49,6 +52,7 @@
         "unknown": "Nepoznato",
         "schedule": "Red vožnje",
         "operator": "Operater",
-        "in_stop": "na stanici"
+        "in_stop": "na stanici",
+        "source": "Izvor"
     }
 }

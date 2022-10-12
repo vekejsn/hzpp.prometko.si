@@ -150,6 +150,14 @@ span.delayText {
     display: none;
   }
 
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 4000000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .composition {
     display: flex;
     flex-direction: row;
