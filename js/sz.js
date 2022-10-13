@@ -26,7 +26,7 @@ async function sz() {
             let vehicles = await fetch('https://api.hzpp.prometko.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
             console.log(vehicles);
             vehicles.forEach(async vehicle => {
-                let marker = szMarkers.find(m => m.id == vehicle.train_data.train_id);
+                let marker = await szMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {
                     marker = new maplibregl.Marker({
                         color: '#ff0000',
@@ -37,7 +37,11 @@ async function sz() {
                     let k = await returnszMarker(vehicle.train_data.train_type + vehicle.train_data.train_number, vehicle.train_cache.delay);
                     marker.getElement().innerHTML = k.innerHTML;
                 }
+                
                 marker.id = vehicle.train_data.train_id;
+                if (vehicle.train_cache.composition.find(x => x.source == 'HŽPP')) {
+                    vehicle.train_cache.composition.find(x => x.source == 'HŽPP').composition = vehicle.train_cache.composition.find(x => x.source == 'HŽPP').composition.reverse()
+                }
                 marker.data = vehicle;
                 marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
                 marker.addTo(map);
@@ -106,7 +110,6 @@ async function sz() {
                         for (let info of marker.data.train_cache.composition) {
                             compositionText += `${ACTIVE_VOCABULARY.source}: <img src="img/logos/${sourceLogos[info.source]}" style="height:1rem"/></span> <small>(${new Date(info.timestamp).toLocaleString('hr-HR')})</small><hr class="no-padding no-margin">`;
                             let imgs = "";
-                            if (info.source == 'HŽPP') info.composition = info.composition.reverse();
                             for (let composition of info.composition) {
                                 compositionText += `${composition.kind} ${composition.uicNumber ? `<small>(${composition.uicNumber})</small>`: ""}<br>`;
                                 if (info.source == 'SŽ') {
