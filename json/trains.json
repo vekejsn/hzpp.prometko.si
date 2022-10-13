@@ -1,0 +1,3771 @@
+[{
+    "kind": "A149",
+    "uic": "51541941",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/A-n-a.gif"
+}, {
+    "kind": "AB349",
+    "uic": "51543941",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/AB-n2-a.gif"
+}, {
+    "kind": "B249",
+    "uic": "51542041",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/B-n-a.gif"
+}, {
+    "kind": "BDs449",
+    "uic": "51548240",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/BDs-n-a.gif"
+}, {
+    "kind": "Bdt279",
+    "uic": "50542108",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdt279-n-a.gif"
+}, {
+    "kind": "Bdt280",
+    "uic": "50542108",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdt-n-a.gif"
+}, {
+    "kind": "Bee272",
+    "uic": "50542038",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bee272-n2-a.gif"
+}, {
+    "kind": "Aee152",
+    "uic": "50541938",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Aee152-n2-a.gif"
+}, {
+    "kind": "BDs450",
+    "uic": "50548240",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/BDs-n-a.gif"
+}, {
+    "kind": "Ds952",
+    "uic": "50549540",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Ds-n-a.gif"
+}, {
+    "kind": "Bee273",
+    "uic": "50542038",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bee273-n2-a.gif"
+}, {
+    "kind": "Aee145",
+    "uic": "61541951",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Aee152-n2-a.gif"
+}, {
+    "kind": "Bee243",
+    "uic": "51542041",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/B-n2-a.gif"
+}, {
+    "kind": "BDsee454",
+    "uic": "50548246",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/BDs-n2-a.gif"
+}, {
+    "kind": "Bd264",
+    "uic": "50542941",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bd264-n2-a.gif"
+}, {
+    "kind": "B209",
+    "uic": "50542941",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/B251-n2-a.gif"
+}, {
+    "kind": "Aee140",
+    "uic": "61541970",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Aee140-n2-a.gif"
+}, {
+    "kind": "Aee140",
+    "uic": "61541970",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Aee140-n2-a.gif"
+}, {
+    "kind": "Apee139",
+    "uic": "61541070",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Apee139-n2-a.gif"
+}, {
+    "kind": "Bee238",
+    "uic": "61542070",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bee238-a.gif"
+}, {
+    "kind": "Bee238",
+    "uic": "61542070",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bee238-n2-a.gif"
+}, {
+    "kind": "Bpee237",
+    "uic": "61542070",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bpee237-n2-a.gif"
+}, {
+    "kind": "Bpee237",
+    "uic": "61542070",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bpee237-n2-a.gif"
+}, {
+    "kind": "Btee285",
+    "uic": "50542119",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bt-n-a.gif"
+}, {
+    "kind": "Bdt262",
+    "uic": "50542019",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdtee287-n-a.gif"
+}, {
+    "kind": "Bdtee286",
+    "uic": "50542019",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdtee286-a.gif"
+}, {
+    "kind": "Bdtee287",
+    "uic": "50542119",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdtee287-n2-a.gif"
+}, {
+    "kind": "Btee289",
+    "uic": "50542108",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdt279-n2-a.gif"
+}, {
+    "kind": "Bfhpvee295",
+    "uic": "50548030",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bfhpvee295-a.gif"
+}, {
+    "kind": "ABpee347",
+    "uic": "61543030",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ABpee347-a.gif"
+}, {
+    "kind": "Bdtee276",
+    "uic": "50542046",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdtee276-a.gif"
+}, {
+    "kind": "Bdpee231",
+    "uic": "61542071",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdpee231-n2-a.gif"
+}, {
+    "kind": "ABfhpvee395",
+    "uic": "50548030",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ABfhpvee395-a.gif"
+}, {
+    "kind": "BDbmsee447",
+    "uic": "51548270",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/BDbmsee447-n2-a.gif"
+}, {
+    "kind": "WLABmee823",
+    "uic": "61547071",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/WLABmee-n-a.gif"
+}, {
+    "kind": "ARmpee832",
+    "uic": "61548571",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ARmpee-a.gif"
+}, {
+    "kind": "Bbdgmee236",
+    "uic": "61548471",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bbdgmsee236-a.gif"
+}, {
+    "kind": "Bdmpee233",
+    "uic": "61542071",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmpee233-n2-a.gif"
+}, {
+    "kind": "ARmpee829",
+    "uic": "61548571",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ARmpee829-a.gif"
+}, {
+    "kind": "WLABmee823",
+    "uic": "61547071",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/WLABmee-n2-a.gif"
+}, {
+    "kind": "Bdmtee281",
+    "uic": "50542244",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee-a.gif"
+}, {
+    "kind": "Bdmtee275",
+    "uic": "50542244",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee275-a.gif"
+}, {
+    "kind": "Bdmpee253",
+    "uic": "50542244",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee-n2-a.gif"
+}, {
+    "kind": "Bdmtee263",
+    "uic": "50542082",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee-n-a.gif"
+}, {
+    "kind": "Bdmtee265",
+    "uic": "50542082",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee265-n2-a.gif"
+}, {
+    "kind": "Bdmtee266",
+    "uic": "50542082",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee266-n2-a.gif"
+}, {
+    "kind": "Bdmtee267",
+    "uic": "50542082",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee265-n2-a.gif"
+}, {
+    "kind": "Bdmtee268",
+    "uic": "50542082",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmtee266-n2-a.gif"
+}, {
+    "kind": "Bmto292",
+    "uic": "50542618",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmto-n2-a.gif"
+}, {
+    "kind": "Bdmteeo294",
+    "uic": "50542618",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmto-a.gif"
+}, {
+    "kind": "Bdmteeo296",
+    "uic": "50542618",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmteeo296-n2-a.gif"
+}, {
+    "kind": "Ampz146",
+    "uic": "73541091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Ampz-n2-H-a.gif"
+}, {
+    "kind": "Ampz143",
+    "uic": "73541091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Ampz-n2-H-a.gif"
+}, {
+    "kind": "Bmz245",
+    "uic": "73542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz-n2-H-a.gif"
+}, {
+    "kind": "Bmz241",
+    "uic": "73542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz-n2-H-a.gif"
+}, {
+    "kind": "WRmz815",
+    "uic": "73548891",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/WRmz-n2-H-a.gif"
+}, {
+    "kind": "WLABmz826",
+    "uic": "61547291",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/WLABmz-n2-a.gif"
+}, {
+    "kind": "Afmpz890",
+    "uic": "73548091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Afmpz890-a.gif"
+}, {
+    "kind": "ARbmpz892",
+    "uic": "73548591",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ARbmpz892-a.gif"
+}, {
+    "kind": "Bmpz891",
+    "uic": "73542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmpz891-a.gif"
+}, {
+    "kind": "Bmpz893",
+    "uic": "73542091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmpz893-a.gif"
+}, {
+    "kind": "ABmz346",
+    "uic": "61543090",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ABmz346-n2-mr-a.gif"
+}, {
+    "kind": "Bmz232",
+    "uic": "61542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz232-obb-a.gif"
+}, {
+    "kind": "WRmz817",
+    "uic": "61818890",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/WRmz817-n2-a.gif"
+}, {
+    "kind": "DDm915",
+    "uic": "51819870",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/DDm915-a.gif"
+}, {
+    "kind": "Bdmpz227",
+    "uic": "61542991",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmpz227-n2-a.gif"
+}, {
+    "kind": "Bhmpz228",
+    "uic": "61542091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bhmpz228-n2-a.gif"
+}, {
+    "kind": "Bdmz223",
+    "uic": "61542091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz230-n2-a.gif"
+}, {
+    "kind": "Bmz234",
+    "uic": "51542170",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz234-n2-br-a.gif"
+}, {
+    "kind": "Bmz235",
+    "uic": "61542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz235-n2-mod-br-a.gif"
+}, {
+    "kind": "Bmz229",
+    "uic": "61542991",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz229-n2-mod-a.gif"
+}, {
+    "kind": "Amz138",
+    "uic": "73811991",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Amz138-n2-mod-br-a.gif"
+}, {
+    "kind": "Bmz226",
+    "uic": "61542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz226-n2-mod-br-a.gif"
+}, {
+    "kind": "Bmz232",
+    "uic": "61542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz224-n2-mod-br-a.gif"
+}, {
+    "kind": "Bmz224",
+    "uic": "61542091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmz224-n2-mod-br-a.gif"
+}, {
+    "kind": "Bcmz834",
+    "uic": "61545971",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bcmz834-n2-a.gif"
+}, {
+    "kind": "Ampz894",
+    "uic": "73541091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Ampz894-a.gif"
+}, {
+    "kind": "Bbmpz897",
+    "uic": "73548491",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bbmpz897-a.gif"
+}, {
+    "kind": "Bmpz895",
+    "uic": "73542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bmpz895-a.gif"
+}, {
+    "kind": "Bdmpz896",
+    "uic": "73542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmpz896-a.gif"
+}, {
+    "kind": "Bdmteeo297",
+    "uic": "50542672",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmteeo298-a.gif"
+}, {
+    "kind": "Bdmteeo298",
+    "uic": "50542672",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/Bdmteeo298-a.gif"
+}, {
+    "kind": "ABfbdmteeo396",
+    "uic": "50548672",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/CD/ABfbdmteeo396-a.gif"
+}, {
+    "kind": "Afmpz800",
+    "uic": "73548091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "Ampz800",
+    "uic": "73541091",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "BRmpz800",
+    "uic": "73548591",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "Bbmpz800",
+    "uic": "73548491",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "Bmpz800",
+    "uic": "73542191",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "Bdmpz800",
+    "uic": "73542191?",
+    "operator": "ČD",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "Ampz",
+    "uic": "61811891",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Ampz-1891-a.gif"
+}, {
+    "kind": "Ampz",
+    "uic": "61811895",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Ampz-1895-a.gif"
+}, {
+    "kind": "ASmz",
+    "uic": "61818990",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/ASmz-a.gif"
+}, {
+    "kind": "ABmz",
+    "uic": "61813090",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/ABmz-3090-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812190",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bmz-2190-0-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812191",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bmz-2191-0-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812190",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bmz-2190-1-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812891",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bmz-2891-0-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "51815970",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bcmz-5970-a.gif"
+}, {
+    "kind": "Amz",
+    "uic": "61811990",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Am-1990-IS-a.gif"
+}, {
+    "kind": "Bwmz",
+    "uic": "61802990",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Am-1990-IS-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "61812073",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/B-2073-a.gif"
+}, {
+    "kind": "A9",
+    "uic": "61881970",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/SNCB/A-I6-bmc-a.gif"
+}, {
+    "kind": "B11",
+    "uic": "61882170",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/SNCB/B-I6-bmc-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "61885070",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/SNCB/Bcmz-a.gif"
+}, {
+    "kind": "Avmz109.5",
+    "uic": "618019915",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Avmz-db-a.gif"
+}, {
+    "kind": "Bmpvz, Bmpz",
+    "uic": "61812890",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Apmz125-a.gif"
+}, {
+    "kind": "ABmpz",
+    "uic": "61818490",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/ABmpz-8490-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812091",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bpmz294-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812991",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bpmz294-a.gif"
+}, {
+    "kind": "Bvmsz",
+    "uic": "61802194",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/DB/Bvmsz186-a.gif"
+}, {
+    "kind": "Bvmsz",
+    "uic": "61802190",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/DB/Bvmsz186-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812990",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bvcmbz-a.gif"
+}, {
+    "kind": "Bvcmz",
+    "uic": "61815091",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bvcmz-a.gif"
+}, {
+    "kind": "Bvcmz",
+    "uic": "61815071",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bvcmz-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "61815990",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bvcmbz-a.gif"
+}, {
+    "kind": "BDcm",
+    "uic": "61858290",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/BDcm-a.gif"
+}, {
+    "kind": "DABz",
+    "uic": "50803635",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/DABz755-db-a.gif"
+}, {
+    "kind": "DBz",
+    "uic": "50802635",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/DBz750-db-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "61812090",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bmpz-2090-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "61812070",
+    "operator": "RJ",
+    "image": "https://www.vagonweb.cz/popisy/img/RJ/Bmpz-2090-a.gif"
+}, {
+    "kind": "B\n\nBee",
+    "uic": "51562041",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-a.gif"
+}, {
+    "kind": "B\n\nBee",
+    "uic": "50562041",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-a.gif"
+}, {
+    "kind": "B\n\nBee",
+    "uic": "51562031",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-a.gif"
+}, {
+    "kind": "B\n\nBee",
+    "uic": "50562048",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-a.gif"
+}, {
+    "kind": "B\nBee",
+    "uic": "50562940",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-2940-a.gif"
+}, {
+    "kind": "B\nBee",
+    "uic": "50562948",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-2940-a.gif"
+}, {
+    "kind": "B",
+    "uic": "50562040",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/B-a.gif"
+}, {
+    "kind": "BDs\n\nBDsee",
+    "uic": "51568240",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/BDs-a.gif"
+}, {
+    "kind": "BDs\n\nBDsee",
+    "uic": "50568240",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/BDs-a.gif"
+}, {
+    "kind": "BDs\n\nBDsee",
+    "uic": "50568248",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/BDs-a.gif"
+}, {
+    "kind": "Bc\n\n\nBcee",
+    "uic": "51565941",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bc-a.gif"
+}, {
+    "kind": "Bc\n\n\nBcee",
+    "uic": "51565980",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bc-a.gif"
+}, {
+    "kind": "Bc\n\n\nBcee",
+    "uic": "51565970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bc-a.gif"
+}, {
+    "kind": "Bdt\n\nBdtee",
+    "uic": "50562108",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdt-a.gif"
+}, {
+    "kind": "Bdt\n\nBdtee",
+    "uic": "50562109",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdt-a.gif"
+}, {
+    "kind": "Bdt",
+    "uic": "50562108",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bp-a.gif"
+}, {
+    "kind": "WLAB\nWLABee",
+    "uic": "51567040",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WLAB-a.gif"
+}, {
+    "kind": "WLAB\nWLABee",
+    "uic": "51567070",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WLAB-a.gif"
+}, {
+    "kind": "WRRm",
+    "uic": "51568841",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WRRm-a.gif"
+}, {
+    "kind": "Bdtmee\nBdgtmee",
+    "uic": "50562244",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdtmee-a.gif"
+}, {
+    "kind": "WLABmee",
+    "uic": "62567190",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WLABmee-a.gif"
+}, {
+    "kind": "Bceer",
+    "uic": "61565930",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bc-a.gif"
+}, {
+    "kind": "Apeer",
+    "uic": "61561970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Apeer-a.gif"
+}, {
+    "kind": "ARpeer",
+    "uic": "61568570",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/ARpeer-ICplus-a.gif"
+}, {
+    "kind": "Aeer",
+    "uic": "61561970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Aeer-a.gif"
+}, {
+    "kind": "Aeer",
+    "uic": "61561970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Aeer-ICplus-a.gif"
+}, {
+    "kind": "Bpeer",
+    "uic": "61562070",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bpeer-2070-a.gif"
+}, {
+    "kind": "Bpeer",
+    "uic": "61562970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bpeer-2070-a.gif"
+}, {
+    "kind": "Beer",
+    "uic": "61562070",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Beer-a.gif"
+}, {
+    "kind": "BDsheer",
+    "uic": "61568270",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/BDsheer-a.gif"
+}, {
+    "kind": "WRReer",
+    "uic": "61568870",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WRReer-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "51562040",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bd-a.gif"
+}, {
+    "kind": "B, Bee\nBgee\nBd, Bdee",
+    "uic": "51562040",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bd-a.gif"
+}, {
+    "kind": "B, Bee\nBgee\nBd, Bdee",
+    "uic": "51562030",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bd-a.gif"
+}, {
+    "kind": "B, Bee\nBgee\nBd, Bdee",
+    "uic": "51562940",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bd-a.gif"
+}, {
+    "kind": "WRRmeer",
+    "uic": "61568870",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WRRmeer-a.gif"
+}, {
+    "kind": "Bmeer",
+    "uic": "61562170",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bmee-a.gif"
+}, {
+    "kind": "Bdghmeer",
+    "uic": "61562870",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdghmeer-a.gif"
+}, {
+    "kind": "Ampeer",
+    "uic": "61561970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Ampeer-a.gif"
+}, {
+    "kind": "Bmpeer",
+    "uic": "61562070",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bmpeer-IS-a.gif"
+}, {
+    "kind": "Bdmpeer",
+    "uic": "61562070",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdmpeer-a.gif"
+}, {
+    "kind": "Bdteer\nBdgteer\nBdteer",
+    "uic": "61562000",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdteer-a.gif"
+}, {
+    "kind": "Bdteer\nBdgteer\nBdteer",
+    "uic": "61562000",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdteer-a.gif"
+}, {
+    "kind": "Bdteer\nBdgteer\nBdteer",
+    "uic": "61562100",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdteer-a.gif"
+}, {
+    "kind": "951",
+    "uic": "96564951",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/951-a.gif"
+}, {
+    "kind": "051",
+    "uic": "96560051",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/v-051-a.gif"
+}, {
+    "kind": "Ampz",
+    "uic": "61561070",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Ampz-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "61562270",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bmpz-a.gif"
+}, {
+    "kind": "Bdmpz",
+    "uic": "50562270",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdmpz-a.gif"
+}, {
+    "kind": "Bmz\nBmz",
+    "uic": "61562170",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bmz-a.gif"
+}, {
+    "kind": "Bmz\nBmz",
+    "uic": "50562170",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bmz-a.gif"
+}, {
+    "kind": "Bdteer",
+    "uic": "50562270",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bdteer-2270-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51568980",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Salon-8940-084-a.gif"
+}, {
+    "kind": "WGmeer",
+    "uic": "61568970",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WGmeer-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "51565580",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/Bc-a.gif"
+}, {
+    "kind": "DDm",
+    "uic": "51569870",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/DDm-a.gif"
+}, {
+    "kind": "DDm",
+    "uic": "51819870",
+    "operator": "ZSSK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/DDm-obb-a.gif"
+}, {
+    "kind": "Bcmh",
+    "uic": "51560570",
+    "operator": "SK",
+    "image": "https://www.vagonweb.cz/popisy/img/WSBA/Bcmh-a.gif"
+}, {
+    "kind": "Bvcmz",
+    "uic": "61805091",
+    "operator": "SK",
+    "image": "https://www.vagonweb.cz/popisy/img/DB/Bvcmz248-a.gif"
+}, {
+    "kind": "WRmz",
+    "uic": "61548890",
+    "operator": "SK",
+    "image": "https://www.vagonweb.cz/popisy/img/SK-/TRA/WRmz-a.gif"
+}, {
+    "kind": "WLADmveer",
+    "uic": "53560971",
+    "operator": "SK",
+    "image": "https://www.vagonweb.cz/popisy/img/ZSSK/WLADmveer-zb-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61812190",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmz-2190-5-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "61815990",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bcmz-5990-nj-a.gif"
+}, {
+    "kind": "Dmsz",
+    "uic": "51819570",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Dmsz-s-a.gif"
+}, {
+    "kind": "Bbmvz",
+    "uic": "61812891",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bbmvz-2891-nj-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "73812191",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmz-2191-1-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "73812991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-2991-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "73815991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bcmz-5991-1-nj-a.gif"
+}, {
+    "kind": "WRmz",
+    "uic": "61818890",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/WRmz-8890-a.gif"
+}, {
+    "kind": "WRmz",
+    "uic": "73818891",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/WRmz-8891-a.gif"
+}, {
+    "kind": "Amz",
+    "uic": "73811991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Amz73-1991-5-a.gif"
+}, {
+    "kind": "ADbmpsz",
+    "uic": "73818191",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/ADmpsz-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "73812991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmz73-2991-5-nj-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "73812991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-2991-1-a.gif"
+}, {
+    "kind": "Bbcmvz",
+    "uic": "73815991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bbcmvz-5991-3-nj-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "70812094",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-2094-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "73815991",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bcmz-5991-2-nj-a.gif"
+}, {
+    "kind": "Afmpz",
+    "uic": "73818090",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Afmpz-8090-7-rj-a.gif"
+}, {
+    "kind": "Afmpz",
+    "uic": "73818090",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Afmpz-8090-7-rj-a.gif"
+}, {
+    "kind": "Ampz",
+    "uic": "73811990",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Ampz-1990-6-rj-a.gif"
+}, {
+    "kind": "ARbmpz",
+    "uic": "73818590",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/ARbmpz-8590-5-rj-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "73812290",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-2290-4-rj-a.gif"
+}, {
+    "kind": "Bmpvz",
+    "uic": "73818490",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-2290-1-rj-a.gif"
+}, {
+    "kind": "Bmpvz",
+    "uic": "73818490",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-2290-1-rj-a.gif"
+}, {
+    "kind": "WLBmz",
+    "uic": "61817694",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/WLABmz-7694-nj-a.gif"
+}, {
+    "kind": "WLABmz",
+    "uic": "61817694",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/WLABmz-7694-nj-a.gif"
+}, {
+    "kind": "WLABmz",
+    "uic": "61807290",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/WLABmz-7290-nj-a.gif"
+}, {
+    "kind": "Bvcmbz",
+    "uic": "61805990",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bvcmbz-nj-a.gif"
+}, {
+    "kind": "DDm",
+    "uic": "51819880",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/DDm-a.gif"
+}, {
+    "kind": "DDm",
+    "uic": "51819870",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/DDm-a.gif"
+}, {
+    "kind": "Bp, Bp-k",
+    "uic": "50812935",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bp-2935-a.gif"
+}, {
+    "kind": "Bpz",
+    "uic": "50812935",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bpz-2935-a.gif"
+}, {
+    "kind": "BDp-l",
+    "uic": "50818433",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/BDp-l-8433-a.gif"
+}, {
+    "kind": "BDp",
+    "uic": "50818235",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/BDp-8235-a.gif"
+}, {
+    "kind": "BDpz",
+    "uic": "50818235",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/BDpz-8235-a.gif"
+}, {
+    "kind": "Bmpvz-l",
+    "uic": "50818473",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpvz-l-8473-a.gif"
+}, {
+    "kind": "Bmpz-l",
+    "uic": "50812173",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-l-2173-0-a.gif"
+}, {
+    "kind": "Bmpz-l",
+    "uic": "50812173",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-l-2173-8-a.gif"
+}, {
+    "kind": "Bmpz-s",
+    "uic": "50818073",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-s-8073-a.gif"
+}, {
+    "kind": "Bmpz-dl",
+    "uic": "50812633",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-dl-a.gif"
+}, {
+    "kind": "Bmpz-dl",
+    "uic": "50812633",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-dl-CAT-a.gif"
+}, {
+    "kind": "Bbfmpz",
+    "uic": "50818633",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-ds-a.gif"
+}, {
+    "kind": "Bmpz-ds",
+    "uic": "50818033",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/Bmpz-ds-CAT-a.gif"
+}, {
+    "kind": "A9mnopuz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Amnopuz-152A-a.gif"
+}, {
+    "kind": "A9mnopuz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Amnopuz-152Aa-a.gif"
+}, {
+    "kind": "B10mnopuz",
+    "uic": "61512090",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bmnopuz-154A-a.gif"
+}, {
+    "kind": "B10mnopuz",
+    "uic": "61512090",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bmnopuz-154Aa-a.gif"
+}, {
+    "kind": "WLAB10mnouz",
+    "uic": "61517090",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLABmnouz-305Ad-ic-a.gif"
+}, {
+    "kind": "A9mnopuz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Amnopuz-158A-a.gif"
+}, {
+    "kind": "B9mnopuz",
+    "uic": "61512990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bmnopuz-159A-a.gif"
+}, {
+    "kind": "A9emnouz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9emnouz-156A-a.gif"
+}, {
+    "kind": "A9emnouz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9emnouz-156A-a.gif"
+}, {
+    "kind": "A9mnopuz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Amnopuz-158A-a.gif"
+}, {
+    "kind": "B9bmnouz",
+    "uic": "61512990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bbmnouz-157A-a.gif"
+}, {
+    "kind": "B9mnopuz",
+    "uic": "61512990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bmnopuz-159A-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518890",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-407A-a.gif"
+}, {
+    "kind": "A9mnouz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9mnouz-166A-a.gif"
+}, {
+    "kind": "A9mnopuz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Amnopuz-158A-a.gif"
+}, {
+    "kind": "B10bmnouz",
+    "uic": "61512090",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10bmnouz-167A-a.gif"
+}, {
+    "kind": "B9mnopuvz",
+    "uic": "61512990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bmnopuvz-159A-a.gif"
+}, {
+    "kind": "B9mnopuz",
+    "uic": "61512991",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "B9mnopuvz",
+    "uic": "61512991",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-136A-IC6-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-136A-IC6-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-136A-IC5-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-136A-IC6-a.gif"
+}, {
+    "kind": "A9mnouz",
+    "uic": "61511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9mnouz-139A-IC3-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-144A-Newag-a.gif"
+}, {
+    "kind": "Bc10mnouz",
+    "uic": "61515070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bc10mnouz-134Ab-Newag-a.gif"
+}, {
+    "kind": "Bc10mnouz",
+    "uic": "61515090",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bc10mnouz-134Ac-Newag-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-171A-a.gif"
+}, {
+    "kind": "Bc10mnouz",
+    "uic": "61515070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bc10mnouz-134Ac-Newag-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-144A-FPS-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-406A-20-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-406A-30-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-406A-40-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-Newag-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-XB-FPS-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-XBMg-FPS-a.gif"
+}, {
+    "kind": "B10bmnouz",
+    "uic": "61512071",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10bmnouz-XBN-FPS-a.gif"
+}, {
+    "kind": "B10bmnouz",
+    "uic": "61512071",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10bmnouz-XBNMg2-FPS-a.gif"
+}, {
+    "kind": "B10bmnouz",
+    "uic": "61512071",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10bmnouz-XBNMg2-FPS-a.gif"
+}, {
+    "kind": "BR4mnouz",
+    "uic": "61518571",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B4Rmnouz-155A-Pesa-a.gif"
+}, {
+    "kind": "BR4mnouz",
+    "uic": "61518571",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B4Rmnouz-155A-Newag-a.gif"
+}, {
+    "kind": "BR4mnouz",
+    "uic": "61518571",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B4Rmnouz-155A-ZNTKMM-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-170A-a.gif"
+}, {
+    "kind": "A9emnouz",
+    "uic": "61511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9emnouz-Z2ABCMg-a.gif"
+}, {
+    "kind": "A9mnouz",
+    "uic": "61511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9mnouz-Z2A-FPS-a.gif"
+}, {
+    "kind": "B11mnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-Z2B-Newag-a.gif"
+}, {
+    "kind": "B11gmnouz",
+    "uic": "61512170",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B11mnouz-Z2B-Newag-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518890",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-AWR-PESA-a.gif"
+}, {
+    "kind": "ASamnouz",
+    "uic": "61518990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Asmnouz-507A-a.gif"
+}, {
+    "kind": "B10bmnouz",
+    "uic": "61512090",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10bmnouz-Z1B-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518890",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-406A-10-a.gif"
+}, {
+    "kind": "WRmnouz",
+    "uic": "61518890",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRmnouz-406A-10-a.gif"
+}, {
+    "kind": "B5mnopuvz",
+    "uic": "61512890",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B5mnopuvz-152Az-a.gif"
+}, {
+    "kind": "B9mnopuvz",
+    "uic": "61512990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B9mnopuvz-154Aarow-a.gif"
+}, {
+    "kind": "Samnouz",
+    "uic": "61518990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Asmnouz-508A-a.gif"
+}, {
+    "kind": "B6mnopuz",
+    "uic": "61518490",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B6mnopuz-154Aa-a.gif"
+}, {
+    "kind": "A9emnouz",
+    "uic": "61511990",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9emnouz-145Ac-a.gif"
+}, {
+    "kind": "A9\nA9o\nA9ou\nA9ouz\nA9nou\nA9nouz",
+    "uic": "551190",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nou-112A-ic-a.gif"
+}, {
+    "kind": "A9\nA9o\nA9ou\nA9ouz\nA9nou\nA9nouz",
+    "uic": "551198",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nou-112A-ic-a.gif"
+}, {
+    "kind": "B10\nB10o \nB10ou\nB10ouz\nB10nou\nB10nouz",
+    "uic": "551200",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-111A-ic-a.gif"
+}, {
+    "kind": "B10\nB10o \nB10ou\nB10ouz\nB10nou\nB10nouz",
+    "uic": "551201",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-111A-ic-a.gif"
+}, {
+    "kind": "B10\nB10o \nB10ou\nB10ouz\nB10nou\nB10nouz",
+    "uic": "551208",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-111A-ic-a.gif"
+}, {
+    "kind": "WLAB10o, WLAB10ou",
+    "uic": "52517080",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLABd-a.gif"
+}, {
+    "kind": "WLAB10o, WLAB10ou",
+    "uic": "52517080",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLABd-a.gif"
+}, {
+    "kind": "WLAB10o, WLAB10ou",
+    "uic": "52517080",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLABd-a.gif"
+}, {
+    "kind": "B10nou\nB10nouz",
+    "uic": "51512081",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-YB-ic-a.gif"
+}, {
+    "kind": "B10nou\nB10nouz",
+    "uic": "51512070*",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-YB-ic-a.gif"
+}, {
+    "kind": "B10nou\nB10nouz",
+    "uic": "51512071*",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-YB-ic-a.gif"
+}, {
+    "kind": "B10nou\nB10nouz",
+    "uic": "50512078*",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-YB-ic-a.gif"
+}, {
+    "kind": "WLAB10o, WLAB10ou",
+    "uic": "52517080",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLABd-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "51511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nou-112Alux-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "51512070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-111Alux-a.gif"
+}, {
+    "kind": "WRouz",
+    "uic": "51518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRouz-113A-Lux-a.gif"
+}, {
+    "kind": "B9ouv\nB9nouv",
+    "uic": "50512900",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B9ouv,B9nouv,B9nouvz-111A-a.gif"
+}, {
+    "kind": "B9ouv\nB9nouv",
+    "uic": "50512908",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B9ouv,B9nouv,B9nouvz-111A-a.gif"
+}, {
+    "kind": "B9ouv\nB9nouv",
+    "uic": "51512970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B9ouv,B9nouv,B9nouvz-111A-a.gif"
+}, {
+    "kind": "BD4osuv",
+    "uic": "50518208",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/BDosuv-a.gif"
+}, {
+    "kind": "BD4osuv",
+    "uic": "50518278",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/BDosuv-a.gif"
+}, {
+    "kind": "AB9nou ",
+    "uic": "51513970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/AB9nou-112At-ic-a.gif"
+}, {
+    "kind": "AB9nou ",
+    "uic": "50513978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/AB9nou-112At-ic-a.gif"
+}, {
+    "kind": "B8nopuv",
+    "uic": "50518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuv-111A-Newag-ic-a.gif"
+}, {
+    "kind": "B8nopuv",
+    "uic": "51518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuv-111A-Newag-ic-a.gif"
+}, {
+    "kind": "B8nopuvz",
+    "uic": "50518478",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuv-111A-Newag-ic-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "57511978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nou-140A-FPS-1-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "57511978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-140A-FPS-2-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "57511978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-140A-FPS-2-a.gif"
+}, {
+    "kind": "B10nou",
+    "uic": "51512078",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-141A-MM-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "57511978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-140A-FPS-3-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "51512078",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-141A-Newag-a.gif"
+}, {
+    "kind": "B9nopuv",
+    "uic": "50518478",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuv-111Arow-2005-06-a.gif"
+}, {
+    "kind": "B9nopuvz",
+    "uic": "51518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuv-111Arow-a.gif"
+}, {
+    "kind": "B9nopuvz",
+    "uic": "50518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuvz-111Arow-2-a.gif"
+}, {
+    "kind": "B9nopuvz",
+    "uic": "50518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuvz-111Arow-2-2009-a.gif"
+}, {
+    "kind": "B8nopuvz",
+    "uic": "50518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bnopuvz-111Arow-2-2009-a.gif"
+}, {
+    "kind": "B8bnopuz",
+    "uic": "50512870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bbnopu-111Ainw-FPS-SPOT-ic-a.gif"
+}, {
+    "kind": "B8bnopuz",
+    "uic": "50512878",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bbnopu-111Ainw-FPS-SPOT-ic-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "51512071",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-YB-2-SPOT-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "50512078",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-111A-2-SPOT-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "51512070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-111A-2-SPOT-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "51512071",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-111A-2-SPOT-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "51511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-112A-2-SPOT-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "50511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-112A-2-SPOT-a.gif"
+}, {
+    "kind": "WLAB10mouz",
+    "uic": "52517070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLABouz-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "50511970",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-140A-2015-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "50512071",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-141A-FPS-2013-a.gif"
+}, {
+    "kind": "B7bnopuz",
+    "uic": "50512870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B7bnopuz-168A-Newag-a.gif"
+}, {
+    "kind": "B7nopuvz",
+    "uic": "50518470",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B7nopuvz-111Arow-a.gif"
+}, {
+    "kind": "WRnouz",
+    "uic": "50518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRnouz-113Aa-2015-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "50511978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-140A-2015-a.gif"
+}, {
+    "kind": "B7bnopuz",
+    "uic": "50518478",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B7bnopuz-111Ainw-Pesa-a.gif"
+}, {
+    "kind": "B7nopuvz",
+    "uic": "50518478",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B7nopuvz-111Arow-a.gif"
+}, {
+    "kind": "Bc8bnouz",
+    "uic": "50515978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/Bc9nouz-173A-a.gif"
+}, {
+    "kind": "WLAB9bmnouz",
+    "uic": "61517070",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WLAB9bnouz-308A-a.gif"
+}, {
+    "kind": "WRnouz",
+    "uic": "50518870",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/WRnouz-113Aa-2015-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "50511978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nouz-140A-10-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "50512078",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-141A-10-a.gif"
+}, {
+    "kind": "B7nopuvz",
+    "uic": "50518478",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B7nopuvz-168A-Newag-a.gif"
+}, {
+    "kind": "AB9nouz",
+    "uic": "50513978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/AB9nouz-141A-20-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "50512078",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-174A-a.gif"
+}, {
+    "kind": "B9nopuz",
+    "uic": "50512978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B9nopuz-111A-20-a.gif"
+}, {
+    "kind": "B6bnouvz",
+    "uic": "50518478",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B6bnouvz-111A-30-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "50512078",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nouz-174A-a.gif"
+}, {
+    "kind": "B9nopuz",
+    "uic": "50512978",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B9nopuz-111A-20-a.gif"
+}, {
+    "kind": "A9nouz",
+    "uic": "?",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/A9nou-112Alux-a.gif"
+}, {
+    "kind": "B10nouz",
+    "uic": "?",
+    "operator": "PKPIC",
+    "image": "https://www.vagonweb.cz/popisy/img/PKPIC/B10nou-111Alux-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "51555980",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bc-5941-a.gif"
+}, {
+    "kind": "Bo",
+    "uic": "50552037",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bo-2037-a.gif"
+}, {
+    "kind": "Bko",
+    "uic": "50552037",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bo-2037-a.gif"
+}, {
+    "kind": "B",
+    "uic": "51552080",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/B-2080-a.gif"
+}, {
+    "kind": "ABmz",
+    "uic": "61553091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ABmz-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61552191",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bmz-2191-a.gif"
+}, {
+    "kind": "WRmz",
+    "uic": "61558891",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WRmz-a.gif"
+}, {
+    "kind": "WLABmz",
+    "uic": "61557191",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WLABmz-a.gif"
+}, {
+    "kind": "Apmz",
+    "uic": "61551071",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Apmz-1071-a.gif"
+}, {
+    "kind": "Bpmz",
+    "uic": "61552071",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmz-2071-a.gif"
+}, {
+    "kind": "Bpmz",
+    "uic": "61552091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmz-2091-4-a.gif"
+}, {
+    "kind": "Bbdpmz",
+    "uic": "61558491",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bbdpmz-8491-4-a.gif"
+}, {
+    "kind": "Bpmz",
+    "uic": "61552091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmz-2091-4-a.gif"
+}, {
+    "kind": "Bbdpmz",
+    "uic": "61558491",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bbdpmz-8491-4-a.gif"
+}, {
+    "kind": "ARmz",
+    "uic": "61558591",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ARmz-8591-4-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "50558444",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-8444-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "50558407",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-8407-a.gif"
+}, {
+    "kind": "Ad",
+    "uic": "50551930",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Ad-1930-h-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "51552930",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-2937-h-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "51552030",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-2037-h-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "50552937",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-2037-h-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "50552037",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-2037-h-a.gif"
+}, {
+    "kind": "Bd",
+    "uic": "50552037",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bd-2037-h-a.gif"
+}, {
+    "kind": "Apee",
+    "uic": "50551044",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Apee-1044-a.gif"
+}, {
+    "kind": "Bpee\nBbpee",
+    "uic": "50552044",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpee-2044-a.gif"
+}, {
+    "kind": "Bpee\nBbpee",
+    "uic": "50552044",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpee-2044-a.gif"
+}, {
+    "kind": "Apee",
+    "uic": "50551737",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ARp-a.gif"
+}, {
+    "kind": "WRRee",
+    "uic": "50558844",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WRR-a.gif"
+}, {
+    "kind": "Apee",
+    "uic": "61551957",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Apee-a.gif"
+}, {
+    "kind": "Bpee",
+    "uic": "61552957",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpee-a.gif"
+}, {
+    "kind": "A",
+    "uic": "51551980",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/A-1980-a.gif"
+}, {
+    "kind": "AB",
+    "uic": "51553980",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/AB-3980-a.gif"
+}, {
+    "kind": "WLAB",
+    "uic": "51557080",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WLAB-a.gif"
+}, {
+    "kind": "Apmz",
+    "uic": "61551091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Apmz-1091-1-m-a.gif"
+}, {
+    "kind": "Bpmz",
+    "uic": "61552091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmz-2091-1-m-a.gif"
+}, {
+    "kind": "WRmz",
+    "uic": "61558891",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WRmz-m-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "61555091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bcmz-5091-1-m-a.gif"
+}, {
+    "kind": "Amz",
+    "uic": "61551991",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Amz-1991-1-m-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61552191",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bmz-2191-1-m-a.gif"
+}, {
+    "kind": "Ddmee",
+    "uic": "51559491",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Dms-a.gif"
+}, {
+    "kind": "WLABmz",
+    "uic": "61557191",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WLABmz-m-a.gif"
+}, {
+    "kind": "Amz",
+    "uic": "61551991",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Avmz-a.gif"
+}, {
+    "kind": "Bpmee",
+    "uic": "51552070",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpm-2070-a.gif"
+}, {
+    "kind": "Amz",
+    "uic": "61551991",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Amz-1991-3-m-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61552191",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bmz-2191-3-m-a.gif"
+}, {
+    "kind": "WRRmz",
+    "uic": "61558871",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WRbumz-a.gif"
+}, {
+    "kind": "Bpmz",
+    "uic": "61552071",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmz-2071-m-a.gif"
+}, {
+    "kind": "Apmz",
+    "uic": "61551071",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Apmz-1071-m-a.gif"
+}, {
+    "kind": "Bpmee",
+    "uic": "51552076",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmee-2076-a.gif"
+}, {
+    "kind": "Bpmbdfee",
+    "uic": "51558076",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bpmbdfee-8076-a.gif"
+}, {
+    "kind": "Bcbmz",
+    "uic": "61555990",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bcbmz-5990-m-a.gif"
+}, {
+    "kind": "Bcmz",
+    "uic": "61555091",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bcmz-5091-2-m-a.gif"
+}, {
+    "kind": "WLABmz",
+    "uic": "62557191",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/WLABmz-7191-0-m-a.gif"
+}, {
+    "kind": "Bhv",
+    "uic": "50552007",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/MAV/Bh,Bhv-a.gif"
+}, {
+    "kind": "By",
+    "uic": "50552017",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/MAV/By-2006-a.gif"
+}, {
+    "kind": "BDh",
+    "uic": "50558127",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDh-a.gif"
+}, {
+    "kind": "BDbh, BDh",
+    "uic": "50558228",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDbh-8228-a.gif"
+}, {
+    "kind": "Bhv",
+    "uic": "50552007",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bh,Bhv-a.gif"
+}, {
+    "kind": "By\nByh",
+    "uic": "50552017",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/By-2006-a.gif"
+}, {
+    "kind": "By\nByh",
+    "uic": "50552006",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/By-2006-a.gif"
+}, {
+    "kind": "By\nByh",
+    "uic": "50552017",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/By-2006-a.gif"
+}, {
+    "kind": "BDh",
+    "uic": "50558127",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDh-a.gif"
+}, {
+    "kind": "BDt",
+    "uic": "50558207",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDt,BDbt-a.gif"
+}, {
+    "kind": "BDt",
+    "uic": "50558227",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDt,BDbt-a.gif"
+}, {
+    "kind": "BDt\nBDdf",
+    "uic": "50558227",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDt-8227-a.gif"
+}, {
+    "kind": "BDt\nBDdf",
+    "uic": "50558005",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDt-8227-a.gif"
+}, {
+    "kind": "Bhrv",
+    "uic": "50552005",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bhv,Bhvr-a.gif"
+}, {
+    "kind": "BDbh",
+    "uic": "50558228",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDbh-8228-a.gif"
+}, {
+    "kind": "BDbt",
+    "uic": "50558007",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDbt-a.gif"
+}, {
+    "kind": "BDbt",
+    "uic": "50558027",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDbt-a.gif"
+}, {
+    "kind": "Bhv",
+    "uic": "50552005",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bhv-2005-550-a.gif"
+}, {
+    "kind": "Bhv",
+    "uic": "50552005",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bhv-2005-550-a.gif"
+}, {
+    "kind": "BDt",
+    "uic": "50558005",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/BDt-8005-400-a.gif"
+}, {
+    "kind": "AByee\n\nABy",
+    "uic": "50553155",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ABy,AByee-m-a.gif"
+}, {
+    "kind": "AByee\n\nABy",
+    "uic": "50553155",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ABy,AByee-m-a.gif"
+}, {
+    "kind": "AByee\n\nABy",
+    "uic": "50553155",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ABy,AByee-m-a.gif"
+}, {
+    "kind": "AByee\n\nABy",
+    "uic": "50553155",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/ABy,AByee-m-a.gif"
+}, {
+    "kind": "Byee\nByee\nByee\nBy\nBy\nBy\nByee\nBy ",
+    "uic": "50552155",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/By,Byee-m-a.gif"
+}, {
+    "kind": "Bydee\n\nByd",
+    "uic": "50558455",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Byd,Bydee-m-a.gif"
+}, {
+    "kind": "Bydee\n\nByd",
+    "uic": "50558455",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Byd,Bydee-m-a.gif"
+}, {
+    "kind": "Bydee\n\nByd",
+    "uic": "50558455",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Byd,Bydee-m-a.gif"
+}, {
+    "kind": "Bybdtee",
+    "uic": "50558055",
+    "operator": "START",
+    "image": "https://www.vagonweb.cz/popisy/img/START/Bybdtee-m-a.gif"
+}, {
+    "kind": "Bpz",
+    "uic": "50432903",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bpz-2935-a.gif"
+}, {
+    "kind": "BDpz",
+    "uic": "50438203",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/BDpz-a.gif"
+}, {
+    "kind": "Bpz",
+    "uic": "50552905",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bpz-2935-a.gif"
+}, {
+    "kind": "BDpz",
+    "uic": "50558205",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/BDpz-a.gif"
+}, {
+    "kind": "Bdpz",
+    "uic": "50558405",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bdpz-8405-a.gif"
+}, {
+    "kind": "Bdfmpz",
+    "uic": "50558076",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bdfmpz-8076-a.gif"
+}, {
+    "kind": "Ap",
+    "uic": "50431033",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Ap-1033-a.gif"
+}, {
+    "kind": "Bp",
+    "uic": "50432033",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bp-2033-a.gif"
+}, {
+    "kind": "Bp",
+    "uic": "51432033",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bp-2033-a.gif"
+}, {
+    "kind": "ABmz",
+    "uic": "61553190",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/ABmz-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "61552190",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bmz-a.gif"
+}, {
+    "kind": "Apee",
+    "uic": "51551036",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Ap-1067-a.gif"
+}, {
+    "kind": "Bpee",
+    "uic": "51432036",
+    "operator": "GySEV / Raaberbahn",
+    "image": "https://www.vagonweb.cz/popisy/img/GySEV/Bp-2067-a.gif"
+}, {
+    "kind": "Baat",
+    "uic": "50792409",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Baat-b-a.gif"
+}, {
+    "kind": "Daa",
+    "uic": "50799317",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Daa-a.gif"
+}, {
+    "kind": "Postaa",
+    "uic": "50799???",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Post-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51790940",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Salon-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "50791980",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Al-a.gif"
+}, {
+    "kind": "ABl",
+    "uic": "50793900",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-a.gif"
+}, {
+    "kind": "ABl",
+    "uic": "51793970",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-a.gif"
+}, {
+    "kind": "B",
+    "uic": "50792010",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bl-ZTO-Skopje-2-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "50792000",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Bl-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "51792070",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Bl-a.gif"
+}, {
+    "kind": "Dls",
+    "uic": "51799510",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Dls-a.gif"
+}, {
+    "kind": "WLAl",
+    "uic": "51727040",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WLABl-7089-ZG-Ljubljana-a.gif"
+}, {
+    "kind": "WLAl",
+    "uic": "51727080",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WLABl-7089-ZG-Ljubljana-a.gif"
+}, {
+    "kind": "WLAl",
+    "uic": "51797040",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WLAl-7080-0-a.gif"
+}, {
+    "kind": "WLAl",
+    "uic": "51797080",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WLAl-7080-0-a.gif"
+}, {
+    "kind": "WLAl",
+    "uic": "51797180",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WLAl-7180-0-a.gif"
+}, {
+    "kind": "Post-l",
+    "uic": "51790080",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Post-2-a.gif"
+}, {
+    "kind": "Acl",
+    "uic": "51794740",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Acl-a.gif"
+}, {
+    "kind": "ABl",
+    "uic": "50793800",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-3810-m-a.gif"
+}, {
+    "kind": "ABl",
+    "uic": "50793810",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-3810-m-a.gif"
+}, {
+    "kind": "Bll",
+    "uic": "50792010",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/B-2010-a.gif"
+}, {
+    "kind": "BRll",
+    "uic": "50798510",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/BRll-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51798740",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WRl-8740-3-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51798840",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WRl-8840-ZG-Ljubljana-a.gif"
+}, {
+    "kind": "DDam",
+    "uic": "50729710",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Laeekss-z-a.gif"
+}, {
+    "kind": "ABlm",
+    "uic": "50793110",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABlm-a.gif"
+}, {
+    "kind": "Blm",
+    "uic": "50792200",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Blm-a.gif"
+}, {
+    "kind": "B",
+    "uic": "51792910",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/B-2910-a.gif"
+}, {
+    "kind": "ABeelmt",
+    "uic": "61793990",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABeelmt-3-a.gif"
+}, {
+    "kind": "WReelmt",
+    "uic": "61798790",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WReelmt-3-a.gif"
+}, {
+    "kind": "ARl",
+    "uic": "50798580",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ARl-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "51791900",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Al-n-mm-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "51792000",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Bl-3p-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51798870",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WRl-8870-3-a.gif"
+}, {
+    "kind": "ABeelm",
+    "uic": "61793970",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABeelm-a.gif"
+}, {
+    "kind": "Beelm",
+    "uic": "61792070",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Beelm-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51798570",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/WRl-8570-3-a.gif"
+}, {
+    "kind": "ABl",
+    "uic": "50793970",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-av-a.gif"
+}, {
+    "kind": "ABlv",
+    "uic": "50793900",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-mm-a.gif"
+}, {
+    "kind": "ABlv",
+    "uic": "51793970",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/ABl-mm-a.gif"
+}, {
+    "kind": "Blv",
+    "uic": "50792000",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/SZ/Bl-3-a.gif"
+}, {
+    "kind": "Uks-zž",
+    "uic": "20729001",
+    "operator": "SŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "WL",
+    "uic": "51726019",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WL-6049-a.gif"
+}, {
+    "kind": "WR",
+    "uic": "51728808",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WR-8808-ZTP-Zagreb-a.gif"
+}, {
+    "kind": "Am",
+    "uic": "50721020",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Am-z-a.gif"
+}, {
+    "kind": "Am",
+    "uic": "51721060",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Am-z-a.gif"
+}, {
+    "kind": "ABm",
+    "uic": "50723147",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/ABm-z-a.gif"
+}, {
+    "kind": "ABm",
+    "uic": "51723140",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/ABm-z-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "51722240",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bm-z-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "51722260",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bm-z-a.gif"
+}, {
+    "kind": "ARm",
+    "uic": "51728440",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/ARm-ZTO-Skopje-z-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "51725940",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bcm-a.gif"
+}, {
+    "kind": "Ds",
+    "uic": "51729510",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Ds-9510-a.gif"
+}, {
+    "kind": "Aaa",
+    "uic": "50721???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Aaa-a.gif"
+}, {
+    "kind": "ABaa",
+    "uic": "50723???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/ABaa-a.gif"
+}, {
+    "kind": "Baat",
+    "uic": "50722???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Baat-a.gif"
+}, {
+    "kind": "Daa",
+    "uic": "50729310",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Daa-a.gif"
+}, {
+    "kind": "Postaa",
+    "uic": "50729???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Post-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "51781910",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Al-ZTO-Skopje-2-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "50781930",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Al-ZTP-Zagreb-1-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "51781980",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Al-ZTP-Zagreb-2-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "51781970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Al-ZTP-Zagreb-3-a.gif"
+}, {
+    "kind": "Al",
+    "uic": "51781900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Al-ZTP-Zagreb-3-a.gif"
+}, {
+    "kind": "ABeel",
+    "uic": "51783900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/ABeel-2b-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "50782000",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-2b-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "50782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-2b-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "51782000",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-2b-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "51782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-2b-a.gif"
+}, {
+    "kind": "Bee, Beel",
+    "uic": "51782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Beel-2b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "50782900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "50782910",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "50782970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "51782900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "51782970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "Bee",
+    "uic": "51782900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "Bee",
+    "uic": "51782970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "51785910",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bcl-a.gif"
+}, {
+    "kind": "Bcl",
+    "uic": "51785900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bcl-2b-a.gif"
+}, {
+    "kind": "Bcl",
+    "uic": "51785970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bcl-2b-a.gif"
+}, {
+    "kind": "WL",
+    "uic": "51787019",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WL-7089-a.gif"
+}, {
+    "kind": "WLl",
+    "uic": "51787010",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/WLl-7080-1-a.gif"
+}, {
+    "kind": "WLee",
+    "uic": "51787110",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/WLee-7110-2b-a.gif"
+}, {
+    "kind": "ARl",
+    "uic": "50788500",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/ARl-1a-a.gif"
+}, {
+    "kind": "ARl",
+    "uic": "50788510",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/ARl-1b-a.gif"
+}, {
+    "kind": "Dls",
+    "uic": "51789500",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Dls-a.gif"
+}, {
+    "kind": "Post-l",
+    "uic": "51780000",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Post-a.gif"
+}, {
+    "kind": "WLlm",
+    "uic": "51787140",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WLlm-ZTP-Zagreb-a.gif"
+}, {
+    "kind": "DDam",
+    "uic": "50729710",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Laeekss-z-a.gif"
+}, {
+    "kind": "DDm",
+    "uic": "51789800",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/DDm-a.gif"
+}, {
+    "kind": "Bclm",
+    "uic": "50785080",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bclm-ZTP-Zagreb-a.gif"
+}, {
+    "kind": "Bt",
+    "uic": "50782017",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Bt-2117-1-a.gif"
+}, {
+    "kind": "AB",
+    "uic": "50783???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/AB2-a.gif"
+}, {
+    "kind": "Beet",
+    "uic": "50782005",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Beet-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "50785???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Bc2-a.gif"
+}, {
+    "kind": "WL",
+    "uic": "50788???",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/WL-a.gif"
+}, {
+    "kind": "ABeemt",
+    "uic": "61783970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/ABeemt-2b-a.gif"
+}, {
+    "kind": "Beemt",
+    "uic": "61782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Beemt-2b-a.gif"
+}, {
+    "kind": "WReelmt",
+    "uic": "61788770",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/WReelmt-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "51782900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-p-exA-2b-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "50782970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-p-exA-2b-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "51782970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-p-exA-2b-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "50788710",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/WRl-8780-1a-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51788880",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/WRl-8880-a.gif"
+}, {
+    "kind": "Aeet",
+    "uic": "61781000",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Aeelt-2b-a.gif"
+}, {
+    "kind": "Aeet",
+    "uic": "61781070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Aeelt-2b-a.gif"
+}, {
+    "kind": "ABee",
+    "uic": "61783900",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/ABee-2b-a.gif"
+}, {
+    "kind": "ABee",
+    "uic": "61783970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/ABee-2b-a.gif"
+}, {
+    "kind": "Bee",
+    "uic": "61782000",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bee-2b-a.gif"
+}, {
+    "kind": "Bee",
+    "uic": "61782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bee-2b-a.gif"
+}, {
+    "kind": "Beet",
+    "uic": "61782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Beelt-2b-a.gif"
+}, {
+    "kind": "Beet",
+    "uic": "61782070",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Beelt-i-2b-a.gif"
+}, {
+    "kind": "Bcee",
+    "uic": "61785970",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bcee-2b-a.gif"
+}, {
+    "kind": "WLee",
+    "uic": "61787170",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/WLee-7170-do005-2b-a.gif"
+}, {
+    "kind": "WRee",
+    "uic": "61788800",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/WRee-2b-a.gif"
+}, {
+    "kind": "Bee",
+    "uic": "51782770",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-exAB-2b-a.gif"
+}, {
+    "kind": "Bee",
+    "uic": "51782870",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Bl-2b-a.gif"
+}, {
+    "kind": "Beet",
+    "uic": "50782107",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/Beet-2b-a.gif"
+}, {
+    "kind": "MDDlm",
+    "uic": "51789800",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZPP/MDDlm-2b-a.gif"
+}, {
+    "kind": "Uks-zž",
+    "uic": "20729001",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/-a.gif"
+}, {
+    "kind": "Uaks-zž",
+    "uic": "50729920",
+    "operator": "HŽ PP",
+    "image": "https://www.vagonweb.cz/popisy/img/HZ/Uaks-zž-a.gif"
+}, {
+    "kind": "A, Al",
+    "uic": "50721905",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Al-3b-a.gif"
+}, {
+    "kind": "AB, ABl",
+    "uic": "51723910",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/ABl-3b-a.gif"
+}, {
+    "kind": "AB, ABl",
+    "uic": "50723926",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/ABl-3b-a.gif"
+}, {
+    "kind": "AB, ABl",
+    "uic": "51723927",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/ABl-3b-a.gif"
+}, {
+    "kind": "AB, ABl",
+    "uic": "51723980",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/ABl-3b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "51722010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bl-3b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "50722026",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bl-3b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "51722027",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bl-3b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "51722070",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bl-3b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "51722080",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bl-3b-a.gif"
+}, {
+    "kind": "B, Bl",
+    "uic": "50722928",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bl-exA-2-a.gif"
+}, {
+    "kind": "BR",
+    "uic": "50728410",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BRl-exARl-a.gif"
+}, {
+    "kind": "BR",
+    "uic": "50728527",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BRl-0-a.gif"
+}, {
+    "kind": "BR",
+    "uic": "50728510",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BRl-0-a.gif"
+}, {
+    "kind": "BRl",
+    "uic": "50728580",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BRl-2-a.gif"
+}, {
+    "kind": "Ac, Acl",
+    "uic": "50724810",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Acl-3b-a.gif"
+}, {
+    "kind": "Ac, Acl",
+    "uic": "50724826",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Acl-3b-a.gif"
+}, {
+    "kind": "Ac, Acl",
+    "uic": "50724880",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Acl-3b-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "50725910",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bc-ZTP-Beograd-a.gif"
+}, {
+    "kind": "Bc, Bcl",
+    "uic": "51725910",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bcl-3b-a.gif"
+}, {
+    "kind": "Bc, Bcl",
+    "uic": "50725927",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bcl-3b-a.gif"
+}, {
+    "kind": "Bc, Bcl",
+    "uic": "51725980",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Bcl-3b-a.gif"
+}, {
+    "kind": "WLB",
+    "uic": "50727089",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WL-7089-a.gif"
+}, {
+    "kind": "WLB",
+    "uic": "50727080",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/WL-7089-a.gif"
+}, {
+    "kind": "WLB, WLBl",
+    "uic": "51727010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/WLBl-70-3b-a.gif"
+}, {
+    "kind": "WLB, WLBl",
+    "uic": "50727027",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/WLBl-70-3b-a.gif"
+}, {
+    "kind": "WLB, WLBl",
+    "uic": "51727080",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/WLBl-70-3b-a.gif"
+}, {
+    "kind": "WLB, WLBl",
+    "uic": "50727110",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/WLBl-7180-3a-a.gif"
+}, {
+    "kind": "WLB, WLBl",
+    "uic": "50727150",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/WLBl-7180-3a-a.gif"
+}, {
+    "kind": "WLB, WLBl",
+    "uic": "51727180",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/WLBl-7180-3a-a.gif"
+}, {
+    "kind": "D",
+    "uic": "50729510",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/D-a.gif"
+}, {
+    "kind": "Ds",
+    "uic": "50729527",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Ds-z-a.gif"
+}, {
+    "kind": "Ds",
+    "uic": "50729580",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Ds-z-a.gif"
+}, {
+    "kind": "Ds",
+    "uic": "51729510",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Ds-ZTP-Beograd-a.gif"
+}, {
+    "kind": "Post-l",
+    "uic": "51720010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Post-l-PTT-Beograd-a.gif"
+}, {
+    "kind": "Post-l",
+    "uic": "51720080",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Post-l-PTT-Beograd-a.gif"
+}, {
+    "kind": "WLBlm",
+    "uic": "51727110",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/WLBlm-1-a.gif"
+}, {
+    "kind": "DDam",
+    "uic": "50729700",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/DDam-a.gif"
+}, {
+    "kind": "AcBc",
+    "uic": "51724476",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/AcBcm-4-a.gif"
+}, {
+    "kind": "Am, Alm",
+    "uic": "51721070",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Alm-1b-a.gif"
+}, {
+    "kind": "ABm, ABlm",
+    "uic": "50723010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/ABlm-3b-a.gif"
+}, {
+    "kind": "ABm, ABlm",
+    "uic": "51723070",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/ABlm-3b-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722110",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Blm-3b-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722126",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Blm-3b-a.gif"
+}, {
+    "kind": "Beelmt",
+    "uic": "50722005",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Beelmt-1-a.gif"
+}, {
+    "kind": "BReelmt",
+    "uic": "50728505",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BReelmt-a.gif"
+}, {
+    "kind": "Am",
+    "uic": "50721010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Am-1040-bo-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722027",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2022-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722040",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2022-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722105",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2127-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722127",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2127-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722140",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2127-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "51722205",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2227-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "51722210",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2227-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722227",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2227-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722240",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2227-ss2-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722255",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2227-ss2-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "51725010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bcm-5022-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "50725027",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bcm-5022-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "51725040",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bcm-5022-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "50725041",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bcm-5022-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "51725010",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bcm-5010-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "51725040",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bcm-5010-a.gif"
+}, {
+    "kind": "BDm",
+    "uic": "50728227",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BDms-8240-a.gif"
+}, {
+    "kind": "ABm",
+    "uic": "50723005",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/ABm-3005-a.gif"
+}, {
+    "kind": "ABm",
+    "uic": "50723028",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/ABm-3005-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722905",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2928-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722928",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2928-a.gif"
+}, {
+    "kind": "At, Atl",
+    "uic": "50721976",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Atl-a.gif"
+}, {
+    "kind": "Bt, Btl",
+    "uic": "50722076",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Btl-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51728771",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/WRl-8771-a.gif"
+}, {
+    "kind": "D",
+    "uic": "50729255",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/D-ZTP-Beograd-a.gif"
+}, {
+    "kind": "WRl",
+    "uic": "51728780",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/WRl-8780-a.gif"
+}, {
+    "kind": "BRtl",
+    "uic": "50728505",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/BRtl-1a-a.gif"
+}, {
+    "kind": "Aeelmt",
+    "uic": "61721070",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Aeelmt-3b-a.gif"
+}, {
+    "kind": "Beelmt",
+    "uic": "61722070",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/Beelmt-3b-a.gif"
+}, {
+    "kind": "WReelmt",
+    "uic": "61728770",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/SV/WReelm-3b-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51720950",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-0950-600-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "61720950",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-0950-600-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51720990",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-0990-600-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "50728902",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-8902-500-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51728970",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-8970-900-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51729980",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-9980-601-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "61720980",
+    "operator": "SV",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Salon-0980-710-a.gif"
+}, {
+    "kind": "Baat",
+    "uic": "50722418",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Baat-ZTO-Sarajevo-a.gif"
+}, {
+    "kind": "Baat",
+    "uic": "50722425",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Baat-ZTO-Sarajevo-a.gif"
+}, {
+    "kind": "Daa",
+    "uic": "50729317",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Daa-ZTO-Sarajevo-a.gif"
+}, {
+    "kind": "A",
+    "uic": "50491910",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Al-a.gif"
+}, {
+    "kind": "All",
+    "uic": "50491900",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/All-ZTO-Sarajevo-2-a.gif"
+}, {
+    "kind": "AB",
+    "uic": "50493910",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/ABl-a.gif"
+}, {
+    "kind": "B",
+    "uic": "50492010",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Bl-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "50725910",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bc-ZTO-Sarajevo-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "50725980",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bc-ZTO-Sarajevo-a.gif"
+}, {
+    "kind": "Bcl",
+    "uic": "50495910",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Bcl-a.gif"
+}, {
+    "kind": "Bcl",
+    "uic": "50495980",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Bcl-a.gif"
+}, {
+    "kind": "D",
+    "uic": "50499510",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/D-a.gif"
+}, {
+    "kind": "ARll",
+    "uic": "50498410",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/ARll-a.gif"
+}, {
+    "kind": "Aeelt",
+    "uic": "50491005",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Aeelt-a.gif"
+}, {
+    "kind": "Beelt",
+    "uic": "50492005",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Beelt-a.gif"
+}, {
+    "kind": "All",
+    "uic": "51491900",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/All-a.gif"
+}, {
+    "kind": "All",
+    "uic": "51491970",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/All-a.gif"
+}, {
+    "kind": "Blm",
+    "uic": "51492110",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Blm-001,2,5-a.gif"
+}, {
+    "kind": "Blm",
+    "uic": "51492180",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Blm-001,2,5-a.gif"
+}, {
+    "kind": "TA7h",
+    "uic": "73491790",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TA7h-a.gif"
+}, {
+    "kind": "TA7l",
+    "uic": "73491790",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TA7h-a.gif"
+}, {
+    "kind": "TB7",
+    "uic": "73492890",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TB7-a.gif"
+}, {
+    "kind": "TC7",
+    "uic": "73498790",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TC7-a.gif"
+}, {
+    "kind": "TGA7l",
+    "uic": "73498990",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TGA7z-a.gif"
+}, {
+    "kind": "TGA7z",
+    "uic": "73498990",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TGA7z-a.gif"
+}, {
+    "kind": "TGB7z",
+    "uic": "73498990",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TGB7z-a.gif"
+}, {
+    "kind": "TWL7",
+    "uic": "7349890",
+    "operator": "ŽFBH",
+    "image": "https://www.vagonweb.cz/popisy/img/ZFBH/Talgo-TB7-a.gif"
+}, {
+    "kind": "ABlm",
+    "uic": "50443010",
+    "operator": "ŽRS",
+    "image": "https://www.vagonweb.cz/popisy/img/ZRS/ABm-mb-a.gif"
+}, {
+    "kind": "Blm",
+    "uic": "50442110",
+    "operator": "ŽRS",
+    "image": "https://www.vagonweb.cz/popisy/img/ZRS/Bm-mb-a.gif"
+}, {
+    "kind": "Blm",
+    "uic": "50442126",
+    "operator": "ŽRS",
+    "image": "https://www.vagonweb.cz/popisy/img/ZRS/Bm-mb-a.gif"
+}, {
+    "kind": "B",
+    "uic": "50622905",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/B-2905-a.gif"
+}, {
+    "kind": "B",
+    "uic": "50622910",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/B-2905-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "50628669",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Salon-2-07-a.gif"
+}, {
+    "kind": "WR",
+    "uic": "51628776",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/WRl-a.gif"
+}, {
+    "kind": "Aeelm",
+    "uic": "61621070",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Aeelm-a.gif"
+}, {
+    "kind": "Beelm",
+    "uic": "61622070",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Beelm-a.gif"
+}, {
+    "kind": "AcBc",
+    "uic": "50624427",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/AcBc-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "50625927",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Bc-ss-a.gif"
+}, {
+    "kind": "WLABm",
+    "uic": "50627210",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/WLABm-7210-ss-a.gif"
+}, {
+    "kind": "WLABm",
+    "uic": "50627510",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/WLAB-T2-ss-a.gif"
+}, {
+    "kind": "DDm",
+    "uic": "50629810",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/DDm-a.gif"
+}, {
+    "kind": "Am",
+    "uic": "50621010",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZCG/Am-0-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50622205",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Bm-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50622227",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Bm-a.gif"
+}, {
+    "kind": "Acl",
+    "uic": "50624027",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Acm-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "50625005",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Bcm-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "50625027",
+    "operator": "ŽPCG",
+    "image": "https://www.vagonweb.cz/popisy/img/ZPCG/Bcm-a.gif"
+}, {
+    "kind": "ABm",
+    "uic": "50723110",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/ABm-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722210",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Bm-a.gif"
+}, {
+    "kind": "ARm",
+    "uic": "51658410",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/ARm-a.gif"
+}, {
+    "kind": "Bcm",
+    "uic": "51655940",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Bcm-a.gif"
+}, {
+    "kind": "Baat",
+    "uic": "50722425",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Baat-a.gif"
+}, {
+    "kind": "A",
+    "uic": "50651010",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Al-1010-a.gif"
+}, {
+    "kind": "A, Al",
+    "uic": "50651910",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Al-a.gif"
+}, {
+    "kind": "B, Bl, Bll",
+    "uic": "51652010",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Bl-a.gif"
+}, {
+    "kind": "Bc",
+    "uic": "51655910",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Bc-a.gif"
+}, {
+    "kind": "Bcll",
+    "uic": "51655980",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Bcll-a.gif"
+}, {
+    "kind": "WLB",
+    "uic": "51657080",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/WLB-7080-a.gif"
+}, {
+    "kind": "WLBll",
+    "uic": "51657180",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/WLBl-7180-a.gif"
+}, {
+    "kind": "Salon",
+    "uic": "51650980",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Salon-0980-000-a.gif"
+}, {
+    "kind": "Post-l",
+    "uic": "50650080",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Post-l-a.gif"
+}, {
+    "kind": "AR",
+    "uic": "51658440",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/AR-a.gif"
+}, {
+    "kind": "Am, Alm",
+    "uic": "51651080",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Alm-a.gif"
+}, {
+    "kind": "Bm, Blm",
+    "uic": "51652180",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Blm-a.gif"
+}, {
+    "kind": "Bcm, Bclm, Bcllm",
+    "uic": "51655080",
+    "operator": "MŽ",
+    "image": "https://www.vagonweb.cz/popisy/img/MZ/Bclm-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "50722010",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bl-z-a.gif"
+}, {
+    "kind": "Bl",
+    "uic": "50722027",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bl-z-a.gif"
+}, {
+    "kind": "Alt",
+    "uic": "50721984",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Atl-a.gif"
+}, {
+    "kind": "Btl",
+    "uic": "50722076",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Btl-a.gif"
+}, {
+    "kind": "Beelmt",
+    "uic": "50722005",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Beelmt-1-a.gif"
+}, {
+    "kind": "Bt",
+    "uic": "50722020",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Bt-2030-ZTP-Beograd-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722140",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2127-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722240",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2127-a.gif"
+}, {
+    "kind": "Bm",
+    "uic": "50722255",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/ZS/Bm-2127-a.gif"
+}, {
+    "kind": "D",
+    "uic": "50729510",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/Ds-9510-a.gif"
+}, {
+    "kind": "D",
+    "uic": "51729580",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/JZ/D-a.gif"
+}, {
+    "kind": "Bc241",
+    "uic": "51805940",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/DR/Bme-72-s-a.gif"
+}, {
+    "kind": "B1",
+    "uic": "50002076",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/TRAINKOS/B-SJ-cb-a.gif"
+}, {
+    "kind": "Bpz",
+    "uic": "50812935",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/TRAINKOS/Bpz-a.gif"
+}, {
+    "kind": "BDpz",
+    "uic": "50818235",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/TRAINKOS/BDpz-a.gif"
+}, {
+    "kind": "ABnr",
+    "uic": "50003135",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/TRAINKOS/Bnr-a.gif"
+}, {
+    "kind": "Bnr",
+    "uic": "50002235",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/TRAINKOS/Bnr-a.gif"
+}, {
+    "kind": "Bnrd",
+    "uic": "50008435",
+    "operator": "Trainkos",
+    "image": "https://www.vagonweb.cz/popisy/img/TRAINKOS/Bnr-a.gif"
+}, {
+    "kind": "ABmhe",
+    "uic": "51733980",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/ABmhee-a.gif"
+}, {
+    "kind": "Bmhe",
+    "uic": "51732080",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/Bmhee-a.gif"
+}, {
+    "kind": "Bcme",
+    "uic": "51735080",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/Bcmee-a.gif"
+}, {
+    "kind": "Amz",
+    "uic": "73730996",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/Amz-a.gif"
+}, {
+    "kind": "ADmz",
+    "uic": "73738496",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/ADmz-a.gif"
+}, {
+    "kind": "Bmz",
+    "uic": "73732196",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/Bmz-a.gif"
+}, {
+    "kind": "WRmz",
+    "uic": "73738896",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/WRmz-a.gif"
+}, {
+    "kind": "Bmpz",
+    "uic": "73732096",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/Bmpz-a.gif"
+}, {
+    "kind": "MDDm",
+    "uic": "51739889",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/MDDm-a.gif"
+}, {
+    "kind": "WLABmh",
+    "uic": "61737176",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/WLABmh-a.gif"
+}, {
+    "kind": "WLAB",
+    "uic": "61737571",
+    "operator": "TRAINOSE",
+    "image": "https://www.vagonweb.cz/popisy/img/OSE/WLAB-T2-a.gif"
+}, {
+    "kind": "WL26x - 7100",
+    "uic": "50717978",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/WL26x-7100-a.gif"
+}, {
+    "kind": "A9t - 9100",
+    "uic": "50711970",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/A12t-9000-a.gif"
+}, {
+    "kind": "B10t - 9300",
+    "uic": "50712070",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/B10t-9300-a.gif"
+}, {
+    "kind": "Bc10x - 9600",
+    "uic": "50715070",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/Bc10x-9600-a.gif"
+}, {
+    "kind": "BR4t - 9800",
+    "uic": "50718570",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/BR4t-9800-a.gif"
+}, {
+    "kind": "BR3t - 9820",
+    "uic": "50718570",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/BR4t-9800-a.gif"
+}, {
+    "kind": "A10x - 10000",
+    "uic": "51711078",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/A10x-10000-a.gif"
+}, {
+    "kind": "A8lv - 10500",
+    "uic": "58716078",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/A8lv-10500-a.gif"
+}, {
+    "kind": "BR4x - 10800",
+    "uic": "51718578",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/BR4x-10800-a.gif"
+}, {
+    "kind": "A9t - 2000",
+    "uic": "50711298",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/A9t-2000-a.gif"
+}, {
+    "kind": "B10t - 2200",
+    "uic": "50712098",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/B10t-2200-a.gif"
+}, {
+    "kind": "BR3t - 2800",
+    "uic": "50718598",
+    "operator": "RENFE",
+    "image": "https://www.vagonweb.cz/popisy/img/RENFE/BR3t-2800-a.gif"
+}]

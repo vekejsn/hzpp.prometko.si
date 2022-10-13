@@ -116,6 +116,13 @@ async function sz() {
                                     let b = await (types.find(x => composition.kind.substring(0,4).includes(x.type)));
                                     console.log(b);
                                     imgs += `<img src="img/${b.img}.gif" style="height:30px"\>`
+                                } else {
+                                    let uicNumber = TRAIN_COMPOSITIONS.find(u => composition.uicNumber.startsWith(u.uic));
+                                    if (uicNumber) {
+                                        imgs += `<img src="${uicNumber.image}" style="height: 30px;">`;
+                                    } else {
+                                        imgs += `<img src="./img/generic.gif" style="height: 30px;">`;
+                                    }
                                 }
                             }
                             compositionText += `${imgs.length > 0 ? `<div class="composition">${imgs}</div>`: ""}<hr>`

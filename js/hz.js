@@ -121,7 +121,12 @@ async function hz() {
                                     }
                                     unitCounter[type.type] = unitCounter[type.type] ? unitCounter[type.type] + 1 : 1;
                                 } else {
-                                    composition_img += `<img src="./img/generic.gif" style="height: 30px;">`;
+                                    let uicNumber = TRAIN_COMPOSITIONS.find(u => component.uicNumber.startsWith(u.uic));
+                                    if (uicNumber) {
+                                        composition_img += `<img src="${uicNumber.image}" style="height: 30px;">`;
+                                    } else {
+                                        composition_img += `<img src="./img/generic.gif" style="height: 30px;">`;
+                                    }
                                 }
                             }
                         } else {
