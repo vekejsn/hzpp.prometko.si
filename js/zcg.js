@@ -23,7 +23,6 @@ async function zcg() {
     while (true) {
         try {
             let vehicles = await fetch('https://api.hzpp.prometko.si/ME/zcg/trips/active').then(res => res.json()).then(res => res.data);
-            console.log(vehicles);
             vehicles.forEach(async vehicle => {
                 let marker = ZcgMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {

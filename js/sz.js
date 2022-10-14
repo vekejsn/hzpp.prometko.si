@@ -24,7 +24,6 @@ async function sz() {
     while (true) {
         try {
             let vehicles = await fetch('https://api.hzpp.prometko.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
-            console.log(vehicles);
             vehicles.forEach(async vehicle => {
                 let marker = await szMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {
@@ -110,18 +109,22 @@ async function sz() {
                         for (let info of marker.data.train_cache.composition) {
                             compositionText += `${ACTIVE_VOCABULARY.source}: <img src="img/logos/${sourceLogos[info.source]}" style="height:1rem"/></span> <small>(${new Date(info.timestamp).toLocaleString('hr-HR')})</small><hr class="no-padding no-margin">`;
                             let imgs = "";
+                            let has_loco = false;
                             for (let composition of info.composition) {
                                 compositionText += `${composition.kind} ${composition.uicNumber ? `<small>(${composition.uicNumber})</small>`: ""}<br>`;
                                 if (info.source == 'SŽ') {
                                     let b = await (types.find(x => composition.kind.substring(0,4).includes(x.type)));
-                                    console.log(b);
                                     imgs += `<img src="img/${b.img}.gif" style="height:30px"\>`
                                 } else {
-                                    let uicNumber = TRAIN_COMPOSITIONS.find(u => composition.uicNumber.startsWith(u.uic));
+                                    let uicNumber = TRAIN_UIC_IMAGES.find(x => x.uicNumber == composition.uicNumber);
+                                    !uicNumber || uicNumber.operator == '???' ? uicNumber = TRAIN_COMPOSITIONS.find(u => composition.uicNumber.startsWith(u.uic)) : uicNumber;
                                     if (uicNumber) {
-                                        imgs += `<img src="${uicNumber.image}" style="height: 30px;">`;
+                                        imgs += `<img src="${uicNumber.image}" style="height: ${has_loco ? 21 : 30}px; margin-top: auto; ">`;
+                                        if (composition.kind == 'TFZ') {
+                                            has_loco = true;
+                                        }
                                     } else {
-                                        imgs += `<img src="./img/generic.gif" style="height: 30px;">`;
+                                        imgs += `<img src="./img/generic.gif" style="height: ${has_loco ? 21 : 30}px; margin-top: auto; ">`;
                                     }
                                 }
                             }

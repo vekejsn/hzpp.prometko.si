@@ -44,8 +44,6 @@ async function hz() {
                 marker.addTo(map);
                 marker.getElement().addEventListener('click', async () => {
                     while (true) {
-
-                        console.log(marker.data);
                         let scheduleTable = document.createElement('table');
                         scheduleTable.className = 'table table-sm';
                         scheduleTable.style.width = '100%';
@@ -121,7 +119,8 @@ async function hz() {
                                     }
                                     unitCounter[type.type] = unitCounter[type.type] ? unitCounter[type.type] + 1 : 1;
                                 } else {
-                                    let uicNumber = TRAIN_COMPOSITIONS.find(u => component.uicNumber.startsWith(u.uic));
+                                    let uicNumber = TRAIN_UIC_IMAGES.find(x => x.uicNumber == component.uicNumber);
+                                    !uicNumber || uicNumber.operator == '???' ? uicNumber = TRAIN_COMPOSITIONS.find(u => component.uicNumber.startsWith(u.uic)) : uicNumber;
                                     if (uicNumber) {
                                         composition_img += `<img src="${uicNumber.image}" style="height: 30px;">`;
                                     } else {

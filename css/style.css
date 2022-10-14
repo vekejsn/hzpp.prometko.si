@@ -163,9 +163,11 @@ span.delayText {
     flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
-    border-bottom: 1px solid grey;
+    border-bottom: 2px solid grey;
     justify-content: left;
     align-items: center;
+    vertical-align: bottom;
+    padding: 0 0 0 0;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     padding-top:0px;

@@ -23,7 +23,6 @@ async function zs() {
     while (true) {
         try {
             let vehicles = await fetch('https://api.hzpp.prometko.si/RS/zs/trips/active').then(res => res.json()).then(res => res.data);
-            console.log(vehicles);
             vehicles.forEach(async vehicle => {
                 let marker = zsMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {

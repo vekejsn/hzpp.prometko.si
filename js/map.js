@@ -5,6 +5,7 @@ var VOCABULARY = {};
 var SIDEBAR = {};
 var ACTIVE_VOCABULARY = {};
 var TRAIN_COMPOSITIONS = [];
+var TRAIN_UIC_IMAGES = [];
 
 window.onload = async () => {
     let height = await $(document).height();
@@ -96,6 +97,7 @@ window.onload = async () => {
     VOCABULARY = await fetch('json/vocabulary.json').then(response => response.json());
     ACTIVE_VOCABULARY = VOCABULARY.hr;
     TRAIN_COMPOSITIONS = await fetch('json/trains.json').then(response => response.json());
+    TRAIN_UIC_IMAGES = await fetch('https://api.hzpp.prometko.si/tools/units/units').then(response => response.json()).then(data => data.data);
 
     SIDEBAR = new SidebarJS.SidebarElement({
         position: 'left',

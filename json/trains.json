@@ -3768,4 +3768,14 @@
     "uic": "50718598",
     "operator": "RENFE",
     "image": "https://www.vagonweb.cz/popisy/img/RENFE/BR3t-2800-a.gif"
+}, {
+    "kind": "TFZ",
+    "uic": "91811216",
+    "operator": "ÖBB",
+    "image": "https://www.vagonweb.cz/popisy/img/OeBB/1216-a.gif"
+}, {
+    "kind": "TFZ",
+    "uic": "91806193",
+    "operator": "ELL",
+    "image": "https://www.vagonweb.cz/popisy/img/D-/ELOC/193-ell-a.gif"
 }]
