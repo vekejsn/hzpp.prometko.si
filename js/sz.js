@@ -25,7 +25,7 @@ async function sz() {
         try {
             let vehicles = await fetch('https://api.hzpp.prometko.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
-                let marker = await szMarkers.find(m => m.id == vehicle.train_data.train_id);
+                let marker = await szMarkers.find(m => m.data.train_data.train_number == vehicle.train_data.train_number);
                 if (!marker) {
                     marker = new maplibregl.Marker({
                         color: '#ff0000',
@@ -160,9 +160,10 @@ async function sz() {
                             }
                         }
                     });
-                    szMarkers.push(marker);
+                    marker.id = await vehicle.train_data.train_number;
                     marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
                     marker.addTo(map);
+                    szMarkers.push(marker);
                 } else {
                     let k = await returnszMarker(vehicle.train_data.train_type + vehicle.train_data.train_number, vehicle.train_cache.delay);
                     marker.getElement().innerHTML = k.innerHTML;

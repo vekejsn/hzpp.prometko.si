@@ -1,4 +1,4 @@
-var map = L.map('map', { zoomControl: false }).setView([44.4110628,16.5184112], 8);
+var map = L.map('map', { zoomControl: false }).setView([46.4110628,14.5184112], 9);
 let szMarkers = [];
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
@@ -60,8 +60,9 @@ async function sz() {
         try {
             let vehicles = await fetch('https://api.hzpp.prometko.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
-                let marker = await szMarkers.find(m => m.id == vehicle.train_data.train_id);
+                let marker = await szMarkers.find(m => m.id == vehicle.train_data.train_number);
                 if (!marker) {
+                    console.log(vehicle.train_data.train_number);
                     marker = new L.marker([vehicle.coordinates.lat, vehicle.coordinates.lng], { icon: L.divIcon({ html: await returnszMarker(vehicle.train_data.train_number, vehicle.train_data.train_type, vehicle.train_cache.delay), className: 'szMarker' }) });
                     marker.on('click', async () => {
                         while (true) {
@@ -206,7 +207,7 @@ async function sz() {
                 marker.data = vehicle;
             });
 
-            await delay(10000);
+            await delay(1000);
         } catch (e) {
             await delay(5000);
         }
