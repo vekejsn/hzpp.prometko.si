@@ -31,14 +31,15 @@ async function zcg() {
                         element: await returnZcgMarker(vehicle.train_data.train_number, 0)
                     });
                     ZcgMarkers.push(marker);
+                    marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
+                    marker.addTo(map);
                 } else {
                     let k = await returnZcgMarker(vehicle.train_data.train_number, 0);
                     marker.getElement().innerHTML = k.innerHTML;
+                    marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
                 }
                 marker.id = vehicle.train_data.train_id;
                 marker.data = vehicle;
-                marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
-                marker.addTo(map);
                 marker.getElement().addEventListener('click', async () => {
                     while (true) {
                         console.log(marker.data);

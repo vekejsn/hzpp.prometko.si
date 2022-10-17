@@ -34,14 +34,15 @@ async function hz() {
                         element: await returnHzMarker(vehicle.trip_short_name, vehicle.delay)
                     });
                     hzMarkers.push(marker);
+                    marker.setLngLat([vehicle.train_lon, vehicle.train_lat]);
+                    marker.addTo(map);
+                    marker.id = vehicle.trip_id;
                 } else {
                     let k = await returnHzMarker(vehicle.trip_short_name, vehicle.delay);
                     marker.getElement().innerHTML = k.innerHTML;
+                    marker.setLngLat([vehicle.train_lon, vehicle.train_lat]);
                 }
-                marker.id = vehicle.trip_id;
                 marker.data = vehicle;
-                marker.setLngLat([vehicle.train_lon, vehicle.train_lat]);
-                marker.addTo(map);
                 marker.getElement().addEventListener('click', async () => {
                     while (true) {
                         let scheduleTable = document.createElement('table');

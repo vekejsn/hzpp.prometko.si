@@ -98,15 +98,17 @@ async function sz() {
                             let sourceLogos = {
                                 "SŽ": "sz.svg",
                                 "HŽPP": "hzpp.svg",
-                                "OeBB": "obb.svg"
+                                "OeBB": "obb.svg",
+                                "MAV": "mav.svg",
                             }
                             let compositionText = marker.data.train_cache.composition.length > 0 ? `` : `<small>${marker.data.train_cache.is_bus ? 'AVTOBUS' : `(${ACTIVE_VOCABULARY.unknown})`}</small>`;
                             for (let info of marker.data.train_cache.composition) {
+                                if (info == null) continue;
                                 compositionText += `${ACTIVE_VOCABULARY.source}: <img src="img/logos/${sourceLogos[info.source]}" style="height:1rem"/></span> <small>(${new Date(info.timestamp).toLocaleString('hr-HR')})</small><hr class="no-padding no-margin">`;
                                 let imgs = "";
                                 let has_loco = false;
                                 for (let composition of info.composition) {
-                                    compositionText += `${composition.kind} ${composition.uicNumber ? `<small>(${composition.uicNumber})</small>`: ""}<br>`;
+                                    compositionText += `${composition.kind ? composition.kind : ""} ${composition.uicNumber ? `<small>(${composition.uicNumber})</small>`: ""}<br>`;
                                     if (info.source == 'SŽ') {
                                         let b = await (types.find(x => composition.kind.substring(0,4).includes(x.type)));
                                         imgs += `<img src="img/${b.img}.gif" style="height:30px"\>`
@@ -159,9 +161,12 @@ async function sz() {
                         }
                     });
                     szMarkers.push(marker);
+                    marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
+                    marker.addTo(map);
                 } else {
                     let k = await returnszMarker(vehicle.train_data.train_type + vehicle.train_data.train_number, vehicle.train_cache.delay);
                     marker.getElement().innerHTML = k.innerHTML;
+                    marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
                 }
                 
                 marker.id = vehicle.train_data.train_id;
@@ -170,7 +175,6 @@ async function sz() {
                 }
                 marker.data = vehicle;
                 marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
-                marker.addTo(map);
             });
 
             await delay(10000);
