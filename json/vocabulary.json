@@ -11,7 +11,15 @@
         "schedule": "Schedule",
         "operator": "Operator",
         "in_stop": "in stop",
-        "source": "Source"
+        "source": "Source",
+        "hello_and_welcome": "Hello and welcome to the Mapper!",
+        "changelog": "Changelog",
+        "select_language": "Select language",
+        "language_name": "English",
+        "language_image": "https://flagcdn.com/20x15/gb.png",
+        "other_services": "Other services",
+        "hz_archive": "HŽ Archive",
+        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.1.0</b><br>Initial release of the MaplibreJS rewrite of the mapper."
     },
     "sl": {
         "current_stop": "Trenutna postaja",
@@ -25,7 +33,14 @@
         "schedule": "Vozni red",
         "operator": "Operater",
         "in_stop": "na postaji",
-        "source": "Vir"
+        "source": "Vir",
+        "hello_and_welcome": "Pozdravljeni in dobrodošli v Mapper!",
+        "changelog": "Dnevnik sprememb (v angleščini)",
+        "select_language": "Izberite jezik",
+        "language_name": "Slovenščina",
+        "language_image": "https://flagcdn.com/20x15/si.png",
+        "other_services": "Ostali servisi",
+        "hz_archive": "Arhiv HŽ"
     },
     "hr": {
         "current_stop": "Trenutna stanica",
@@ -39,7 +54,14 @@
         "schedule": "Vozni red",
         "operator": "Operater",
         "in_stop": "na postaji",
-        "source": "Izvor"
+        "source": "Izvor",
+        "hello_and_welcome": "Pozdravljeni i dobrodošli u Mapper!",
+        "changelog": "Dnevnik izmjena (na engleskom)",
+        "select_language": "Odaberite jezik",
+        "language_name": "Hrvatski",
+        "language_image": "https://flagcdn.com/20x15/hr.png",
+        "other_services": "Ostali servisi",
+        "hz_archive": "Arhiv HŽ"
     },
     "bs": {
         "current_stop": "Trenutna stanica",
@@ -53,6 +75,13 @@
         "schedule": "Red vožnje",
         "operator": "Operater",
         "in_stop": "na stanici",
-        "source": "Izvor"
+        "source": "Izvor",
+        "hello_and_welcome": "Pozdravljeni i dobrodošli u Mapper!",
+        "changelog": "Dnevnik izmjena (na engleskom)",
+        "select_language": "Odaberite jezik",
+        "language_name": "Bosanski",
+        "language_image": "https://flagcdn.com/20x15/ba.png",
+        "other_services": "Ostali servisi",
+        "hz_archive": "Arhiv HŽ"
     }
 }

@@ -13,11 +13,12 @@ window.onload = async () => {
 
     map = new maplibregl.Map({
         container: 'map',
-        style: 'https://api.maptiler.com/maps/pastel/style.json?key=8tDQz5wMQ3NjP4jqmQSN',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=8tDQz5wMQ3NjP4jqmQSN',
         center: [18,44.4110628],
         zoom: 7,
         //        minZoom: 6,
         //        renderWorldCopies: false,
+        maxPitch: 60,
         hash: true,
         trackResize: true,
     });
@@ -92,6 +93,8 @@ window.onload = async () => {
             labelLayerId
         );
 
+
+
     }); // end: load
     // get vocabulary
     VOCABULARY = await fetch('json/vocabulary.json').then(response => response.json());
@@ -120,18 +123,57 @@ window.onload = async () => {
         }
     } else {
         // prompt user to choose language
-        let languages = Object.keys(VOCABULARY);
-        let language = prompt(`Please choose your language: ${languages.join(', ')}`);
-        while (true) {
-            if (language in VOCABULARY) {
-                ACTIVE_VOCABULARY = VOCABULARY[language];
-                document.cookie = `new_mapper_language_preference=${language}`;
-                break;
-            } else {
-                language = prompt(`Please choose your language: ${languages.join(', ')}`);
-            }
-        }
+        document.cookie = `new_mapper_language_preference=${'en'}`;
     }
+    SIDEBAR.open();
+    // iterate over the VOCABULARY and create buttons for language selection, as div cards
+    let language_divs = [];
+    for (let language in VOCABULARY) {
+        let div = document.createElement('button');
+        div.classList.add('btn', 'btn-outline-primary');
+        div.style = 'cursor: pointer; text-align:center; width: 100%; margin:.2rem;';
+        div.innerHTML = `<img src="${VOCABULARY[language].language_image}"/> ${VOCABULARY[language].language_name}`;
+        div.addEventListener('click', () => {
+            document.cookie = `new_mapper_language_preference=${language}`;
+            ACTIVE_VOCABULARY = VOCABULARY[language];
+            // refresh the sidebar
+            SIDEBAR.close();
+        });
+        language_divs.push(div);
+    }
+
+    let sidebar = document.querySelector('[sidebarjs-container]');
+    let card = document.createElement('div');
+    card.style = "border-radius: 0; border: 0;";
+    card.classList.add('card');
+    let card_header = document.createElement('div');
+    card_header.classList.add('card-header', 'text-center', 'font-weight-bold', 'bg-primary', 'text-white');
+    card_header.style = "border-radius: 0; border: 0;";
+    card_header.innerHTML = `<h5>Mapper</h5>`;
+    let card_body = document.createElement('div');
+    card_body.classList.add('card-body');
+    card_body.innerHTML = `<p>${ACTIVE_VOCABULARY.hello_and_welcome}</p>
+                            <hr>
+                            <h6>${ACTIVE_VOCABULARY.select_language}</h6>`;
+    for (let div of language_divs) {
+        card_body.appendChild(div);
+    }
+    let text_div = document.createElement('div');
+    text_div.innerHTML += `<hr>
+    <h6>${ACTIVE_VOCABULARY.other_services}</h6>
+    <button class="btn btn-outline-primary" style="cursor: pointer; text-align: center; width: 100%; margin: 0.2rem;" onclick="window.location.href = './hzArchive.html'">
+    HŽ Archive
+    </button>
+    <hr>
+    <h6>${ACTIVE_VOCABULARY.changelog}</h6>
+    <code>${VOCABULARY['en'].changelog_details}</code>`;
+    card_body.appendChild(text_div);
+    
+    card.appendChild(card_header);
+    card.appendChild(card_body);
+    sidebar.appendChild(card);
+
+
     hz();
     zs();
     zcg();
