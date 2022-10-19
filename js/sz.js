@@ -116,7 +116,7 @@ async function sz() {
                                         let uicNumber = TRAIN_UIC_IMAGES.find(x => x.uicNumber == composition.uicNumber);
                                         !uicNumber || uicNumber.operator == '???' ? uicNumber = TRAIN_COMPOSITIONS.find(u => composition.uicNumber.startsWith(u.uic)) : uicNumber;
                                         if (uicNumber) {
-                                            imgs += `<img src="${uicNumber.image}" style="height: ${has_loco ? 21 : 30}px; margin-top: auto; ">`;
+                                            imgs += `<img src="${uicNumber.image}" style="height: ${has_loco && composition.kind != 'TFZ' ? 21 : 30}px; margin-top: auto; ">`;
                                             if (composition.kind == 'TFZ') {
                                                 has_loco = true;
                                             }
