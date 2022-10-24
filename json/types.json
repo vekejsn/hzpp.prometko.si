@@ -70,5 +70,16 @@
 }, {
     "type": "8814",
     "img": "blank"
+}, {
+    "type": "VOZNA",
+    "img": "generic-loco"
+}, {
+    "type": "91781141",
+    "img": "1141-cm-b"
+}, {
+    "type": "91781142",
+    "img": "1142-a"
+}, {
+        
 }
 ]

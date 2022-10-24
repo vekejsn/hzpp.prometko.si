@@ -91,6 +91,7 @@ async function hz() {
                         let composition_img = "";
                         if (marker.data.composition) {
                             let unitCounter = {};
+                            let has_loco = false;
                             for (let i = 0; i < marker.data.composition.length; i++) {
                                 let unit = marker.data.composition[i];
                                 compositionText += `<span>${unit.kind}</span> <small>(${unit.uicNumber})</small><br>`;
@@ -107,25 +108,40 @@ async function hz() {
                                 }
                                 let component = vehicle.composition[i];
                                 let type = types.find(t => component.kind.includes(t.type));
+                                if (component.kind == 'VOZNA' || component.kind == 'ZAPR.') {
+                                    type = types.find(t => component.uicNumber.startsWith(t.type));
+                                }
                                 if (type) {
                                     // if it's the 2nd in a row of the classes 7121-1 or 7123, flip the image to the other side
                                     // console.log('uc',vehicle.trip_short_name, unitCounter[type.type])
                                     if (unitCounter[type.type] && (unitCounter[type.type] + 1) % 2 == 0 && (type.type == "7121" || type.type == "7123")) {
                                         // console.log('went in')
-                                        composition_img += `<img src="./img/${type.img}.gif" style="height: 30px; transform: scaleX(-1);">`;
+                                        composition_img += `<img src="./img/${type.img}.gif" style="height: 30px; transform: scaleX(-1); margin-top: auto;">`;
                                     } else if (false) {
 
                                     } else {
-                                        composition_img += `<img src="./img/${type.img}.gif" style="height: 30px;">`;
+                                        composition_img += `<img src="./img/${type.img}.gif" style="height: ${has_loco && (component.kind != 'TFZ' && component.kind != 'VOZNA' && component.kind != 'ZAPREŽNA') ? 21 : 30}px; margin-top: auto;">`;
+                                        if (component.kind == 'TFZ' || component.kind == 'VOZNA' || component.kind == 'ZAPREŽNA') {
+                                            has_loco = true;
+                                            console.log('1')
+                                        }
                                     }
                                     unitCounter[type.type] = unitCounter[type.type] ? unitCounter[type.type] + 1 : 1;
                                 } else {
                                     let uicNumber = TRAIN_UIC_IMAGES.find(x => x.uicNumber == component.uicNumber);
                                     !uicNumber || uicNumber.operator == '???' ? uicNumber = TRAIN_COMPOSITIONS.find(u => component.uicNumber.startsWith(u.uic)) : uicNumber;
                                     if (uicNumber) {
-                                        composition_img += `<img src="${uicNumber.image}" style="height: 30px;">`;
+                                        composition_img += `<img src="${uicNumber.image}" style="height: ${has_loco && (component.kind != 'TFZ' && component.kind != 'VOZNA' && component.kind != 'ZAPREŽNA') ? 21 : 30}px; margin-top: auto;">`;
+                                        if (component.kind == 'TFZ' || component.kind == 'VOZNA' || component.kind == 'ZAPREŽNA') {
+                                            has_loco = true;
+                                            console.log('2')
+                                        }
                                     } else {
-                                        composition_img += `<img src="./img/generic.gif" style="height: 30px;">`;
+                                        composition_img += `<img src="./img/generic.gif" style="height: ${has_loco && (component.kind != 'TFZ' && component.kind != 'VOZNA' && component.kind != 'ZAPREŽNA') ? 21 : 30}px; margin-top: auto;">`;
+                                        if (component.kind == 'TFZ' || component.kind == 'VOZNA' || component.kind == 'ZAPREŽNA') {
+                                            has_loco = true;
+                                            console.log('3')
+                                        }
                                     }
                                 }
                             }
