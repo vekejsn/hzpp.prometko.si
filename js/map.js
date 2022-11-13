@@ -165,6 +165,10 @@ window.onload = async () => {
     HŽ Archive
     </button>
     <hr>
+    <button class="btn btn-outline-primary" style="cursor: pointer; text-align: center; width: 100%; margin: 0.2rem;" onclick='window.location.href="mailto:info@vlak.si"'>
+    ${ACTIVE_VOCABULARY.contact_us}
+    </button>
+    <hr>
     <h6>${ACTIVE_VOCABULARY.changelog}</h6>
     <code>${VOCABULARY['en'].changelog_details}</code>`;
     card_body.appendChild(text_div);

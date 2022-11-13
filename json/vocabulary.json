@@ -19,7 +19,8 @@
         "language_image": "https://flagcdn.com/20x15/gb.png",
         "other_services": "Other services",
         "hz_archive": "HŽ Archive",
-        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.1.0</b><br>Initial release of the MaplibreJS rewrite of the mapper."
+        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.1.0</b><br>Initial release of the MaplibreJS rewrite of the mapper.",
+        "contact_us": "Contact us"
     },
     "sl": {
         "current_stop": "Trenutna postaja",
@@ -40,7 +41,8 @@
         "language_name": "Slovenščina",
         "language_image": "https://flagcdn.com/20x15/si.png",
         "other_services": "Ostali servisi",
-        "hz_archive": "Arhiv HŽ"
+        "hz_archive": "Arhiv HŽ",
+        "contact_us": "Kontakt"
     },
     "hr": {
         "current_stop": "Trenutna stanica",
@@ -61,7 +63,8 @@
         "language_name": "Hrvatski",
         "language_image": "https://flagcdn.com/20x15/hr.png",
         "other_services": "Ostali servisi",
-        "hz_archive": "Arhiv HŽ"
+        "hz_archive": "Arhiv HŽ",
+        "contact_us": "Kontakt"
     },
     "bs": {
         "current_stop": "Trenutna stanica",
@@ -82,6 +85,7 @@
         "language_name": "Bosanski",
         "language_image": "https://flagcdn.com/20x15/ba.png",
         "other_services": "Ostali servisi",
-        "hz_archive": "Arhiv HŽ"
+        "hz_archive": "Arhiv HŽ",
+        "contact_us": "Kontakt"
     }
 }
