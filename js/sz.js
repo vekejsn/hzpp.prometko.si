@@ -108,7 +108,7 @@ async function sz() {
                                 let imgs = "";
                                 let has_loco = false;
                                 for (let composition of info.composition) {
-                                    compositionText += `${composition.kind ? composition.kind : ""} ${composition.uicNumber ? `<small>(${composition.uicNumber})</small>`: ""}<br>`;
+                                    compositionText += `${composition.kind ? composition.kind : ""} ${composition.uicNumber ? `<small>(${await formatUICNumber(composition.uicNumber)})</small>`: ""}<br>`;
                                     if (info.source == 'SŽ') {
                                         let b = await (types.find(x => composition.kind.substring(0,4).includes(x.type)));
                                         imgs += `<img src="img/${b.img}.gif" style="height:30px"\>`

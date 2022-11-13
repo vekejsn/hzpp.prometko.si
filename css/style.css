@@ -7,6 +7,15 @@
 
 }
 
+.modalPoint {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .zsIcon {
     font-family: 'Raleway', sans-serif;
     color: white !important;
@@ -31,6 +40,8 @@
     box-shadow: inset 0 0 2px white;
     z-index: 1;
     transition-duration: 2000ms;
+    display:flex;
+    flex-direction: column;
 }
 
 .szIcon-test {
@@ -156,6 +167,21 @@ span.delayText {
     position: absolute;
     z-index: 4000000;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.stopIcon {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #173963;
+    padding: 3px;
+    border-radius: 6px;
+    width: 8rem;
+    box-shadow: inset 0 0 2px white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .composition {

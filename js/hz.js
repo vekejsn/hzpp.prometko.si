@@ -19,6 +19,11 @@ async function returnHzMarker(number, delay) {
     return div;
 }
 
+async function formatUICNumber(uic) {
+    if (uic.length < 12) return uic;
+    return `${uic.substr(0, 2)} ${uic.substr(2, 2)} <u>${uic.substr(0, 2) > 90 ? uic.substr(4, 4) : `${uic.substr(4,2)}-${uic.substr(6,2)}`}-${uic.substr(8, 3)}</u> ${uic.substr(11, 1)}`;
+}
+
 async function hz() {
     let types = await fetch('json/types.json').then(res => res.json());
     let stops = await fetch('json/stops.json').then(res => res.json());
@@ -94,7 +99,7 @@ async function hz() {
                             let has_loco = false;
                             for (let i = 0; i < marker.data.composition.length; i++) {
                                 let unit = marker.data.composition[i];
-                                compositionText += `<span>${unit.kind}</span> <small>(${unit.uicNumber})</small><br>`;
+                                compositionText += `<span>${unit.kind}</span> <small>(${await formatUICNumber(unit.uicNumber)})</small><br>`;
                                 if (marker.data.composition[i + 2] != null && (vehicle.composition[i].kind.includes("5111") && vehicle.composition[i + 2].kind.includes("4111"))) {
                                     let temp = vehicle.composition[i];
                                     vehicle.composition[i] = vehicle.composition[i + 2];
