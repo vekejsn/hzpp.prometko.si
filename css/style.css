@@ -1,0 +1,211 @@
+.icon {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modalPoint {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.zsIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #173963;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.szIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #00AEEF;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+    z-index: 1;
+    transition-duration: 2000ms;
+    display:flex;
+    flex-direction: column;
+}
+
+.szIcon-test {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #2C549A;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.zcgIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #CC991A;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 3px grey;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
+.delay {
+    font-family: 'Raleway', sans-serif;
+    background-color: #C31F2A !important;
+    color: white;
+    font-size: 0.6rem;
+    padding: 0 5px 0 15px;
+    margin: 0 0 0 -15px;
+    border-radius: 0 6px 6px 0;
+    text-align: right;
+    z-index: 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px white;
+}
+
+.leaflet-control-layers-toggle {
+    font-family: 'Raleway', sans-serif;
+    transition-duration: 200ms;
+}
+
+.leaflet-control-layers {
+    font-family: 'Raleway', sans-serif;
+    transition-duration: 200ms;
+}
+
+.labelstyle {
+    font-family: 'Roboto Condensed', sans-serif;
+    transition-duration: 200ms;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.vehicle-img {
+    padding-left:.5rem;
+    max-width: 80vw;
+    max-height:2.5rem;
+    width: auto;
+}
+
+.vehicle-data {
+    border: 1px solid #4CABCE;
+    background-color: #9CC0CE;
+    color: white;
+    border-radius: 6px;
+    padding: .5rem;
+    box-shadow: inset 0 0 2px darkgrey;
+}
+
+.info-span {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 0 5px;
+    border-radius: 6px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.popup-train-img {
+    display:flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+span.delayText {
+    font-weight: bold;
+    color: red;
+}
+
+.sidebar {
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 4000000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.stopIcon {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #173963;
+    padding: 3px;
+    border-radius: 6px;
+    width: 8rem;
+    box-shadow: inset 0 0 2px white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.composition {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-bottom: 2px solid grey;
+    justify-content: left;
+    align-items: center;
+    vertical-align: bottom;
+    padding: 0 0 0 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    padding-top:0px;
+    border-top: 1px solid lightgrey;
+}
+
+.composition::-webkit-scrollbar {
+    display: none;
+  }
+
+@media screen and (max-width: 600px) {
+    .vehicle-data {
+        font-size: 0.8rem;
+    }
+}

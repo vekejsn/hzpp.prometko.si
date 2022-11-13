@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -48,7 +48,9 @@
     window.onload = async () => {
         let data = await fetch('https://api.hzpp.prometko.si/HR/hz/units/info').then(res => res.json()).then(res => res
             .data);
-        let types = await fetch('types.json').then(res => res.json());
+        let TRAIN_COMPOSITIONS = await fetch('json/trains.json').then(response => response.json());
+        let TRAIN_UIC_IMAGES = await fetch('https://api.hzpp.prometko.si/tools/units/units').then(response => response.json()).then(data => data.data);
+        let types = await fetch('./json/types.json').then(res => res.json());
         await data.sort((a, b) => {
             // regex both into numbers, and check then
             try {
@@ -60,13 +62,22 @@
             }
         });
         let info = document.getElementById('info');
+        console.log(types, TRAIN_COMPOSITIONS,TRAIN_UIC_IMAGES)
+        console.log(data);
         data.forEach((unit) => {
-            let type = types.find(type => unit.kind.includes(type.type));
-            console.log(type)
+            let type = TRAIN_UIC_IMAGES.find((train) => train.uicNumber == unit.uicNumber);
+            type = !type || type.operator == '???' ? TRAIN_COMPOSITIONS.find((train) => unit.uicNumber.toString().startsWith(train.uic)) : type;
+            type = !type ? types.find(type => unit.kind.includes(type.type)) : type;
+            if (type != undefined && type.img) {
+                // get current domain
+                let domain = window.location.href.split('/').slice(0, 3).join('/');
+                type.image = domain + '/img/' + type.img + '.gif';
+            }
+            console.log(unit,type);
             let vehicle = document.createElement('div');
             vehicle.classList.add('vehicle');
             let img = document.createElement('img');
-            img.src = `./img/${type != null ? type.img : "generic"}.gif`;
+            img.src = `${type && type.image != null ? type.image : "./img/generic.gif"}`;
             img.alt = unit.uic;
             img.classList.add('vehicle-img');
             let vehicleData = document.createElement('div');
