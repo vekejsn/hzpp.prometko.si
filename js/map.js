@@ -16,7 +16,12 @@ window.onload = async () => {
         style: 'https://api.maptiler.com/maps/streets/style.json?key=8tDQz5wMQ3NjP4jqmQSN',
         center: [18,44.4110628],
         zoom: 7,
-        //        minZoom: 6,
+        minZoom: 5,
+        maxZoom: 18,
+        maxBounds: [
+            [12, 42], // Southwest LngLat
+            [24, 47]  // Northeast LngLat
+        ],
         //        renderWorldCopies: false,
         maxPitch: 60,
         hash: true,
