@@ -93,7 +93,22 @@ window.onload = async () => {
             labelLayerId
         );
 
-
+        map.addSource("openrailwaymap", {
+            type: "raster",
+            tiles: [
+                'https://a.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+                'https://b.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+                'https://c.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+            ],
+            'attribution': '&copy; <a target="_top" rel="noopener" href="https://www.openrailwaymap.org/">OpenRailwayMap</a>'
+        });
+        map.addLayer(
+            {
+                id: "openrailwaymap-raster",
+                type: "raster",
+                source: "openrailwaymap"
+            },
+        );
 
     }); // end: load
     // get vocabulary
