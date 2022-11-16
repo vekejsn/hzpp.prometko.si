@@ -98,22 +98,13 @@ window.onload = async () => {
             labelLayerId
         );
 
-        map.addSource("openrailwaymap", {
-            type: "raster",
-            tiles: [
-                'https://a.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
-                'https://b.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
-                'https://c.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
-            ],
-            'attribution': '&copy; <a target="_top" rel="noopener" href="https://www.openrailwaymap.org/">OpenRailwayMap</a>'
-        });
-        map.addLayer(
-            {
-                id: "openrailwaymap-raster",
-                type: "raster",
-                source: "openrailwaymap"
-            },
-        );
+        // custom rail styling:
+        for (var i = 0; i < layers.length; i++) {
+            if (layers[i].type === 'line' && layers[i].id.endsWith('major_rail')) {
+                map.setPaintProperty(layers[i].id, 'line-color', '#333333');
+                map.setPaintProperty(layers[i].id, 'line-width', 3);
+            }
+        }
 
     }); // end: load
     // get vocabulary
