@@ -46,10 +46,10 @@
 </body>
 <script>
     window.onload = async () => {
-        let data = await fetch('https://api.hzpp.prometko.si/HR/hz/units/info').then(res => res.json()).then(res => res
+        let data = await fetch('https://api.map.vlak.si/HR/hz/units/info').then(res => res.json()).then(res => res
             .data);
         let TRAIN_COMPOSITIONS = await fetch('json/trains.json').then(response => response.json());
-        let TRAIN_UIC_IMAGES = await fetch('https://api.hzpp.prometko.si/tools/units/units').then(response => response.json()).then(data => data.data);
+        let TRAIN_UIC_IMAGES = await fetch('https://api.map.vlak.si/tools/units/units').then(response => response.json()).then(data => data.data);
         let types = await fetch('./json/types.json').then(res => res.json());
         await data.sort((a, b) => {
             // regex both into numbers, and check then
@@ -86,7 +86,7 @@
             text.innerHTML =
                 `<b>UIC</b> <span class="info-span">${unit.uicNumber}</span> <b>Tip</b> <span class="info-span">${unit.kind}</span><br>
             <b>Vlak</b> <span class="info-span">${unit.trainNumber} ${unit.trainRoute}</span> ⟷ <b>Otpremni kolodvor</b> <span class="info-span">${unit.origin}</span> - <b>Uputni kolodvor</b> <span class="info-span">${unit.destination}</span><br>
-            <b>Zabilježen</b> <span class="info-span">${new Date(unit.timestamp * 1000).toLocaleString('hr-HR')}</span>`;
+            <b>Zabilježen</b> <span class="info-span">${new Date(unit.timestamp).toLocaleString('hr-HR')}</span>`;
             vehicleData.appendChild(text);
             vehicle.appendChild(img);
             vehicle.appendChild(vehicleData);

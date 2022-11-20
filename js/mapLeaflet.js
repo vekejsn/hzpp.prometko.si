@@ -37,7 +37,7 @@ async function main() {
     VOCABULARY = await fetch('json/vocabulary.json').then(response => response.json());
     ACTIVE_VOCABULARY = VOCABULARY.hr;
     TRAIN_COMPOSITIONS = await fetch('json/trains.json').then(response => response.json());
-    TRAIN_UIC_IMAGES = await fetch('https://api.hzpp.prometko.si/tools/units/units').then(response => response.json()).then(data => data.data);
+    TRAIN_UIC_IMAGES = await fetch('https://api.map.vlak.si/tools/units/units').then(response => response.json()).then(data => data.data);
     SIDEBAR = new SidebarJS.SidebarElement({
         position: 'left',
         open: true,
@@ -58,7 +58,7 @@ async function sz() {
     let types = await fetch('json/types.json').then(res => res.json());
     while (true) {
         try {
-            let vehicles = await fetch('https://api.hzpp.prometko.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
+            let vehicles = await fetch('https://api.map.vlak.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
                 let marker = await szMarkers.find(m => m.id == vehicle.train_data.train_number);
                 if (!marker) {

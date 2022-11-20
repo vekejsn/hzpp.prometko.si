@@ -23,7 +23,7 @@ async function sz() {
     let types = await fetch('json/types.json').then(res => res.json());
     while (true) {
         try {
-            let vehicles = await fetch('https://api.hzpp.prometko.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
+            let vehicles = await fetch('https://api.map.vlak.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
                 let marker = await szMarkers.find(m => m.data.train_data.train_number == vehicle.train_data.train_number);
                 if (!marker) {
@@ -171,9 +171,6 @@ async function sz() {
                 }
                 
                 marker.id = vehicle.train_data.train_id;
-                if (vehicle.train_cache.composition.find(x => x.source == 'HŽPP')) {
-                    vehicle.train_cache.composition.find(x => x.source == 'HŽPP').composition = vehicle.train_cache.composition.find(x => x.source == 'HŽPP').composition.reverse()
-                }
                 marker.data = vehicle;
                 marker.setLngLat([vehicle.coordinates.lng, vehicle.coordinates.lat]);
             });

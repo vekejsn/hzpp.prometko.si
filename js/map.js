@@ -111,7 +111,7 @@ window.onload = async () => {
     VOCABULARY = await fetch('json/vocabulary.json').then(response => response.json());
     ACTIVE_VOCABULARY = VOCABULARY.hr;
     TRAIN_COMPOSITIONS = await fetch('json/trains.json').then(response => response.json());
-    TRAIN_UIC_IMAGES = await fetch('https://api.hzpp.prometko.si/tools/units/units').then(response => response.json()).then(data => data.data);
+    TRAIN_UIC_IMAGES = await fetch('https://api.map.vlak.si/tools/units/units').then(response => response.json()).then(data => data.data);
 
     SIDEBAR = new SidebarJS.SidebarElement({
         position: 'left',

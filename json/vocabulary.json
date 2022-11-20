@@ -19,8 +19,9 @@
         "language_image": "https://flagcdn.com/20x15/gb.png",
         "other_services": "Other services",
         "hz_archive": "HŽ Archive",
-        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.1.0</b><br>Initial release of the MaplibreJS rewrite of the mapper.",
-        "contact_us": "Contact us"
+        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.2</b><br>Rewrite of the HŽ backend to be more in line with the others. It now uses a more precise system for approximating vehicle locations.<hr><b>Version 0.1</b><br>Initial release of the MaplibreJS rewrite of the mapper.<br>",
+        "contact_us": "Contact us",
+        "bus": "Bus as replacement service"
     },
     "sl": {
         "current_stop": "Trenutna postaja",
@@ -42,7 +43,8 @@
         "language_image": "https://flagcdn.com/20x15/si.png",
         "other_services": "Ostali servisi",
         "hz_archive": "Arhiv HŽ",
-        "contact_us": "Kontakt"
+        "contact_us": "Kontakt",
+        "bus": "Nadomestni avtobus"
     },
     "hr": {
         "current_stop": "Trenutna stanica",
@@ -64,7 +66,8 @@
         "language_image": "https://flagcdn.com/20x15/hr.png",
         "other_services": "Ostali servisi",
         "hz_archive": "Arhiv HŽ",
-        "contact_us": "Kontakt"
+        "contact_us": "Kontakt",
+        "bus": "Nadomjestni autobus"
     },
     "bs": {
         "current_stop": "Trenutna stanica",
@@ -86,6 +89,7 @@
         "language_image": "https://flagcdn.com/20x15/ba.png",
         "other_services": "Ostali servisi",
         "hz_archive": "Arhiv HŽ",
-        "contact_us": "Kontakt"
+        "contact_us": "Kontakt",
+        "bus": "Nadomjestni autobus"
     }
 }
