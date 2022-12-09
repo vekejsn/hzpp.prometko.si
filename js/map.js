@@ -13,7 +13,7 @@ window.onload = async () => {
 
     map = new maplibregl.Map({
         container: 'map',
-        style: 'https://api.maptiler.com/maps/streets/style.json?key=8tDQz5wMQ3NjP4jqmQSN',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=PtSBTvQseHPGGgEr1awG',
         center: [18,44.4110628],
         zoom: 7,
         minZoom: 5,
