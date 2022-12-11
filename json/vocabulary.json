@@ -28,7 +28,7 @@
             "not_accurate": "The application \"Mapper\" is not affiliated with any railway operator. Data is for informational purposes only, and vehicle locations are approximated.",
             "not_accurate_contact": "Please contact us in case of any errors or other comments, and not the operators.",
             "explanation": "The application collects and combines data from multiple official and unofficial sources. Due to irregularities in the original data, errors in the conversion from combining on our side and limitations of the data we have access to, there can (and often do) occur inconsistencies between displayed and real data.<hr>Vehicle locations for Slovenian Railways, Croatian Railways, Serbian Railways, Montenegrin Railways and other operators are not based on GNSS tracking, but are calculated based on the scheduled timetable and minutes of delay as reported by the operators. In case of major delays, the displayed location of the vehicle can be up to or more than 100 km away from the real location.",
-            "cookies": "This website uses cookies to improve your experience. We'll assume you're ok with this if you continue to use this website."
+            "cookies": "This website uses cookies to improve your experience. We'll assume you're OK with this if you continue to use this website."
         },
         "close": "Close"
     },
