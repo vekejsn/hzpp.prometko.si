@@ -140,6 +140,7 @@ window.onload = async () => {
     // iterate over the VOCABULARY and create buttons for language selection, as div cards
     let language_divs = [];
     for (let language in VOCABULARY) {
+        if (language == 'bs') continue; // skip english
         let div = document.createElement('button');
         div.classList.add('btn', 'btn-outline-primary');
         div.style = 'cursor: pointer; text-align:center; width: 100%; margin:.2rem;';
@@ -176,6 +177,11 @@ window.onload = async () => {
     HŽ Archive
     </button>
     <hr>
+    <h6>${ACTIVE_VOCABULARY.disclaimer}</h6>
+    <button class="btn btn-outline-primary" style="cursor: pointer; text-align: center; width: 100%; margin: 0.2rem;" onclick="showDisclaimers()">
+    ${ACTIVE_VOCABULARY.read_more}
+    </button>
+    <hr>
     <button class="btn btn-outline-primary" style="cursor: pointer; text-align: center; width: 100%; margin: 0.2rem;" onclick='window.location.href="mailto:info@vlak.si"'>
     ${ACTIVE_VOCABULARY.contact_us}
     </button>
@@ -195,6 +201,38 @@ window.onload = async () => {
     sz();
 }
 
+async function showDisclaimers() {
+    // close sidebar
+    SIDEBAR.close();
+    // generate a modal, which will be shown immediately to the user
+    let modal = document.createElement('div');
+    modal.innerHTML = `<div class="modal fade" id="disclaimerModal" tabindex="100" role="dialog" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="disclaimerModalLabel">${ACTIVE_VOCABULARY.disclaimer}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="SIDEBAR.open()">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>${ACTIVE_VOCABULARY.disclaimers.explanation}</p>
+                                    <hr>
+                                    <p>${ACTIVE_VOCABULARY.disclaimers.not_accurate_contact}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="SIDEBAR.open()">${ACTIVE_VOCABULARY.close}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+    document.body.appendChild(modal);
+    
+    $('#disclaimerModal').modal('show');
+
+
+
+}
 
 
 // when window changes size

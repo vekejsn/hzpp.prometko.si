@@ -12,7 +12,7 @@
         "operator": "Operator",
         "in_stop": "in stop",
         "source": "Source",
-        "hello_and_welcome": "Hello and welcome to the Mapper!",
+        "hello_and_welcome": "Hello and welcome to Mapper!",
         "changelog": "Changelog",
         "select_language": "Select language",
         "language_name": "English",
@@ -21,7 +21,14 @@
         "hz_archive": "HŽ Archive",
         "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.2</b><br>Rewrite of the HŽ backend to be more in line with the others. It now uses a more precise system for approximating vehicle locations.<hr><b>Version 0.1</b><br>Initial release of the MaplibreJS rewrite of the mapper.<br>",
         "contact_us": "Contact us",
-        "bus": "Bus as replacement service"
+        "bus": "Bus as replacement service",
+        "disclaimer": "Disclaimers",
+        "read_more": "Read more",
+        "disclaimers": {
+            "not_accurate": "The application \"Mapper\" is not affiliated with any railway operator. Data is for informational purposes only, and vehicle locations are approximated.",
+            "not_accurate_contact": "Please contact us in case of any errors or other comments, and not the operators.",
+            "explanation": "The application collects and combines data from multiple official and unofficial sources. Due to irregularities in the original data, errors in the conversion from combining on our side and limitations of the data we have access to, there can (and often do) occur inconsistencies between displayed and real data.<hr>Vehicle locations for Slovenian Railways, Croatian Railways, Serbian Railways, Montenegrin Railways and other operators are not based on GNSS tracking, but are calculated based on the scheduled timetable and minutes of delay as reported by the operators. In case of major delays, the displayed location of the vehicle can be up to or more than 100 km away from the real location."
+        }
     },
     "sl": {
         "current_stop": "Trenutna postaja",
@@ -44,7 +51,14 @@
         "other_services": "Ostali servisi",
         "hz_archive": "Arhiv HŽ",
         "contact_us": "Kontakt",
-        "bus": "Nadomestni avtobus"
+        "bus": "Nadomestni avtobus",
+        "disclaimer": "Odgovornosti",
+        "read_more": "Preberite več",
+        "disclaimers": {
+            "not_accurate": "Aplikacija \"Mapper\" ni povezana z nobenim operaterjem železniških storitev. Podatki so zgolj informativne narave, lokacije vlakov pa so izračunane približno.",
+            "not_accurate_contact": "Prosimo, da se v primeru kakršnih koli napak v podatkih oz. drugih komentarjev obrnete na nas in ne na operaterje.",
+            "explanation": "Aplikacija zbira in združuje podatke iz več uradnih in neuradnih virov. Zaradi nepravilnosti v izvornih podatkih, napakah v pretvorbi iz združevanju na naši strani in omejitev podatkov, do katerih imamo dostop, lahko (in pogosto) prihaja do neskladanj v prikazanih in realnih podatkih.<hr>Lokacije vlakov Slovenskih železnic, Hrvaških železnic, Srbija Voza, Železnic Črne gore in drugih morebitnih operaterjev niso osnovane na GNSS sledenju, ampak so izračunani na podlagi predvidenega voznega reda in minut zamude, kot jih sporočajo operaterji. V primeru večjih zamud se prikaz lokacije vlaka od realne lokacije lahko razlikuje tudi do več 100 kilometrov."
+        }
     },
     "hr": {
         "current_stop": "Trenutna stanica",
@@ -67,7 +81,14 @@
         "other_services": "Ostali servisi",
         "hz_archive": "Arhiv HŽ",
         "contact_us": "Kontakt",
-        "bus": "Nadomjestni autobus"
+        "bus": "Nadomjestni autobus",
+        "disclaimer": "Odgovornosti",
+        "read_more": "Pročitajte više",
+        "disclaimers": {
+            "not_accurate": "Aplikacija \"Mapper\" nije povezana s nikim operaterom željezničkih usluga. Podaci su samo informativne prirode, lokacije vlakova su aproksimirane.",
+            "not_accurate_contact": "Molimo da se u slučaju bilo kakvih pogrešaka u podacima ili drugih komentara obratite na nas i ne na operatera.",
+            "explanation": "Aplikacija prikuplja i spaja podatke iz više službenih i nezvaničnih izvora. Zbog nepravilnosti u izvornim podacima, pogrešaka u pretvorbi iz spajanja na našoj strani i ograničenja podataka, do kojih imamo pristup, može (i često) doći do neskladnosti u prikazanim i realnim podacima.<hr>Lokacije vlakova Slovenskih željeznica, Hrvatskih željeznica, Srbija Voza, Železnica Crne Gore i drugih eventualnih operatera nisu osnovane na GNSS praćenju, već su izračunate na osnovi predviđenog voznog reda i minuta kašnjenja, kao što ih priopćavaju operateri. U slučaju većih kašnjenja prikaz lokacije vlaka od realne lokacije može se razlikovati i do više od 100 kilometara."
+        }
     },
     "bs": {
         "current_stop": "Trenutna stanica",
@@ -90,6 +111,10 @@
         "other_services": "Ostali servisi",
         "hz_archive": "Arhiv HŽ",
         "contact_us": "Kontakt",
-        "bus": "Nadomjestni autobus"
+        "bus": "Nadomjestni autobus",
+        "disclaimers": {
+            "not_accurate": "Aplikacija \"Mapper\" nije povezana s nikim operaterom željezničkih usluga. Podaci su samo informativne prirode, lokacije vlakova su aproksimirane.",
+            "not_accurate_contact": "Molimo da se u slučaju bilo kakvih pogrešaka u podacima ili drugih komentara obratite na nas i ne na operatera."
+        }
     }
 }

@@ -86,6 +86,7 @@ async function zcg() {
                             <span><b>${ACTIVE_VOCABULARY.schedule}</b></span><br>
                             ${scheduleTable.outerHTML}
                             ${ACTIVE_VOCABULARY.static_data}
+                            <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.not_accurate}</small>
                             </div>
                         </div>`;
                         // add exit button

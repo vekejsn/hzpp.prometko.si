@@ -101,6 +101,7 @@ async function zs() {
                             ${scheduleTable.outerHTML}
                             <span><b>${ACTIVE_VOCABULARY.composition}</b></span><br>
                             ${compositionText}
+                            <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.not_accurate}</small>
                             </div>
                         </div>`;
                         // add exit button

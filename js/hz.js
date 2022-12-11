@@ -236,6 +236,7 @@ async function hz() {
                                     <span><b>${ACTIVE_VOCABULARY.composition}</b></span><br>
                                     ${compositionText}
                                     ${composition_img.length > 0 ? `<div class="composition">${composition_img}</div>` : ""}
+                                    <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.not_accurate}</small>
                                     </div>
                                 </div>`;
                                 // add exit button

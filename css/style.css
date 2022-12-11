@@ -114,6 +114,11 @@
     width: auto;
 }
 
+.really-small {
+    font-size: 0.6rem;
+    line-height: 0.1rem;
+}
+
 .vehicle-data {
     border: 1px solid #4CABCE;
     background-color: #9CC0CE;
