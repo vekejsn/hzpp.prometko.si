@@ -112,7 +112,6 @@ window.onload = async () => {
     ACTIVE_VOCABULARY = VOCABULARY.hr;
     TRAIN_COMPOSITIONS = await fetch('json/trains.json').then(response => response.json());
     TRAIN_UIC_IMAGES = await fetch('https://api.map.vlak.si/tools/units/units').then(response => response.json()).then(data => data.data);
-
     SIDEBAR = new SidebarJS.SidebarElement({
         position: 'left',
         open: true,
@@ -137,6 +136,13 @@ window.onload = async () => {
         document.cookie = `new_mapper_language_preference=${'en'}`;
     }
     SIDEBAR.open();
+    // check if we have a cookie named 'new_mapper_disclaimer_shown'
+    cookie = document.cookie.split(';').find(row => row.trim().startsWith('new_mapper_disclaimer_shown='));
+    if (!cookie) {
+        // show disclaimer
+        document.cookie = `new_mapper_disclaimer_shown=${true}`;
+        showDisclaimers();
+    }
     // iterate over the VOCABULARY and create buttons for language selection, as div cards
     let language_divs = [];
     for (let language in VOCABULARY) {
@@ -211,7 +217,7 @@ async function showDisclaimers() {
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="disclaimerModalLabel">${ACTIVE_VOCABULARY.disclaimer}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="SIDEBAR.open()">
+                                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close" onclick="SIDEBAR.open()">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
@@ -219,6 +225,8 @@ async function showDisclaimers() {
                                     <p>${ACTIVE_VOCABULARY.disclaimers.explanation}</p>
                                     <hr>
                                     <p>${ACTIVE_VOCABULARY.disclaimers.not_accurate_contact}</p>
+                                    <hr>
+                                    <p>${ACTIVE_VOCABULARY.disclaimers.cookies}</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="SIDEBAR.open()">${ACTIVE_VOCABULARY.close}</button>
