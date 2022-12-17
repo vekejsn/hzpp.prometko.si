@@ -132,8 +132,16 @@ window.onload = async () => {
             ACTIVE_VOCABULARY = VOCABULARY[language];
         }
     } else {
-        // prompt user to choose language
-        document.cookie = `new_mapper_language_preference=${'en'}`;
+        // get user language
+        let language = navigator.language || navigator.userLanguage;
+        console.log('jezik: ', language);
+        if (language.split('-')[0] in VOCABULARY) {
+            ACTIVE_VOCABULARY = VOCABULARY[language.split('-')[0]];
+            document.cookie = `new_mapper_language_preference=${language.split('-')[0]}`;
+        } else {
+            ACTIVE_VOCABULARY = VOCABULARY.en;
+            document.cookie = `new_mapper_language_preference=en`;
+        }
     }
     SIDEBAR.open();
     // check if we have a cookie named 'new_mapper_disclaimer_shown'
