@@ -10,10 +10,24 @@ var TRAIN_UIC_IMAGES = [];
 window.onload = async () => {
     let height = await $(document).height();
     await $('#map').height(height);
-
+    let keys = [
+        '3CrYgGuJO0ovMVRdJ6vM',
+        'ZqNDADlkjnfsqsf1w3gx'
+    ]
+    // check if we have a cookie for maptiler key
+    let map_cookie = document.cookie.split(';').find(row => row.trim().startsWith('mapper_maptiler_key='));
+    if (map_cookie) {
+        let key = cookie.split('=')[1];
+        keys = key;
+    } else {
+        // pick a random key
+        keys = keys[Math.floor(Math.random() * keys.length)];
+        // set cookie
+        document.cookie = `mapper_maptiler_key=${keys}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+    }
     map = new maplibregl.Map({
         container: 'map',
-        style: 'https://api.maptiler.com/maps/streets/style.json?key=Aao4q2xuiWnEi59ydlDW',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=' + keys,
         center: [18,44.4110628],
         zoom: 7,
         minZoom: 5,
