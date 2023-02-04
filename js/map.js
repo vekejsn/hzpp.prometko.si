@@ -17,7 +17,7 @@ window.onload = async () => {
     // check if we have a cookie for maptiler key
     let map_cookie = document.cookie.split(';').find(row => row.trim().startsWith('mapper_maptiler_key='));
     if (map_cookie) {
-        let key = cookie.split('=')[1];
+        let key = map_cookie.split('=')[1];
         keys = key;
     } else {
         // pick a random key
