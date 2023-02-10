@@ -73,5 +73,8 @@
 }, {
     "type": "VOZNA",
     "img": "generic-loco"
+}, {
+    "type": "6112-2",
+    "img": "6112-2-a"
 }
 ]
