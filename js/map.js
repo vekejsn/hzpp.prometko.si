@@ -33,7 +33,7 @@ window.onload = async () => {
         minZoom: 5,
         maxZoom: 18,
         maxBounds: [
-            [12, 42], // Southwest LngLat
+            [12, 40], // Southwest LngLat
             [24, 47]  // Northeast LngLat
         ],
         //        renderWorldCopies: false,
@@ -227,6 +227,7 @@ window.onload = async () => {
     zs();
     zcg();
     sz();
+    mk();
 }
 
 async function showDisclaimers() {

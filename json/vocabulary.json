@@ -19,7 +19,7 @@
         "language_image": "https://flagcdn.com/20x15/gb.png",
         "other_services": "Other services",
         "hz_archive": "HŽ Archive",
-        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.2</b><br>Rewrite of the HŽ backend to be more in line with the others. It now uses a more precise system for approximating vehicle locations.<hr><b>Version 0.1</b><br>Initial release of the MaplibreJS rewrite of the mapper.<br>",
+        "changelog_details": "<hr class='no-padding no-margin'><b>Version 0.3</b><br>Added MŽ Transport.<hr><b>Version 0.2</b><br>Rewrite of the HŽ backend to be more in line with the others. It now uses a more precise system for approximating vehicle locations.<hr><b>Version 0.1</b><br>Initial release of the MaplibreJS rewrite of the mapper.<br>",
         "contact_us": "Contact us",
         "bus": "Bus as replacement service",
         "disclaimer": "Disclaimers",

@@ -70,6 +70,19 @@
     transition-duration: 2000ms;
 }
 
+.mkIcon {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-radius: 6px;
+    background-color: #255173;
+    padding: .1rem .2rem;
+    vertical-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 3px grey;
+    z-index: 1;
+    transition-duration: 2000ms;
+}
+
 .delay {
     font-family: 'Raleway', sans-serif;
     background-color: #C31F2A !important;
