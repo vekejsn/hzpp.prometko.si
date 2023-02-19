@@ -22,7 +22,7 @@ async function returnMkMarker(number, delay) {
 async function mk() {
     while (true) {
         try {
-            let vehicles = await fetch('http://127.0.0.1:4242/MK/mzt/trips/active').then(res => res.json()).then(res => res.data);
+            let vehicles = await fetch('https://api.map.vlak.si/MK/mzt/trips/active').then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
                 let marker = MkMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {
