@@ -11,8 +11,7 @@ window.onload = async () => {
     let height = await $(document).height();
     await $('#map').height(height);
     let keys = [
-        '3CrYgGuJO0ovMVRdJ6vM',
-        'ZqNDADlkjnfsqsf1w3gx'
+        'M00lVs5nAPWxVFr6mbWo'
     ]
     // check if we have a cookie for maptiler key
     let map_cookie = document.cookie.split(';').find(row => row.trim().startsWith('mapper_maptiler_key='));
