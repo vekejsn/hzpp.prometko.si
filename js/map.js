@@ -26,7 +26,7 @@ window.onload = async () => {
     }
     map = new maplibregl.Map({
         container: 'map',
-        style: 'https://api.maptiler.com/maps/streets/style.json?key=' + keys,
+        style: 'https://tiles.derp.si/maps/streets-v2/style.json',
         center: [18,44.4110628],
         zoom: 7,
         minZoom: 5,
