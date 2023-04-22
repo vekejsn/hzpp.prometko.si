@@ -22,7 +22,9 @@ async function returnZsMarker(number, delay) {
 async function zs() {
     while (true) {
         try {
-            let vehicles = await fetch('https://api.map.vlak.si/RS/zs/trips/active').then(res => res.json()).then(res => res.data);
+            let vehicles = await fetch('https://api.map.vlak.si/RS/zs/trips/active', {
+                credentials: 'include'
+            }).then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
                 let marker = zsMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {

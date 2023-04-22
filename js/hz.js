@@ -64,7 +64,9 @@ async function hz() {
     let stops = await fetch('json/stops.json').then(res => res.json());
     while (true) {
         try {
-            let vehicles = await fetch('https://api.map.vlak.si/HR/hz/trips/active').then(res => res.json()).then(res => res.data);
+            let vehicles = await fetch('https://api.map.vlak.si/HR/hz/trips/active', {
+                credentials: 'include'
+            }).then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
                 try {
                     let marker = hzMarkers.find(m => m.id == vehicle.train_data.train_id);

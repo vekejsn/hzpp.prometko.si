@@ -23,7 +23,9 @@ async function sz() {
     let types = await fetch('json/types.json').then(res => res.json());
     while (true) {
         try {
-            let vehicles = await fetch('https://api.map.vlak.si/SI/sz/trips/active').then(res => res.json()).then(res => res.data);
+            let vehicles = await fetch('https://api.map.vlak.si/SI/sz/trips/active', {
+                credentials: 'include'
+            }).then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
                 let marker = await szMarkers.find(m => m.data.train_data.train_number == vehicle.train_data.train_number);
                 if (!marker) {
