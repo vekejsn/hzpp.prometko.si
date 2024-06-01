@@ -198,7 +198,7 @@ window.onload = async () => {
         card_body.appendChild(div);
     }
     let text_div = document.createElement('div');
-    text_div.innerHTML += `<hr>
+    text_div.innerHTML += /*html*/`<hr>
     <h6>${ACTIVE_VOCABULARY.other_services}</h6>
     <button class="btn btn-outline-primary" style="cursor: pointer; text-align: center; width: 100%; margin: 0.2rem;" onclick="window.location.href = './hzArchive.html'">
     HŽ Archive
@@ -274,4 +274,22 @@ $(window).resize(function () {
 
 function vagonweb_proxy(url) {
     return url.replace("https://www.vagonweb.cz/", "https://api.map.vlak.si/");
+}
+
+function showSidebar(options) {
+    let sidebar = document.querySelector('[sidebarjs-container]');
+    sidebar.innerHTML = options.content;
+
+    // add exit button
+    let exitButton = document.createElement('span');
+    exitButton.style = "position: absolute; top: 0; right: 0; padding: 0.5rem; cursor: pointer; color:white;";
+    exitButton.innerHTML = `<i class="bi bi-x"></i>`;
+    exitButton.addEventListener('click', () => {
+        SIDEBAR.close();
+    });
+    sidebar.appendChild(exitButton);
+    sidebar.style.width = '100%';
+    SIDEBAR.open();
+
+    return options;
 }

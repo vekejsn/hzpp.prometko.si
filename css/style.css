@@ -169,7 +169,7 @@ span.delayText {
     color: red;
 }
 
-.sidebar {
+[sidebarjs-container] {
     overflow-y: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -177,7 +177,18 @@ span.delayText {
 
 .sidebar::-webkit-scrollbar {
     display: none;
-  }
+}
+
+.sidebar-body, .sidebar-header {
+    padding: .6rem .6rem;
+}
+
+.sidebar-header {
+    display:flex; 
+    flex-direction:column; 
+    background-color:#004B87; 
+    color:white;
+}
 
 .overlay {
     width: 100vw;
