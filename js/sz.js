@@ -113,12 +113,12 @@ async function sz() {
                                     compositionText += `${composition.kind ? composition.kind : ""} ${composition.uicNumber ? `<small>(${await formatUICNumber(composition.uicNumber)})</small>`: ""}<br>`;
                                     if (info.source == 'SŽ') {
                                         let b = await (types.find(x => composition.kind.substring(0,4).includes(x.type)));
-                                        imgs += `<img src="img/${b.img}.gif" style="height:30px"\>`
+                                        imgs += `<img src="img/${vagonweb_proxy(b.img)}.gif" style="height:30px"\>`
                                     } else {
                                         let uicNumber = TRAIN_UIC_IMAGES.find(x => x.uicNumber == composition.uicNumber);
                                         !uicNumber || uicNumber.operator == '???' ? uicNumber = TRAIN_COMPOSITIONS.find(u => composition.uicNumber.startsWith(u.uic)) : uicNumber;
                                         if (uicNumber) {
-                                            imgs += `<img src="${uicNumber.image}" style="height: ${has_loco && composition.kind != 'TFZ' ? 21 : 30}px; margin-top: auto; ">`;
+                                            imgs += `<img src="${vagonweb_proxy(uicNumber.image)}" style="height: ${has_loco && composition.kind != 'TFZ' ? 21 : 30}px; margin-top: auto; ">`;
                                             if (composition.kind == 'TFZ') {
                                                 has_loco = true;
                                             }
@@ -144,6 +144,7 @@ async function sz() {
                                 ${scheduleTable.outerHTML}
                                 <span><b>${ACTIVE_VOCABULARY.composition}</b></span><br>
                                 ${compositionText}
+                                <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.vagonweb}</small>
                                 <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.not_accurate}</small>
                                 </div>
                             </div>`;

@@ -216,7 +216,7 @@ async function hz() {
                                             }
                                             console.log(unit_counter);
                                             // create images
-                                            composition_img += `<img src="${images[i]}" style="height: ${has_loco && !is_loco ? 21 : 30}px; margin-top: auto; ${unit_counter[images[i]] % 2 == 0 ? 'transform: scaleX(-1);' : ''}">`;
+                                            composition_img += `<img src="${vagonweb_proxy(images[i])}" style="height: ${has_loco && !is_loco ? 21 : 30}px; margin-top: auto; ${unit_counter[images[i]] % 2 == 0 ? 'transform: scaleX(-1);' : ''}">`;
                                         }
                                     }
                                 } else {
@@ -238,6 +238,7 @@ async function hz() {
                                     <span><b>${ACTIVE_VOCABULARY.composition}</b></span><br>
                                     ${compositionText}
                                     ${composition_img.length > 0 ? `<div class="composition">${composition_img}</div>` : ""}
+                                    <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.vagonweb}</small>
                                     <small class="really-small"><hr>${ACTIVE_VOCABULARY.disclaimers.not_accurate}</small>
                                     </div>
                                 </div>`;

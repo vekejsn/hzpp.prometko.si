@@ -270,3 +270,8 @@ $(window).resize(function () {
     let height = $(document).height();
     $('#map').height(height);
 });
+
+
+function vagonweb_proxy(url) {
+    return url.replace("https://www.vagonweb.cz/", "https://api.map.vlak.si/");
+}
