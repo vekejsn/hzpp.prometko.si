@@ -30,7 +30,7 @@ async function zs() {
                 if (!marker) {
                     marker = new maplibregl.Marker({
                         color: '#ff0000',
-                        element: await returnZsMarker(vehicle.train_data.train_number, vehicle.train_cache.delay)
+                        element: await returnZsMarker(vehicle.train_data.train_number, vehicle.train_cache.delay || 0)
                     });
                     zsMarkers.push(marker);
                     marker.id = vehicle.train_data.train_id;
