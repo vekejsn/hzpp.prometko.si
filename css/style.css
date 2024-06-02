@@ -164,7 +164,7 @@
     margin: 0 !important;
 }
 
-span.delayText {
+.delayText {
     font-weight: bold;
     color: red;
 }

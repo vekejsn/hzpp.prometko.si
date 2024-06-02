@@ -21,11 +21,6 @@ async function returnHzMarker(number, delay, gps) {
     return div;
 }
 
-function formatUICNumber(uic) {
-    if (uic.length < 12) return uic;
-    return `${uic.substr(0, 2)} ${uic.substr(2, 2)} <u>${uic.substr(0, 2) > 90 ? uic.substr(4, 4) : `${uic.substr(4, 2)}-${uic.substr(6, 2)}`}-${uic.substr(8, 3)}</u> ${uic.substr(11, 1)}`;
-}
-
 function findImages(uicNumbers) {
     let res = [];
         // TRAIN_COMPOSITIONS = trains.json
@@ -136,107 +131,109 @@ function hz_makeScheduleTable(marker) {
     let scheduleTable = document.createElement('table');
     scheduleTable.className = 'table table-sm';
     scheduleTable.style.width = '100%';
+    
     for (let i = 0; i < marker.data.train_data.train_times.length; i++) {
-        let stopTime = marker.data.train_data.train_times[i];
-        let row = document.createElement('tr');
-        let td1 = document.createElement('td');
-        let td2 = document.createElement('td');
-        let arrival_time = 0;
+        const stopTime = marker.data.train_data.train_times[i];
+        
+        const $row = document.createElement('tr');
+        $row.style.fontSize = 'smaller';
 
-        if (stopTime.arrival_time) {
-            if (stopTime.arrival_time.length == 7) stopTime.arrival_time = '0' + stopTime.arrival_time;
-            if (parseInt(stopTime.arrival_time.split(':')[0]) > 23) {
-                arrival_time = parseInt(stopTime.arrival_time.split(':')[0]) - 24;
-                arrival_time = arrival_time.toString() + ':' + stopTime.arrival_time.split(':')[1] + ':' + stopTime.arrival_time.split(':')[2];
-                if (arrival_time.length == 7) arrival_time = '0' + arrival_time;
-                arrival_time = luxon.DateTime.fromFormat(arrival_time, 'HH:mm:ss', {
-                    zone: 'Europe/Zagreb'
-                }).plus({ days: 1 });
-                console.log(arrival_time);
-            } else {
-                arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'HH:mm:ss').setZone('Europe/Zagreb');
-            }
-        } else {
-            if (stopTime.departure_time.length == 7) stopTime.departure_time = '0' + stopTime.departure_time;
-            if (parseInt(stopTime.departure_time.split(':')[0]) > 23) {
-                arrival_time = parseInt(stopTime.departure_time.split(':')[0]) - 24;
-                arrival_time = arrival_time.toString() + ':' + stopTime.departure_time.split(':')[1] + stopTime.departure_time.split(':')[2];
-                if (arrival_time.length == 7) arrival_time = '0' + arrival_time;
-                arrival_time = luxon.DateTime.fromFormat(arrival_time, 'HH:mm:ss', {
-                    zone: 'Europe/Zagreb'
-                }).plus({ days: 1 });
-            } else {
-                arrival_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Zagreb');
-            }
+        const $td1 = document.createElement('td');
+        const $td2 = document.createElement('td');
+
+        const isUpcomingStop = stopTime.stop_sequence > marker.data.train_data.current_stop_sequence;
+
+        const originalDepartureTime = luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'HH:mm:ss').setZone('Europe/Zagreb');
+
+        let arrival_time_disp = hz_parseTime(stopTime.arrival_time);
+        let departure_time_disp = hz_parseTime(stopTime.departure_time);
+        if (!arrival_time_disp)
+            arrival_time_disp = departure_time_disp;
+        else if (!departure_time_disp)
+            departure_time_disp = arrival_time_disp
+
+
+        // We want to display scheduled time for passed stops but estimated time (incl. delay) for upcoming stops
+        let arrival_time_est = arrival_time_disp;
+        let departure_time_est = departure_time_disp;
+
+        arrival_time_est = arrival_time_est.plus({ minutes: marker.data.train_cache.delay });
+        departure_time_est = departure_time_est.plus({ minutes: marker.data.train_cache.delay });
+
+        if (isUpcomingStop && marker.data.train_cache.delay > 0) {
+            arrival_time_disp = arrival_time_disp.plus({ minutes: marker.data.train_cache.delay });
+            departure_time_disp = departure_time_disp.plus({ minutes: marker.data.train_cache.delay });
         }
-        let arrival_time_copy = arrival_time;
-        if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
-            arrival_time = arrival_time.plus({ minutes: marker.data.train_cache.delay });
+
+        // TODO: explain this -- probably a midnight edge case?
+        if (arrival_time_disp < originalDepartureTime) {
+            arrival_time_disp = arrival_time_disp.plus({ days: 1 });
+            arrival_time_est = arrival_time_est.plus({ days: 1 });
         }
-        arrival_time_copy = arrival_time_copy.plus({ minutes: marker.data.train_cache.delay });
-        if (arrival_time < luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'HH:mm:ss').setZone('Europe/Zagreb')) {
-            arrival_time = arrival_time.plus({ days: 1 });
-            arrival_time_copy = arrival_time_copy.plus({ days: 1 });
+        if (departure_time_disp < originalDepartureTime) {
+            departure_time_disp = departure_time_disp.plus({ days: 1 });
+            departure_time_est = departure_time_est.plus({ days: 1 });
         }
-        let departure_time = 0;
-        if (stopTime.departure_time) {
-            if (stopTime.departure_time.length == 7) stopTime.departure_time = '0' + stopTime.departure_time;
-            if (parseInt(stopTime.departure_time.split(':')[0]) > 23) {
-                departure_time = parseInt(stopTime.departure_time.split(':')[0]) - 24;
-                departure_time = departure_time.toString() + ':' + stopTime.departure_time.split(':')[1] + ':' + stopTime.departure_time.split(':')[2];
-                if (departure_time.length == 7) departure_time = '0' + departure_time;
-                departure_time = luxon.DateTime.fromFormat(departure_time, 'HH:mm:ss', {
-                    zone: 'Europe/Zagreb'
-                }).plus({ days: 1 });
-            } else {
-                departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Zagreb');
-            }
-        } else {
-            if (stopTime.arrival_time.length == 7) stopTime.arrival_time = '0' + stopTime.arrival_time;
-            if (parseInt(stopTime.arrival_time.split(':')[0]) > 23) {
-                departure_time = parseInt(stopTime.arrival_time.split(':')[0]) - 24;
-                departure_time = departure_time.toString() + ':' + stopTime.arrival_time.split(':')[1] + stopTime.arrival_time.split(':')[2];
-                if (departure_time.length == 7) departure_time = '0' + departure_time;
-                departure_time = luxon.DateTime.fromFormat(departure_time, 'HH:mm:ss', {
-                    zone: 'Europe/Zagreb'
-                }).plus({ days: 1 });
-            } else {
-                departure_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'HH:mm:ss').setZone('Europe/Zagreb');
-            }
+
+        const isInStop = new Date() >= arrival_time_est.toJSDate() && new Date() <= departure_time_est.toJSDate();
+
+        if (isInStop) {
+            $row.style.backgroundColor = '#0B3968';
+            $row.style.color = '#fff';
+            arrival_time_disp = arrival_time_est;
+            departure_time_disp = departure_time_est;
         }
-        let departure_time_copy = departure_time;
-        if (departure_time < luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'HH:mm:ss').setZone('Europe/Zagreb')) {
-            departure_time = departure_time.plus({ days: 1 });
-            departure_time_copy = departure_time_copy.plus({ days: 1 });
+        if (new Date() > departure_time_est.toJSDate()) {
+            $row.style.color = '#aaaaaa';
         }
-        if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
-            departure_time = departure_time.plus({ minutes: marker.data.train_cache.delay });
-        }
-        departure_time_copy = departure_time_copy.plus({ minutes: marker.data.train_cache.delay });
-        let is_in_stop = false;
-        if (new Date() >= arrival_time_copy.toJSDate() && new Date() <= departure_time_copy.toJSDate()) {
-            row.style.backgroundColor = '#0B3968';
-            row.style.color = '#fff';
-            is_in_stop = true;
-            arrival_time = arrival_time_copy;
-            departure_time = departure_time_copy;
-        }
-        console.log(stopTime.stop_sequence, marker.data.train_data.current_stop_sequence, stopTime.stop_name);
-        if (new Date() > departure_time_copy.toJSDate()) {
-            row.style.color = '#aaaaaa';
-        }
-        row.style.fontSize = 'smaller';
+        
+        // console.log(stopTime.stop_sequence, marker.data.train_data.current_stop_sequence, stopTime.stop_name);
+
         // convert to HH:mm format both arrival and departure time
-        arrival_time = arrival_time.toFormat('HH:mm');
-        departure_time = departure_time.toFormat('HH:mm');
-        td1.innerHTML = `${i != 0 ? `<i class="bi bi-box-arrow-in-right"></i> ${marker.data.train_cache.delay > 0 && (stopTime.stop_sequence > marker.data.train_data.current_stop_sequence || (is_in_stop && stopTime.stop_sequence >= marker.data.train_data.current_stop_sequence)) ? `<span class="delayText">${arrival_time}</span>` : arrival_time}<br>` : ''}
-                                                 ${i != marker.data.train_data.train_times.length - 1 ? `<i class="bi bi-box-arrow-left"></i> ${marker.data.train_cache.delay > 0 && (stopTime.stop_sequence > marker.data.train_data.current_stop_sequence || (is_in_stop && stopTime.stop_sequence >= marker.data.train_data.current_stop_sequence)) ? `<span class="delayText">${departure_time}</span>` : departure_time}` : ''}`;
-        td2.innerHTML = `${stopTime.stop_name} ${is_in_stop ? `<br><small>(${ACTIVE_VOCABULARY.in_stop})</small>` : ""}`;
-        row.appendChild(td1);
-        row.appendChild(td2);
-        scheduleTable.appendChild(row);
+        const arrival_fmt = arrival_time_disp.toFormat('HH:mm');
+        const departure_fmt = departure_time_disp.toFormat('HH:mm');
+
+        const isUpcomingOrCurrentStop = isUpcomingStop || (isInStop && stopTime.stop_sequence >= marker.data.train_data.current_stop_sequence);
+
+        // Arrival time (non-first stop)
+        if (i != 0) 
+            $td1.innerHTML += /*html*/`
+                <i class="bi bi-box-arrow-in-right"></i> 
+                <span class="${marker.data.train_cache.delay > 0 && isUpcomingOrCurrentStop ? 'delayText' : ''}">
+                    ${arrival_fmt}
+                </span>
+                <br>`;
+        
+        // Departure time (non-last stop)
+        if (i != marker.data.train_data.train_times.length - 1)
+            $td1.innerHTML += /*html*/`
+                <i class="bi bi-box-arrow-left"></i> 
+                <span class="${marker.data.train_cache.delay > 0 && isUpcomingOrCurrentStop ? 'delayText' : ''}">
+                    ${departure_fmt}
+                </span>`;
+
+        $td2.innerHTML = `${stopTime.stop_name} ${isInStop ? `<br><small>(${ACTIVE_VOCABULARY.in_stop})</small>` : ""}`;
+        $row.appendChild($td1);
+        $row.appendChild($td2);
+        scheduleTable.appendChild($row);
     }
     return scheduleTable;
+}
+
+function hz_parseTime(timeString) {
+    if (!timeString)
+        return null;
+
+    const parts = timeString.split(":");
+    let hrs = parseInt(parts.pop(0));
+
+    if (hrs > 23) {
+        hrs = hrs - 24;
+        timeString = hrs + ":" + parts.join(":");
+        return luxon.DateTime.fromFormat(formatted, 'HH:mm:ss').setZone('Europe/Zagreb').plus({ days: 1 });
+    } else {
+        return luxon.DateTime.fromFormat(timeString, 'HH:mm:ss').setZone('Europe/Zagreb');
+    }
 }
 
 function hz_makeCompositionDisplay(marker) {
