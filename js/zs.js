@@ -26,6 +26,14 @@ async function zs() {
                 credentials: 'include'
             }).then(res => res.json()).then(res => res.data);
             vehicles.forEach(async vehicle => {
+
+                // HACK: for some reason the backend isn't returning train_cache
+                vehicle.train_cache = {
+                    delay: 0,
+                    is_bus: false,
+                    composition: [],
+                }
+
                 let marker = zsMarkers.find(m => m.id == vehicle.train_data.train_id);
                 if (!marker) {
                     marker = new maplibregl.Marker({
