@@ -90,8 +90,8 @@ function mz_makeScheduleTable(marker) {
         let row = document.createElement('tr');
         let td1 = document.createElement('td');
         let td2 = document.createElement('td');
-        let arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time ? stopTime.arrival_time : "00:00", 'HH:mm:ss').setZone('Europe/Ljubljana');
-        let departure_time = luxon.DateTime.fromFormat(stopTime.departure_time ? stopTime.departure_time : "00:00", 'HH:mm:ss').setZone('Europe/Ljubljana');
+        let arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time ? stopTime.arrival_time : "00:00", 'H:m:s').setZone('Europe/Ljubljana');
+        let departure_time = luxon.DateTime.fromFormat(stopTime.departure_time ? stopTime.departure_time : "00:00", 'H:m:s').setZone('Europe/Ljubljana');
         let is_in_stop = false;
         if (new Date() > arrival_time.toJSDate() && new Date() < departure_time.toJSDate()) {
             row.style.backgroundColor = '#0B3968';
