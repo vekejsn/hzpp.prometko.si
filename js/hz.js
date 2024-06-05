@@ -143,7 +143,7 @@ function hz_makeScheduleTable(marker) {
 
         const isUpcomingStop = stopTime.stop_sequence > marker.data.train_data.current_stop_sequence;
 
-        const originalDepartureTime = luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'HH:mm:ss').setZone('Europe/Zagreb');
+        const originalDepartureTime = luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'H:m:s').setZone('Europe/Zagreb');
 
         let arrival_time_disp = hz_parseTime(stopTime.arrival_time);
         let departure_time_disp = hz_parseTime(stopTime.departure_time);
@@ -230,9 +230,9 @@ function hz_parseTime(timeString) {
     if (hrs > 23) {
         hrs = hrs - 24;
         timeString = hrs + ":" + parts.join(":");
-        return luxon.DateTime.fromFormat(formatted, 'HH:mm:ss').setZone('Europe/Zagreb').plus({ days: 1 });
+        return luxon.DateTime.fromFormat(formatted, 'H:m:s').setZone('Europe/Zagreb').plus({ days: 1 });
     } else {
-        return luxon.DateTime.fromFormat(timeString, 'HH:mm:ss').setZone('Europe/Zagreb');
+        return luxon.DateTime.fromFormat(timeString, 'H:m:s').setZone('Europe/Zagreb');
     }
 }
 

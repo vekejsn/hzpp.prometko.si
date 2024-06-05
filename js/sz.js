@@ -98,28 +98,29 @@ function sz_makeScheduleTable(marker) {
         let td1 = document.createElement('td');
         let td2 = document.createElement('td');
         let arrival_time = 0;
+        
         if (stopTime.arrival_time) {
-            arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
+            arrival_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'H:m:s').setZone('Europe/Ljubljana');
         } else {
-            arrival_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
+            arrival_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'H:m:s').setZone('Europe/Ljubljana');
         }
         let arrival_time_copy = arrival_time;
         if (marker.data.train_cache.delay > 0 && stopTime.stop_sequence > marker.data.train_data.current_stop_sequence) {
             arrival_time = arrival_time.plus({ minutes: marker.data.train_cache.delay });
         }
         arrival_time_copy = arrival_time_copy.plus({ minutes: marker.data.train_cache.delay });
-        if (arrival_time < luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana')) {
+        if (arrival_time < luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'H:m:s').setZone('Europe/Ljubljana')) {
             arrival_time = arrival_time.plus({ days: 1 });
             arrival_time_copy = arrival_time_copy.plus({ days: 1 });
         }
         let departure_time = 0;
         if (stopTime.departure_time) {
-            departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
+            departure_time = luxon.DateTime.fromFormat(stopTime.departure_time, 'H:m:s').setZone('Europe/Ljubljana');
         } else {
-            departure_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'HH:mm:ss').setZone('Europe/Ljubljana');
+            departure_time = luxon.DateTime.fromFormat(stopTime.arrival_time, 'H:m:s').setZone('Europe/Ljubljana');
         }
         let departure_time_copy = departure_time;
-        if (departure_time < luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'HH:mm:ss').setZone('Europe/Ljubljana')) {
+        if (departure_time < luxon.DateTime.fromFormat(marker.data.train_data.train_times[0].departure_time, 'H:m:s').setZone('Europe/Ljubljana')) {
             departure_time = departure_time.plus({ days: 1 });
             departure_time_copy = departure_time_copy.plus({ days: 1 });
         }
