@@ -40,7 +40,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 90%;
-  max-width: 300px;
+  max-width: 375px;
   height: 100%;
   background: #fff;
   -webkit-transition: -webkit-transform ease 0.3s;
@@ -96,7 +96,7 @@
     transition: -webkit-transform 0s ease 0s;
     transition: transform 0s ease 0s;
     transition: transform 0s ease 0s, -webkit-transform 0s ease 0s;
-    width: 300px; }
+    width: 375px; }
     [sidebarjs].sidebarjs--responsive [sidebarjs-container] {
       -webkit-transform: translate(0, 0) !important;
               transform: translate(0, 0) !important; }
@@ -118,9 +118,9 @@
       -webkit-box-shadow: none;
               box-shadow: none; }
   [sidebarjs-content] {
-    width: -webkit-calc(100% - 300px);
-    width: calc(100% - 300px); }
+    width: -webkit-calc(100% - 375px);
+    width: calc(100% - 375px); }
     [sidebarjs-content].sidebarjs-content--left.sidebarjs-content--right {
-      width: -webkit-calc(100% - 600px);
-      width: calc(100% - 600px);
+      width: -webkit-calc(100% - 375px);
+      width: calc(100% - 375px);
       margin: 0 auto; } }
