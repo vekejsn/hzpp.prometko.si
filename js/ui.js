@@ -1,4 +1,4 @@
-import { getTrip, getStopTimes } from './api.js';
+import { getTrip, getStopTimes, getUserLanguage, setUserLanguage, getGTFSRTVehicleData } from './api.js';
 
 // Global state tracking for sidebar updates
 let sidebarState = {
@@ -37,7 +37,7 @@ function startSidebarUpdateTimer() {
             try {
                 if (sidebarState.type === 'trip') {
                     const tripDetails = await getTrip(sidebarState.id);
-                    displayTripInfo(tripDetails, window.map, false); // false = don't restart timer
+                    await displayTripInfo(tripDetails, window.map, false); // false = don't restart timer
                 } else if (sidebarState.type === 'stop') {
                     const stopDetails = await getStopTimes(sidebarState.id);
                     displayStopInfo(sidebarState.data, stopDetails, false, sidebarState.mode); // false = don't restart timer, pass current mode
@@ -59,13 +59,97 @@ export function initializeUi(map) {
     map.on('click', 'realtime-vehicles-fg', async (e) => {
         const tripId = e.features[0].properties.tripId;
         const tripDetails = await getTrip(tripId);
-        displayTripInfo(tripDetails, map);
+        await displayTripInfo(tripDetails, map);
     });
 
     map.on('mouseenter', 'stops-layer', () => map.getCanvas().style.cursor = 'pointer');
     map.on('mouseleave', 'stops-layer', () => map.getCanvas().style.cursor = '');
     map.on('mouseenter', 'realtime-vehicles-fg', () => map.getCanvas().style.cursor = 'pointer');
     map.on('mouseleave', 'realtime-vehicles-fg', () => map.getCanvas().style.cursor = '');
+}
+
+/**
+ * Format UIC number with proper grouping (e.g., 94 78 6112 002-2)
+ * Format: XX XX XXXX XXX-X (first 4 digits, then last digit separated by dash)
+ */
+function formatUicNumber(value) {
+    if (!value || typeof value !== 'string') return value;
+    
+    // Remove any existing spaces and dashes
+    const cleaned = value.replace(/[\s\-]/g, '');
+    
+    // Format as: XX XX XXXX XXX-X (12 digits)
+    if (cleaned.length >= 12) {
+        const digits = cleaned.slice(0, 12);
+        if (digits[0] == '9') {
+            return `${digits.slice(0, 2)} ${digits.slice(2, 4)} ${digits.slice(4, 8)} ${digits.slice(8, 11)}-${digits.slice(11)}`;
+        }
+        return `${digits.slice(0, 2)} ${digits.slice(2, 4)} ${digits.slice(4, 6)} ${digits.slice(6, 8)} ${digits.slice(8, 11)}-${digits.slice(11)}`;
+    }
+    
+    return value;
+}
+
+/**
+ * Parse vehicle_id from GTFS-RT and return as structured data
+ * Format: splits by '; ' first, then by ', ' within each segment
+ * Also handles simple comma-separated values
+ */
+function parseVehicleData(vehicleId) {
+    if (!vehicleId) return [];
+    
+    //console.log('Parsing vehicle ID:', vehicleId);
+    
+    const parsedData = [];
+
+    for (let segment of vehicleId.split(';')) {
+        const data = {};
+        data['UIC'] = formatUicNumber(segment.split(',')[0].trim());
+        data['Name'] = segment.split(',')[1] ? segment.split(',')[1].trim() : '';
+        parsedData.push(data);
+    }
+    
+    //console.log('Parsed vehicle data:', parsedData);
+    return parsedData;
+}
+
+/**
+ * Generate HTML table for vehicle data
+ */
+function generateVehicleDataTable(vehicleData) {
+    if (!vehicleData || !vehicleData.id) {
+        return '';
+    }
+    
+    const parsedData = parseVehicleData(vehicleData.id);
+    
+    if (parsedData.length === 0) {
+        return '';
+    }
+    
+    // Get all unique keys across all data objects
+    const allKeys = new Set();
+    parsedData.forEach(obj => {
+        Object.keys(obj).forEach(key => allKeys.add(key));
+    });
+    const sortedKeys = Array.from(allKeys).sort();
+    
+    let table = `
+    <div class="vehicle-data-section">
+        <h6>Vehicle Data</h6>
+        <table class="table table-sm vehicle-data-table" style="width:100%">
+            <tbody>
+                ${parsedData.map(row => `
+                    <tr>
+                        ${sortedKeys.map(key => `<td>${row[key] || '-'}</td>`).join('')}
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    </div>
+    `;
+    
+    return table;
 }
 
 function createSidebarContent(title, body) {
@@ -76,6 +160,9 @@ function createSidebarContent(title, body) {
             <div class="sidebar-header-content">
                 ${title}
             </div>
+            <button class="sidebar-icon-btn" onclick="openSettings()" title="Settings">
+                <i class="bi bi-gear"></i>
+            </button>
             <button class="sidebar-close-btn" onclick="closeSidebar()" title="Close sidebar">
                 <i class="bi bi-x-lg"></i>
             </button>
@@ -88,7 +175,7 @@ function createSidebarContent(title, body) {
     SIDEBAR.open();
 }
 
-export function displayTripInfo(trip, map, startTimer = true) {
+export async function displayTripInfo(trip, map, startTimer = true) {
     const leg = trip.legs[0];
     
     // Update sidebar state
@@ -101,7 +188,35 @@ export function displayTripInfo(trip, map, startTimer = true) {
     const title = `<h5>${leg.routeShortName}</h5>
                    <span>${leg.from.name} - ${leg.to.name}</span>`;
     
-    let body = `
+    let body = ``;
+    
+    // Render alerts if they exist
+    if (leg.alerts && leg.alerts.length > 0) {
+        body += `<div class="trip-alerts">`;
+        leg.alerts.forEach((alert, index) => {
+            const headerText = alert.headerText || 'Alert';
+            const descriptionText = alert.descriptionText || '';
+            const url = alert.url ? `<a href="${alert.url}" target="_blank" class="alert-link">More info</a>` : '';
+            const alertId = `alert-${Date.now()}-${index}`;
+            
+            body += `
+            <div class="alert-item">
+                <button class="alert-toggle" onclick="toggleAlert('${alertId}')" type="button">
+                    <i class="bi bi-chevron-down alert-chevron"></i>
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <span>${headerText}</span>
+                </button>
+                <div id="${alertId}" class="alert-content">
+                    ${descriptionText ? `<div class="alert-description">${descriptionText}</div>` : ''}
+                    ${url}
+                </div>
+            </div>
+            `;
+        });
+        body += `</div>`;
+    }
+    
+    body += `
     ${leg.realTime ? '<i class="fas fa-broadcast-tower blinker"></i> This trip has real time information.' : '<i class="fas fa-broadcast-tower"></i> This trip does not have real time information.'}
     <b>Schedule:</b>
     <table class="table table-sm" style="width:100%">`;
@@ -182,6 +297,23 @@ export function displayTripInfo(trip, map, startTimer = true) {
         `;
     });
     body += `</table>`;
+    
+    // Fetch and add GTFS-RT vehicle data if available
+    if (leg.tripId) {
+        try {
+            const vehicleData = await getGTFSRTVehicleData(leg.tripId);
+            //console.log('Vehicle data fetched:', vehicleData);
+            if (vehicleData) {
+                const tableHtml = generateVehicleDataTable(vehicleData);
+                //console.log('Generated table HTML:', tableHtml);
+                body += tableHtml;
+            } else {
+                //console.log('No vehicle data found for trip:', leg.tripId);
+            }
+        } catch (error) {
+            console.error('Error fetching vehicle data:', error);
+        }
+    }
 
     createSidebarContent(title, body);
     
@@ -305,7 +437,7 @@ window.displayTripInfoByTripId = async function(tripId) {
         window.map.flyTo({ center: coords, zoom: 15 });
     }
     const tripDetails = await getTrip(tripId);
-    displayTripInfo(tripDetails, window.map, true); // true = start timer
+    await displayTripInfo(tripDetails, window.map, true); // true = start timer
 }
 
 window.displayStopInfoById = async function(stopId, lat, lon) {
@@ -332,5 +464,69 @@ window.closeSidebar = function() {
     clearSidebarUpdateTimer();
     sidebarState = { type: null, id: null, data: null, mode: 'departures', updateTimer: null };
     SIDEBAR.close();
+}
+
+window.openSettings = function() {
+    const currentLang = getUserLanguage();
+    const body = `
+    <div class="settings-panel">
+        <div class="settings-section">
+            <label class="settings-label">Language:</label>
+            <div class="settings-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+                <button class="btn btn-sm ${currentLang === 'en' ? 'btn-primary' : 'btn-outline-primary'}" 
+                        onclick="changeLanguage('en')" 
+                        style="flex: 1;">
+                    English
+                </button>
+                <button class="btn btn-sm ${currentLang === 'hr' ? 'btn-primary' : 'btn-outline-primary'}" 
+                        onclick="changeLanguage('hr')" 
+                        style="flex: 1;">
+                    Hrvatski
+                </button>
+            </div>
+        </div>
+        <div class="settings-info">
+            <small class="text-muted">Language changes will be applied to new API requests.</small>
+        </div>
+    </div>
+    `;
+    
+    const container = document.querySelector('[sidebarjs-container]');
+    container.innerHTML = `
+    <div class="sidebar-inner">
+        <div class="sidebar-header">
+            <div class="sidebar-header-content">
+                <h5>Settings</h5>
+            </div>
+            <button class="sidebar-close-btn" onclick="closeSidebar()" title="Close sidebar">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            ${body}
+        </div>
+    </div>
+    `;
+    SIDEBAR.open();
+}
+
+window.changeLanguage = function(lang) {
+    setUserLanguage(lang);
+    // Re-open settings to reflect the change
+    window.openSettings();
+}
+
+window.toggleAlert = function(alertId) {
+    const alertContent = document.getElementById(alertId);
+    const alertButton = alertContent.previousElementSibling;
+    const chevron = alertButton.querySelector('.alert-chevron');
+    
+    if (alertContent.classList.contains('alert-content-open')) {
+        alertContent.classList.remove('alert-content-open');
+        chevron.classList.remove('alert-chevron-open');
+    } else {
+        alertContent.classList.add('alert-content-open');
+        chevron.classList.add('alert-chevron-open');
+    }
 }
 

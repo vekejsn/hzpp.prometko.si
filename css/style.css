@@ -149,6 +149,23 @@
     opacity: 1;
 }
 
+.sidebar-icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.sidebar-icon-btn:hover {
+    opacity: 1;
+}
+
 .overlay {
     width: 100vw;
     height: 100vh;
@@ -221,4 +238,134 @@ body {
 .maplibregl-popup {
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.settings-panel {
+    padding: 0.5rem 0;
+}
+
+.settings-section {
+    margin-bottom: 1.5rem;
+}
+
+.settings-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.settings-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.settings-info {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-left: 3px solid #004B87;
+    border-radius: 4px;
+}
+
+.trip-alerts {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alert-item {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.alert-toggle {
+    width: 100%;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #856404;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.alert-toggle:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.alert-chevron {
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.alert-chevron-open {
+    transform: rotate(180deg);
+}
+
+.alert-toggle i.bi-exclamation-triangle-fill {
+    font-size: 1rem;
+    color: #ffc107;
+    flex-shrink: 0;
+}
+
+.alert-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 0.75rem;
+}
+
+.alert-content-open {
+    max-height: 500px;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    transition: max-height 0.3s ease-in;
+}
+
+.alert-description {
+    color: #856404;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+.alert-link {
+    color: #004B87;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.alert-link:hover {
+    text-decoration: underline;
+}
+
+.vehicle-data-section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.vehicle-data-section h6 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.vehicle-data-table {
+    font-size: 0.85rem;
+}
+
+.vehicle-data-table td {
+    padding: 0.5rem !important;
+    word-break: break-word;
 }

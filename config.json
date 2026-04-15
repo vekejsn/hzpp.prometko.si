@@ -1,5 +1,6 @@
 {
     "motis_api_base_url": "https://mapper-motis.ojpp-gateway.derp.si",
+    "defaultLanguage": "auto",
     "colors": {
         "sv": "#006AB0",
         "sz": "#00ADEF",
